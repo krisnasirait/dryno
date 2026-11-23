@@ -58,6 +58,8 @@ body {
 html { scroll-behavior: smooth }
 section[id] { scroll-margin-top: 112px }
 body.scrolled #masthead { box-shadow: 0 10px 30px rgba(0,0,0,.12) }
+@keyframes heroFade { from { opacity: 0 } }
+.hero-fade-in { animation: heroFade 1s ease both }
 /* JS-gated reveal (AOS parity: 600ms ease-in-out, once). No-JS => visible. */
 .js-anim [data-aos="fade-up"] { opacity: 0; transform: translateY(24px); }
 .js-anim [data-aos="fade-left"] { opacity: 0; transform: translateX(24px); }

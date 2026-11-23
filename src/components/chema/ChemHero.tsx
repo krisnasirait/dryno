@@ -7,12 +7,12 @@ import { useLanguage } from "@/context/LanguageContext";
 export default function ChemHero() {
   const { language, content } = useLanguage();
   const hero = content.hero;
-  const [[slide, prev], setSlides] = useState<[number, number]>([0, -1]);
+  const [slide, setSlide] = useState(0);
   const images = hero.images?.length ? hero.images : [{ id: "01", src: "/images/bg-hero-1.jpeg", alt: "DRYNO" }];
 
   useEffect(() => {
     const id = setInterval(
-      () => setSlides(([s]) => [(s + 1) % images.length, s]),
+      () => setSlide((s) => (s + 1) % images.length),
       6000
     );
     return () => clearInterval(id);
@@ -27,25 +27,27 @@ export default function ChemHero() {
 
   return (
     <section id="home" className="relative min-h-[92vh] flex items-center overflow-hidden bg-[#06121f] text-white">
-      <div className="absolute inset-0">
+      <div className="absolute inset-0 z-0">
         {images.map((img, i) =>
-          i !== slide && i !== prev ? null : (
-            <div key={img.id || i} aria-hidden={i !== slide} className={`absolute inset-0 transition-opacity duration-1000 ${slide === i ? "opacity-100 z-10" : "opacity-0 z-0"}`}>
+          i !== slide ? null : (
+            <div key={img.id || i} className="absolute inset-0">
               <Image
                 src={img.src}
                 alt={img.alt || "DRYNO"}
                 fill
                 sizes="100vw"
                 priority={i === 0}
-                fetchPriority={i === slide ? "high" : "low"}
+                fetchPriority="high"
                 loading={i === 0 ? "eager" : "lazy"}
                 decoding="async"
-                className={`object-cover transition-transform duration-[6000ms] ${slide === i ? "scale-105" : "scale-100"}`}
+                className={`object-cover scale-105 ${i === 0 ? "" : "hero-fade-in"}`}
                 unoptimized={img.src.startsWith("http") || img.src.startsWith("/images/uploads/")}
               />
             </div>
           )
         )}
+      </div>
+      <div className="absolute inset-0 z-[1] pointer-events-none" aria-hidden>
         <div className="absolute inset-0 bg-gradient-to-r from-[#06121f]/95 via-[#0B192C]/80 to-[#0B192C]/20" />
         <div className="absolute inset-0 bg-gradient-to-t from-[#06121f] via-transparent to-[#06121f]/40" />
       </div>
