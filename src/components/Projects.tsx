@@ -23,10 +23,21 @@ export default function Projects() {
     null
   );
   const [currentImageIndex, setCurrentImageIndex] = useState<number>(0);
+  const [scrollProgress, setScrollProgress] = useState(0);
+  const handleScroll = () => {
+    const el = scrollContainerRef.current;
+    if (!el) return;
+    const max = el.scrollWidth - el.clientWidth;
+    setScrollProgress(max > 0 ? el.scrollLeft / max : 0);
+  };
   const { language, content } = useLanguage();
   const t = translations[language].projects;
 
   const projects: ProjectItem[] = content.projects || [];
+  const mediaTitle = (m: { title: string; titleEN?: string }) =>
+    language === "EN" ? m.titleEN || m.title : m.title;
+  const mediaDesc = (m: { description?: string; descriptionEN?: string }) =>
+    language === "EN" ? m.descriptionEN || m.description : m.description;
   const whatsappNumber = content.contact?.whatsappNumber || "6285792096854";
 
   const scroll = (direction: "left" | "right") => {
@@ -143,7 +154,7 @@ export default function Projects() {
             <span className="text-[10px] sm:text-xs font-bold tracking-[0.25em] text-gray-400 uppercase block mb-1 sm:mb-2">
               {t.eyebrow}
             </span>
-            <h2 className="text-2.5xl sm:text-3xl lg:text-5xl font-bold text-deep-navy tracking-tight">
+            <h2 className="text-2xl sm:text-3xl lg:text-5xl font-bold text-deep-navy tracking-tight">
               {t.title}
             </h2>
           </div>
@@ -155,14 +166,14 @@ export default function Projects() {
               <button
                 onClick={() => scroll("left")}
                 aria-label="Previous project"
-                className="w-8 h-8 sm:w-9 sm:h-9 rounded-full border border-gray-200 text-gray-600 hover:bg-deep-navy hover:text-white hover:border-deep-navy flex items-center justify-center transition-all duration-300 active:scale-95 shadow-2xs"
+                className="w-8 h-8 sm:w-9 sm:h-9 rounded-full border border-gray-200 text-gray-600 hover:bg-deep-navy hover:text-white hover:border-deep-navy flex items-center justify-center transition-all duration-300 active:scale-95"
               >
                 <HiChevronLeft className="w-4 h-4 sm:w-5 sm:h-5" />
               </button>
               <button
                 onClick={() => scroll("right")}
                 aria-label="Next project"
-                className="w-8 h-8 sm:w-9 sm:h-9 rounded-full border border-gray-200 text-gray-600 hover:bg-deep-navy hover:text-white hover:border-deep-navy flex items-center justify-center transition-all duration-300 active:scale-95 shadow-2xs"
+                className="w-8 h-8 sm:w-9 sm:h-9 rounded-full border border-gray-200 text-gray-600 hover:bg-deep-navy hover:text-white hover:border-deep-navy flex items-center justify-center transition-all duration-300 active:scale-95"
               >
                 <HiChevronRight className="w-4 h-4 sm:w-5 sm:h-5" />
               </button>
@@ -179,19 +190,18 @@ export default function Projects() {
           </div>
         </div>
 
+        <div className="mt-4 h-1 rounded-full bg-gray-100 overflow-hidden" role="progressbar" aria-label="Projects scroll progress" aria-valuenow={Math.round(scrollProgress * 100)} aria-valuemin={0} aria-valuemax={100}>
+          <div className="h-full bg-engineering-blue rounded-full transition-all duration-200" style={{ width: `${Math.max(8, scrollProgress * 100)}%` }} />
+        </div>
+
         {/* Slidable Cards Row / Responsive Grid */}
         <div
           ref={scrollContainerRef}
+          onScroll={handleScroll}
           className="flex overflow-x-auto gap-3 sm:gap-6 pb-2.5 sm:pb-4 scroll-smooth snap-x snap-mandatory [scrollbar-width:none] [-ms-overflow-style:none] [&::-webkit-scrollbar]:hidden"
         >
           {projects.map((project) => {
             const galleryList = project.gallery || [];
-            const photoCount = galleryList.filter(
-              (m) => m.type === "image"
-            ).length;
-            const videoCount = galleryList.filter(
-              (m) => m.type === "video"
-            ).length;
 
             return (
               <div
@@ -206,7 +216,7 @@ export default function Projects() {
                 role="button"
                 tabIndex={0}
                 aria-label={`${t.openGalleryText}: ${project.title}`}
-                className="min-w-[270px] sm:min-w-[360px] lg:min-w-[380px] flex-1 snap-start group rounded-2xl bg-warm-white border border-gray-100/80 shadow-xs hover:shadow-2xl hover:border-engineering-blue/40 transition-all duration-300 flex flex-col justify-between overflow-hidden cursor-pointer focus:outline-none focus:ring-2 focus:ring-engineering-blue"
+                className="min-w-[270px] sm:min-w-[360px] lg:min-w-[380px] flex-1 snap-start group rounded-2xl bg-warm-white border border-gray-100/80 shadow-sm hover:shadow-lg hover:border-engineering-blue/40 transition-shadow duration-300 flex flex-col justify-between overflow-hidden cursor-pointer focus:outline-none focus:ring-2 focus:ring-engineering-blue"
               >
                 {/* Project Image with Photo & Video Badges + Hover Overlay */}
                 <div className="relative h-40 sm:h-52 w-full overflow-hidden bg-gray-100">
@@ -219,35 +229,17 @@ export default function Projects() {
                       project.image?.startsWith("/images/uploads/")
                     }
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                    loading="lazy" decoding="async" className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
                   />
 
                   {/* Date Badge */}
-                  <div className="absolute top-3 right-3 px-3 py-1 rounded-full bg-deep-navy/80 backdrop-blur-xs text-[10px] font-bold text-white tracking-wider z-10">
+                  <div className="absolute top-3 right-3 px-3 py-1 rounded-full bg-deep-navy/80 backdrop-blur-sm text-[10px] font-bold text-white tracking-wider z-10">
                     {project.date}
                   </div>
 
-                  {/* Photo & Video Count Badges */}
-                  <div className="absolute bottom-3 left-3 flex items-center gap-1.5 z-10">
-                    <span className="px-2.5 py-1 rounded-full bg-deep-navy/85 backdrop-blur-xs text-[11px] font-semibold text-white/95 flex items-center gap-1 shadow-sm">
-                      <HiPhoto className="w-3.5 h-3.5 text-engineering-blue-light" />
-                      <span>
-                        {photoCount} {t.photosCount}
-                      </span>
-                    </span>
-                    {videoCount > 0 && (
-                      <span className="px-2 py-1 rounded-full bg-red-600/90 backdrop-blur-xs text-[10px] font-bold text-white flex items-center gap-1 shadow-sm">
-                        <HiVideoCamera className="w-3.5 h-3.5" />
-                        <span>
-                          {videoCount} {t.videoCount}
-                        </span>
-                      </span>
-                    )}
-                  </div>
-
-                  {/* Hover Overlay */}
-                  <div className="absolute inset-0 bg-deep-navy/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-10">
-                    <span className="px-3.5 py-1.5 rounded-full bg-white/95 text-deep-navy text-xs font-bold shadow-lg flex items-center gap-1.5 transform translate-y-2 group-hover:translate-y-0 transition-transform duration-300">
+                  {/* Hover Overlay (single layer) */}
+                  <div className="absolute inset-0 bg-deep-navy/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-10" aria-hidden>
+                    <span className="px-3.5 py-1.5 rounded-full bg-white/95 text-deep-navy text-xs font-bold shadow-lg flex items-center gap-1.5">
                       <HiMagnifyingGlassPlus className="w-4 h-4 text-engineering-blue" />
                       {t.openGalleryText}
                     </span>
@@ -257,7 +249,7 @@ export default function Projects() {
                 {/* Card Main Info */}
                 <div className="p-5 sm:p-6 flex flex-col justify-between flex-grow">
                   <div>
-                    <h3 className="text-lg font-black text-deep-navy leading-snug mb-1 group-hover:text-engineering-blue transition-colors">
+                    <h3 className="text-lg font-black text-deep-navy leading-snug mb-1">
                       {project.title}
                     </h3>
                     <p className="text-xs font-medium text-gray-500 mb-3">
@@ -274,44 +266,42 @@ export default function Projects() {
                     <div className="grid grid-cols-3 gap-2 pt-4 border-t border-gray-200/60 text-center">
                       {/* Metric 1 */}
                       <div className="border-r border-gray-200/60 pr-1">
-                        <span className="text-base sm:text-lg font-black text-deep-navy block leading-none mb-1">
+                        <span className="text-lg sm:text-xl font-black text-deep-navy block leading-none mb-1 tabular-nums">
                           {project.finalDepth}
                         </span>
-                        <span className="text-[10px] font-semibold text-gray-400 uppercase tracking-wider block">
+                        <span className="text-[11px] font-semibold text-gray-400 uppercase tracking-wider block">
                           {t.finalDepthLabel}
                         </span>
                       </div>
 
                       {/* Metric 2 */}
                       <div className="border-r border-gray-200/60 px-1">
-                        <span className="text-base sm:text-lg font-black text-deep-navy block leading-none mb-1">
+                        <span className="text-lg sm:text-xl font-black text-deep-navy block leading-none mb-1 tabular-nums">
                           {project.waterEncounter}
                         </span>
-                        <span className="text-[10px] font-semibold text-gray-400 uppercase tracking-wider block">
+                        <span className="text-[11px] font-semibold text-gray-400 uppercase tracking-wider block">
                           {t.waterEncounterLabel}
                         </span>
                       </div>
 
                       {/* Metric 3 */}
                       <div className="pl-1">
-                        <span className="text-base sm:text-lg font-black text-deep-navy block leading-none mb-1">
+                        <span className="text-lg sm:text-xl font-black text-deep-navy block leading-none mb-1 tabular-nums">
                           {project.waterDischarge}
                         </span>
-                        <span className="text-[10px] font-semibold text-gray-400 uppercase tracking-wider block">
+                        <span className="text-[11px] font-semibold text-gray-400 uppercase tracking-wider block">
                           {t.dischargeLabel}
                         </span>
                       </div>
                     </div>
 
                     {/* View Documentation Link Bar */}
-                    <div className="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between text-xs font-bold text-engineering-blue group-hover:text-engineering-blue-hover transition-colors">
+                    <div className="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between text-xs font-bold text-engineering-blue">
                       <span className="flex items-center gap-1.5">
                         <HiPhoto className="w-4 h-4" />
                         {t.openGalleryText} ({galleryList.length} Media)
                       </span>
-                      <span className="transform group-hover:translate-x-1 transition-transform">
-                        →
-                      </span>
+                      <span aria-hidden>→</span>
                     </div>
                   </div>
                 </div>
@@ -389,7 +379,7 @@ export default function Projects() {
                 <Image
                   key={currentMedia.src}
                   src={currentMedia.src}
-                  alt={currentMedia.title}
+                  alt={mediaTitle(currentMedia)}
                   fill
                   priority
                   unoptimized={
@@ -460,12 +450,12 @@ export default function Projects() {
                   </span>
                 )}
                 <h4 className="text-sm sm:text-base font-bold text-white leading-snug line-clamp-1">
-                  {currentMedia.title}
+                  {mediaTitle(currentMedia)}
                 </h4>
               </div>
-              {currentMedia.description && (
+              {mediaDesc(currentMedia) && (
                 <p className="text-xs text-gray-300 line-clamp-1 sm:line-clamp-2 pl-0.5">
-                  {currentMedia.description}
+                  {mediaDesc(currentMedia)}
                 </p>
               )}
             </div>
@@ -479,7 +469,7 @@ export default function Projects() {
                     <button
                       key={idx}
                       onClick={() => setCurrentImageIndex(idx)}
-                      aria-label={`Media ${idx + 1}: ${media.title}`}
+                      aria-label={`Media ${idx + 1}: ${mediaTitle(media)}`}
                       className={`relative flex-shrink-0 w-16 h-12 sm:w-20 sm:h-14 rounded-lg overflow-hidden transition-all duration-200 ${
                         currentImageIndex === idx
                           ? "ring-2 ring-engineering-blue-light ring-offset-2 ring-offset-deep-navy opacity-100 scale-105"
@@ -488,7 +478,7 @@ export default function Projects() {
                     >
                       <Image
                         src={media.poster || media.src}
-                        alt={media.title}
+                        alt={mediaTitle(media)}
                         fill
                         unoptimized={
                           (media.poster || media.src)?.startsWith("http") ||

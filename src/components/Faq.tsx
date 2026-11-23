@@ -31,7 +31,7 @@ export default function Faq() {
               <span className="text-[10px] sm:text-xs font-bold tracking-[0.25em] text-gray-400 uppercase block mb-1.5 sm:mb-3">
                 {faq.eyebrow[language]}
               </span>
-              <h2 className="text-2.5xl sm:text-4xl lg:text-5xl font-bold text-deep-navy tracking-tight leading-tight mb-2 sm:mb-4">
+              <h2 className="text-4xl lg:text-5xl font-bold text-deep-navy tracking-tight leading-tight mb-2 sm:mb-4">
                 {faq.title[language]}
               </h2>
               <p className="text-xs sm:text-base text-gray-600 font-normal leading-relaxed">
@@ -61,7 +61,7 @@ export default function Faq() {
 
               <a
                 href="#contact"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-4 py-2 sm:px-5 sm:py-3 rounded-full bg-white text-deep-navy text-[11px] sm:text-xs font-bold tracking-wider uppercase transition-all duration-300 hover:bg-warm-white hover:scale-[1.02] active:scale-95 shadow-md"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-4 py-2 sm:px-5 sm:py-3 rounded-full bg-white text-deep-navy text-[11px] sm:text-xs font-bold tracking-wider uppercase transition-colors duration-300 hover:bg-warm-white shadow-md"
               >
                 <span>{faq.ctaButton[language]}</span>
               </a>
@@ -75,7 +75,8 @@ export default function Faq() {
               return (
                 <div
                   key={item.id || index}
-                  className={`rounded-2xl border transition-all duration-300 overflow-hidden ${
+                  id={`faq-${item.id}`}
+                  className={`rounded-2xl border scroll-mt-28 transition-all duration-300 overflow-hidden ${
                     isOpen
                       ? "bg-white border-engineering-blue/30 shadow-md"
                       : "bg-white/80 border-gray-200/80 hover:border-gray-300"

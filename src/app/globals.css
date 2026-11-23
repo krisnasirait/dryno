@@ -52,6 +52,23 @@ body {
   border-color: rgba(255, 255, 255, 0.7);
 }
 
+/* ===== Chem-Aqua 1:1 port ===== */
+@keyframes fadeIn { from { opacity: 0 } to { opacity: 1 } }
+.animate-fadeIn { animation: fadeIn .5s ease both }
+html { scroll-behavior: smooth }
+section[id] { scroll-margin-top: 112px }
+body.scrolled #masthead { box-shadow: 0 10px 30px rgba(0,0,0,.12) }
+/* JS-gated reveal (AOS parity: 600ms ease-in-out, once). No-JS => visible. */
+.js-anim [data-aos="fade-up"] { opacity: 0; transform: translateY(24px); }
+.js-anim [data-aos="fade-left"] { opacity: 0; transform: translateX(24px); }
+.js-anim [data-aos].aos-in { opacity: 1; transform: none; transition: opacity .6s ease, transform .6s ease-in-out; }
+@media (prefers-reduced-motion: reduce) { .js-anim [data-aos] { opacity: 1 !important; transform: none !important; } }
+.slider-icon-item.active { box-shadow: 0 10px 25px rgba(0,119,200,.35) }
+.slide-image-item { transition: opacity .5s ease }
+.multi-cols-cards__wrapper.using_slider, .cta-contact-sticky { transition: all .3s cubic-bezier(.4,0,.2,1) }
+#masthead.sticky { position: sticky }
+.slick-slider { position: relative }
+
 /* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px;

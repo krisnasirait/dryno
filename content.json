@@ -6,37 +6,37 @@
       "ID": "Solusi Rekayasa Air Tanah"
     },
     "headline": {
-      "EN": "A Reliable Water Source Starts With The Right Approach",
-      "ID": "Sumber Air yang Andal Dimulai dari Pendekatan yang Tepat"
+      "EN": "Reliable well water for your villa, resort, or development in Bali",
+      "ID": "Air sumur yang andal untuk vila, resor, atau pengembangan Anda di Bali"
     },
     "description": {
-      "EN": "Ground Water investigation, professional deep well drilling, well construction and ground water compliance support for projects across Bali and surrounding regions.",
-      "ID": "Investigasi air tanah, pengeboran sumur dalam profesional, konstruksi sumur, dan pendampingan perizinan air tanah untuk berbagai proyek di Bali dan wilayah sekitarnya."
+      "EN": "Geoelectric survey, deep-well drilling to 220 m+, casing, and SIPA permits — Pecatu to Lombok.",
+      "ID": "Survei geolistrik, pengeboran sumur dalam hingga 220 m+, casing, dan izin SIPA — Pecatu hingga Lombok."
     },
     "ctaDiscuss": {
-      "EN": "DISCUSS YOUR PROJECT",
-      "ID": "KONSULTASIKAN PROYEK ANDA"
+      "EN": "Get a drilling assessment",
+      "ID": "Minta penilaian pengeboran"
     },
     "ctaServices": {
-      "EN": "EXPLORE OUR SERVICES",
-      "ID": "JELAJAHI LAYANAN KAMI"
+      "EN": "Explore ground water services",
+      "ID": "Jelajahi layanan air tanah"
     },
     "location": "BALI • NUSA LEMBONGAN • NUSA PENIDA • NTB",
     "images": [
       {
         "id": "01",
         "src": "/images/bg-hero-1.jpeg",
-        "alt": "DRYNO Deep Well Drilling Rig 1"
+        "alt": "Heavy-duty deep-well drilling rig at work in Pecatu, Uluwatu — DRYNO Bali"
       },
       {
         "id": "02",
         "src": "/images/bg-hero-2.jpeg",
-        "alt": "DRYNO Deep Well Drilling Rig 2"
+        "alt": "Geoelectric groundwater survey before deep-well drilling in Bali — DRYNO"
       },
       {
         "id": "03",
         "src": "/images/bg-hero-3.jpeg",
-        "alt": "DRYNO Deep Well Drilling Rig 3"
+        "alt": "Completed deep well with high-yield water discharge in Bali — DRYNO"
       }
     ]
   },
@@ -58,16 +58,16 @@
       "ID": "Terintegrasi"
     },
     "description": {
-      "EN": "DRYNO is an integrated ground water solution provider specializing in ground water investigation, deep well drilling, well installation, technical consultation, and ground water-related permit and administrative assistance.",
-      "ID": "DRYNO adalah penyedia solusi air tanah terintegrasi yang berspesialisasi dalam investigasi air tanah, pengeboran sumur dalam (deep well), instalasi sumur, konsultasi teknis, serta bantuan pengurusan izin air tanah (SIPA) dan administratif."
+      "EN": "DRYNO is an integrated ground water solution provider for Bali and NTB. We handle investigation, deep well drilling, well installation, and technical consultation — plus SIPA and NPWPD ABT permitting, so your project stays compliant.",
+      "ID": "DRYNO adalah penyedia solusi air tanah terintegrasi untuk Bali dan NTB. Kami menangani investigasi, pengeboran sumur dalam, instalasi sumur, dan konsultasi teknis — plus perizinan SIPA dan NPWPD ABT, agar proyek Anda patuh regulasi."
     },
     "learnMore": {
-      "EN": "LEARN MORE",
-      "ID": "PELAJARI LEBIH LANJUT"
+      "EN": "Learn more",
+      "ID": "Pelajari lebih lanjut"
     },
     "showLess": {
-      "EN": "SHOW LESS",
-      "ID": "TUTUP"
+      "EN": "Show less",
+      "ID": "Tutup"
     },
     "yearsExperience": "10+",
     "fieldExp": {
@@ -77,12 +77,12 @@
     "coverageLine1": "Bali • Nusa Lembongan",
     "coverageLine2": "Nusa Penida • NTB",
     "approach": {
-      "EN": "Project-Based \n Approach",
+      "EN": "Project-based\napproach",
       "ID": "Pendekatan \n Berbasis Proyek"
     },
     "technical": {
-      "EN": "Technical & \n Regulatory Support",
-      "ID": "Dukungan Teknis \n & Regulasi Perizinan"
+      "EN": "Technical and\nregulatory support",
+      "ID": "Dukungan teknis\ndan regulasi perizinan"
     },
     "image": "/images/about-villa.jpg",
     "bannerOverlayText": {
@@ -90,7 +90,7 @@
       "ID": "Mendukung Pembangunan Dengan Solusi Air yang Andal"
     },
     "sectorsTitle": {
-      "EN": "SECTORS WE SERVE",
+      "EN": "Sectors we serve",
       "ID": "SEKTOR YANG KAMI LAYANI"
     },
     "sectorsDesc": {
@@ -102,8 +102,8 @@
       "ID": "Investigasi, Pengeboran, Instalasi"
     },
     "processDesc": {
-      "EN": "Our approach begins by understanding the project's water requirements and site conditions. When required, ground water investigation is conducted to obtain subsurface information and identify potential ground water zones before determining the appropriate drilling approach.",
-      "ID": "Pendekatan kami diawali dengan memahami kebutuhan debit air dan kondisi lokasi proyek. Bila diperlukan, investigasi air tanah dilakukan guna memperoleh data bawah permukaan serta mengidentifikasi zona potensi akuifer sebelum menetapkan metode pengeboran yang tepat."
+      "EN": "We start from your water demand and site conditions. Where needed, we run a geoelectric survey to map aquifer zones before choosing the drilling method.",
+      "ID": "Kami mulai dari kebutuhan debit dan kondisi lokasi Anda. Bila perlu, survei geolistrik memetakan zona akuifer sebelum metode pengeboran ditetapkan."
     },
     "dataDrivenTitle": {
       "EN": "Data-Driven Drilling Strategy",
@@ -114,8 +114,8 @@
       "ID": "Meminimalkan risiko biaya & mengoptimalkan debit air jangka panjang."
     },
     "permitTitle": {
-      "EN": "PERMITTING & COMPLIANCE",
-      "ID": "PERIZINAN & KEPATUHAN REGULASI"
+      "EN": "Permitting & compliance",
+      "ID": "Perizinan & kepatuhan regulasi"
     },
     "permitDesc": {
       "EN": "Beyond ground water investigation and drilling, DRYNO also assists clients with SIPA and NPWPD ABT processing, providing a more integrated solution from initial investigation to ground water utilization compliance.",
@@ -136,17 +136,17 @@
       "ID": "Ini adalah tantangan bisnis nyata."
     },
     "description": {
-      "EN": "As development continues across southern Bali, reliable water supply remains an important consideration for villas, resorts and commercial properties. Reported distribution challenges in Pecatu and surrounding areas highlight the value of evaluating long-term water supply strategies early in project planning. DRYNO supports property owners and developers through site-specific ground water investigation, deep well drilling and regulatory assistance.",
-      "ID": "Seiring pesatnya pembangunan di kawasan Bali selatan, keandalan pasokan air bersih menjadi faktor krusial bagi kelangsungan operasional vila, resor, dan properti komersial. Berbagai tantangan distribusi air di Pecatu dan sekitarnya menegaskan pentingnya evaluasi strategi pasokan air jangka panjang sejak tahap awal perencanaan. DRYNO hadir mendukung pemilik properti dan pengembang melalui investigasi air tanah spesifik lokasi, pengeboran sumur dalam (deep well), serta pendampingan regulasi perizinan."
+      "EN": "South Bali keeps building, but piped water can’t always keep up. In Pecatu and nearby areas, tanker prices run IDR 300,000–700,000 per load — a direct cost to villas, resorts, and commercial properties. DRYNO helps owners plan ahead with site-specific surveys, deep wells, and permits.",
+      "ID": "Bali selatan terus membangun, tetapi pasokan air PDAM tak selalu mencukupi. Di Pecatu dan sekitarnya, harga air tangki mencapai Rp300.000–Rp700.000 per ritase — biaya nyata bagi vila, resor, dan properti komersial. DRYNO membantu pemilik merencanakan sejak awal lewat survei spesifik lokasi, sumur dalam, dan perizinan."
     },
-    "bannerImage": "https://images.unsplash.com/photo-1535868118629-f37bcd69ff59?q=80&w=1176&auto=format&fit=crop",
+    "bannerImage": "/images/water-challenges-bali.jpg",
     "ctaCalculator": {
-      "EN": "calculate your spending water",
-      "ID": "hitung pengeluaran air anda"
+      "EN": "Calculate your tanker-water cost",
+      "ID": "Hitung biaya air tangki Anda"
     },
     "ctaSolutions": {
-      "EN": "Explore Solutions",
-      "ID": "Jelajahi Solusi"
+      "EN": "See services & pricing",
+      "ID": "Lihat layanan & harga"
     },
     "referencesEyebrow": {
       "EN": "References & Documented Reports",
@@ -179,7 +179,7 @@
           "EN": "News coverage on the clean water crisis in Pecatu and reported tanker water prices at the time (IDR 300,000–IDR 700,000 per tanker).",
           "ID": "Pemberitaan krisis air bersih di Pecatu dan kisaran harga air tangki yang dilaporkan saat itu (Rp300.000–Rp700.000 per tangki)."
         },
-        "url": "https://www.balipost.com/news/2025/05/29/461087/Krisis-Air-Bersih-di-Pecatu...html",
+        "url": "https://www.balipost.com/news/2025/05/29/461087/Krisis-Air-Bersih-di-Pecatu.html",
         "domain": "balipost.com",
         "badgeColor": "bg-blue-500/10 text-blue-700 border-blue-500/20"
       },
@@ -239,7 +239,7 @@
       "ID": "Solusi Rekayasa Air Tanah"
     },
     "subtitle": {
-      "EN": "End-to-end professional services from subsurface investigation, deep well drilling, to legal permitting support.",
+      "EN": "End-to-end professional services — from subsurface investigation and deep well drilling to legal permitting support.",
       "ID": "Layanan profesional komprehensif mulai dari investigasi geolistrik bawah tanah, pengeboran sumur dalam, hingga pengurusan izin legalitas."
     },
     "modalScope": {
@@ -289,7 +289,7 @@
       "includesEN": [
         "Site assessment",
         "Geoelectric / ground water investigation",
-        "Ground Water potential assessment",
+        "Ground water potential assessment",
         "Interpretation of investigation results",
         "Recommended drilling point",
         "Preliminary depth indication",
@@ -310,8 +310,8 @@
         "ID": "Biaya final disesuaikan dengan lokasi proyek, jumlah titik sounding, kondisi medan, serta kebutuhan teknis."
       },
       "disclaimer": {
-        "EN": "Do not claim or guarantee exact ground water depth or ground water availability.",
-        "ID": "Tidak dapat menjamin secara mutlak kedalaman pasti atau kepastian keberadaan air tanpa uji lapangan."
+        "EN": "Every site differs — we never promise a fixed depth or guaranteed yield before surveying.",
+        "ID": "Setiap lokasi berbeda — kami tidak pernah menjanjikan kedalaman pasti atau debit air sebelum survei."
       }
     },
     {
@@ -323,8 +323,8 @@
       },
       "category": "Drilling",
       "priceLabel": {
-        "EN": "Price",
-        "ID": "Biaya"
+        "EN": "Pricing",
+        "ID": "Harga"
       },
       "price": {
         "EN": "Request Quotation",
@@ -335,7 +335,7 @@
         "ID": "Pengeboran sumur dalam profesional yang disesuaikan dengan kondisi geologi dan kebutuhan debit proyek."
       },
       "fullDesc": {
-        "EN": "Professional deep well drilling according to project requirements, available investigation data, geological conditions, and actual field conditions. The drilling method, equipment, diameter, and target depth are determined according to the requirements and conditions of each project.",
+        "EN": "We drill to the depth your site actually needs — based on survey data, rock formation, and target yield. Method, rig, diameter, and casing are matched to each project’s geology and water demand.",
         "ID": "Layanan pengeboran sumur dalam dengan armada mesin bor heavy-duty sesuai spesifikasi teknis, data investigasi, dan kondisi formasi batuan aktual. Metode pengeboran, diameter lubang, dan kedalaman target dirancang presisi untuk setiap proyek."
       },
       "image": "/images/service-2.jpg",
@@ -348,8 +348,8 @@
         "ID": ""
       },
       "disclaimer": {
-        "EN": "Do not advertise a universal drilling depth or guarantee ground water availability.",
-        "ID": "Kedalaman pengeboran bervariasi menurut kondisi hidrogeologi setempat."
+        "EN": "Every site differs — we never promise a fixed depth or guaranteed yield before surveying.",
+        "ID": "Kedalaman pengeboran selalu mengikuti kondisi hidrogeologi setempat — tidak ada angka universal."
       }
     },
     {
@@ -361,8 +361,8 @@
       },
       "category": "Installation",
       "priceLabel": {
-        "EN": "Price",
-        "ID": "Biaya"
+        "EN": "Pricing",
+        "ID": "Harga"
       },
       "price": {
         "EN": "Request Quotation",
@@ -373,7 +373,7 @@
         "ID": "Pemasangan pipa casing berkualitas tinggi dan konstruksi sumur untuk ketahanan jangka panjang."
       },
       "fullDesc": {
-        "EN": "Installation of well casing and related well components according to drilling conditions and project requirements. The final configuration is determined according to actual technical requirements.",
+        "EN": "We install steel or heavy-duty PVC casing with screens and gravel pack, built to keep water clean and the well structure solid for decades.",
         "ID": "Pemasangan pipa casing (besi/PVC heavy-duty), saringan (screen), gravel pack, dan konstruksi sumur sesuai standar teknis hidrolik guna memastikan air bersih bebas sedimen dan struktur sumur kokoh puluhan tahun."
       },
       "image": "/images/service-3.jpg",
@@ -381,9 +381,9 @@
       "includesEN": [],
       "includesID": [],
       "casingTypes": [
-        "6 inch casing",
-        "5 inch casing",
-        "4 inch casing"
+        "6″ casing",
+        "5″ casing",
+        "4″ casing"
       ],
       "note": {
         "EN": "",
@@ -403,8 +403,8 @@
       },
       "category": "Consultation",
       "priceLabel": {
-        "EN": "Price",
-        "ID": "Biaya"
+        "EN": "Pricing",
+        "ID": "Harga"
       },
       "price": {
         "EN": "Contact Us",
@@ -423,7 +423,7 @@
       "includesEN": [
         "Initial project assessment",
         "Water requirement discussion",
-        "Site-condition assessment",
+        "Site condition assessment",
         "Ground Water investigation strategy",
         "Drilling strategy",
         "Technical recommendation",
@@ -465,7 +465,7 @@
         "ID": "IDR 50,000,000"
       },
       "shortDesc": {
-        "EN": "Legal administrative assistance for Surat Izin Pengusahaan Air Tanah (SIPA).",
+        "EN": "End-to-end help securing your SIPA ground water extraction permit.",
         "ID": "Pendampingan administratif dan teknis untuk penerbitan Surat Izin Pengusahaan Air Tanah (SIPA)."
       },
       "fullDesc": {
@@ -478,8 +478,8 @@
       "includesID": [],
       "casingTypes": [],
       "note": {
-        "EN": "Price depends on project classification, location, and regulatory scope.",
-        "ID": "Biaya bergantung pada klasifikasi debit pemanfaatan, lokasi wilayah administratif, dan kelengkapan dokumen."
+        "EN": "Fixed quote after we review your water demand, location, and document readiness.",
+        "ID": "Penawaran pasti setelah kami meninjau kebutuhan debit, lokasi, dan kelengkapan dokumen."
       },
       "disclaimer": {
         "EN": "",
@@ -543,19 +543,25 @@
           "src": "/videos/Maison.mp4",
           "poster": "/images/project/maison1.webp",
           "title": "Video Operasi Pengeboran - Maison Horizon",
-          "description": "Dokumentasi video langsung proses pengeboran sumur dalam hingga kedalaman 220 meter di kawasan Pecatu, Uluwatu."
+          "description": "Dokumentasi video langsung proses pengeboran sumur dalam hingga kedalaman 220 meter di kawasan Pecatu, Uluwatu.",
+          "titleEN": "Drilling operation video — Maison Horizon",
+          "descriptionEN": "Live footage of deep-well drilling down to 220 metres in Pecatu, Uluwatu."
         },
         {
           "type": "image",
           "src": "/images/project/maison1.webp",
           "title": "Ground Water Investigation & Rig Setup",
-          "description": "Setup alat investigasi geolistrik dan persiapan titik bor sumur dalam Maison Horizon."
+          "description": "Setup alat investigasi geolistrik dan persiapan titik bor sumur dalam Maison Horizon.",
+          "titleEN": "Ground water investigation & rig setup",
+          "descriptionEN": "Geoelectric survey tools and drilling-point preparation at Maison Horizon."
         },
         {
           "type": "image",
           "src": "/images/project/maison2.webp",
           "title": "Deep Drilling & Water Discharge Testing",
-          "description": "Proses pengeboran mencapai 220 m dengan hasil debit air melimpah 10 m³/jam."
+          "description": "Proses pengeboran mencapai 220 m dengan hasil debit air melimpah 10 m³/jam.",
+          "titleEN": "Deep drilling & discharge testing",
+          "descriptionEN": "Drilling to 220 m with a tested yield of 10 m³/hour."
         }
       ]
     },
@@ -576,25 +582,33 @@
           "src": "/videos/Fira Uluwatu Cemongkak.mp4",
           "poster": "/images/project/Fira Uluwatu Cemongkak1.webp",
           "title": "Video Dokumentasi Lapangan - Fira Uluwatu Cemongkak",
-          "description": "Rekaman video pengerjaan pengeboran sumur dalam menembus formasi batuan karst kapur di Bingin, Uluwatu."
+          "description": "Rekaman video pengerjaan pengeboran sumur dalam menembus formasi batuan karst kapur di Bingin, Uluwatu.",
+          "titleEN": "Field drilling video — Fira Uluwatu Cemongkak",
+          "descriptionEN": "Drilling through hard karst limestone in Bingin, Uluwatu."
         },
         {
           "type": "image",
           "src": "/images/project/Fira Uluwatu Cemongkak1.webp",
           "title": "Heavy Rig Mobilization & Site Setup",
-          "description": "Mobilisasi heavy rig dan positioning alat di lokasi Cemongkak, Bingin, Uluwatu."
+          "description": "Mobilisasi heavy rig dan positioning alat di lokasi Cemongkak, Bingin, Uluwatu.",
+          "titleEN": "Heavy rig mobilisation & site setup",
+          "descriptionEN": "Mobilising the heavy rig at Cemongkak, Bingin, Uluwatu."
         },
         {
           "type": "image",
           "src": "/images/project/Fira Uluwatu Cemongkak2.webp",
           "title": "Deep Well Drilling Operation",
-          "description": "Pengeboran formasi batuan karst kapur keras menembus kedalaman 170 meter."
+          "description": "Pengeboran formasi batuan karst kapur keras menembus kedalaman 170 meter.",
+          "titleEN": "Deep well drilling operation",
+          "descriptionEN": "Penetrating hard karst rock down to 170 metres."
         },
         {
           "type": "image",
           "src": "/images/project/Fira Uluwatu Cemongkak3.webp",
           "title": "Casing Installation & Well Development",
-          "description": "Instalasi pipa casing baja dan konstruksi sumur dengan debit air 5 m³/jam."
+          "description": "Instalasi pipa casing baja dan konstruksi sumur dengan debit air 5 m³/jam.",
+          "titleEN": "Casing installation & well development",
+          "descriptionEN": "Steel casing installation with a tested yield of 5 m³/hour."
         }
       ]
     },
@@ -615,32 +629,42 @@
           "src": "/videos/Bebas Villa1.mp4",
           "poster": "/images/project/Bebas Villa1.webp",
           "title": "Video Pengeboran Lapangan Bagian 1 - Bebas Villa",
-          "description": "Dokumentasi video penetrasi batuan dan instalasi alat pengeboran sumur dalam 105 m di Bingin."
+          "description": "Dokumentasi video penetrasi batuan dan instalasi alat pengeboran sumur dalam 105 m di Bingin.",
+          "titleEN": "Field drilling video part 1 — Bebas Villa",
+          "descriptionEN": "Rock penetration and rig setup for the 105 m deep well in Bingin."
         },
         {
           "type": "video",
           "src": "/videos/Bebas Villa2.mp4",
           "poster": "/images/project/Tool Equipment_result.webp",
           "title": "Video Pengujian & Debit Air Bagian 2 - Bebas Villa",
-          "description": "Dokumentasi video semburan air tanah dan pengujian debit 5 m³/jam yang berhasil didapatkan."
+          "description": "Dokumentasi video semburan air tanah dan pengujian debit 5 m³/jam yang berhasil didapatkan.",
+          "titleEN": "Yield testing video part 2 — Bebas Villa",
+          "descriptionEN": "Groundwater discharge footage with a tested yield of 5 m³/hour."
         },
         {
           "type": "image",
           "src": "/images/project/Bebas Villa1.webp",
           "title": "Well Drilling in Bingin",
-          "description": "Operasi pengeboran sumur dalam 105 m untuk menyuplai air bersih Bebas Villa."
+          "description": "Operasi pengeboran sumur dalam 105 m untuk menyuplai air bersih Bebas Villa.",
+          "titleEN": "Well drilling in Bingin",
+          "descriptionEN": "105 m deep-well operation supplying clean water to Bebas Villa."
         },
         {
           "type": "image",
           "src": "/images/project/Tool Equipment_result.webp",
           "title": "Heavy-Duty Drilling Rig on Site",
-          "description": "Rig hidrolik bertenaga tinggi untuk menembus formasi batuan keras perbukitan Uluwatu."
+          "description": "Rig hidrolik bertenaga tinggi untuk menembus formasi batuan keras perbukitan Uluwatu.",
+          "titleEN": "Heavy-duty drilling rig on site",
+          "descriptionEN": "High-powered hydraulic rig for hard Uluwatu rock formations."
         },
         {
           "type": "image",
           "src": "/images/project/Tool Equipment 2_result.webp",
           "title": "High-Pressure DTH Hammer System",
-          "description": "Sistem kompresor bertekanan tinggi dan mata bor DTH hammer di lokasi proyek."
+          "description": "Sistem kompresor bertekanan tinggi dan mata bor DTH hammer di lokasi proyek.",
+          "titleEN": "High-pressure DTH hammer system",
+          "descriptionEN": "High-pressure compressor and DTH hammer bits on site."
         }
       ]
     }
@@ -655,12 +679,12 @@
       "ID": "Peralatan"
     },
     "titleLine2": {
-      "EN": "& Capability",
-      "ID": "& Kapabilitas Kami"
+      "EN": "and Capability",
+      "ID": "dan Kapabilitas Kami"
     },
     "desc": {
-      "EN": "Equipped with professional equipment and supported by an experienced field team to execute ground water projects safely and efficiently.",
-      "ID": "Didukung armada peralatan pengeboran modern dan tim lapangan profesional berpengalaman untuk mengeksekusi proyek air tanah secara aman, presisi, dan andal."
+      "EN": "Professional rigs and an experienced field crew, ready for safe, precise drilling across Bali and NTB.",
+      "ID": "Armada rig profesional dan tim lapangan berpengalaman, siap mengebor dengan aman dan presisi di Bali dan NTB."
     },
     "cta": {
       "EN": "DISCUSS CAPABILITIES",
@@ -753,8 +777,8 @@
       "ID": "PERTANYAAN UMUM"
     },
     "title": {
-      "EN": "Got Questions? We Have Answers",
-      "ID": "Punya Pertanyaan? Kami Punya Jawabannya"
+      "EN": "Ground water questions, answered directly",
+      "ID": "Pertanyaan air tanah, dijawab langsung"
     },
     "subtitle": {
       "EN": "Can't find what you're looking for? Contact our engineering team directly via WhatsApp or inquiry form.",
@@ -772,8 +796,8 @@
           "ID": "Mengapa investigasi air tanah (geolistrik) sangat disarankan sebelum pemboran?"
         },
         "answer": {
-          "EN": "Ground Water investigation (geoelectric survey) provides critical subsurface information to identify potential ground water-bearing zones, estimate depth indications, and assess geological formations before drilling. This minimizes financial risk and helps select the most optimal drilling point.",
-          "ID": "Survei geolistrik menyajikan data formasi bawah permukaan yang akurat untuk mendeteksi lapisan pembawa air (akuifer), memperkirakan kisaran kedalaman, serta memetakan batuan keras. Hal ini sangat meminimalkan risiko biaya bor kering (dry hole) dan membantu memilih titik bor terbaik."
+          "EN": "Yes — a geoelectric survey maps aquifers before you drill, cutting dry-hole risk. Ground Water investigation (geoelectric survey) provides critical subsurface information to identify potential ground water-bearing zones, estimate depth indications, and assess geological formations before drilling. This minimizes financial risk and helps select the most optimal drilling point.",
+          "ID": "Ya — survei geolistrik memetakan akuifer sebelum dibor, menekan risiko bor kering. Survei geolistrik menyajikan data formasi bawah permukaan yang akurat untuk mendeteksi lapisan pembawa air (akuifer), memperkirakan kisaran kedalaman, serta memetakan batuan keras. Hal ini sangat meminimalkan risiko biaya bor kering (dry hole) dan membantu memilih titik bor terbaik."
         }
       },
       {
@@ -783,8 +807,8 @@
           "ID": "Berapa rata-rata kedalaman pemboran sumur dalam di Bali & NTB?"
         },
         "answer": {
-          "EN": "Drilling depths vary significantly based on location and regional hydrogeology. For instance, cliff terrain in Uluwatu or Pecatu may require depths between 100m to 220m+, whereas coastal plains or inland areas may require different depths. We do not guarantee a universal depth and determine drilling depth according to site conditions.",
-          "ID": "Kedalaman sangat bervariasi tergantung topografi dan hidrogeologi kawasan. Sebagai contoh, di area tebing Pecatu dan Uluwatu kedalaman sering berkisar 100m hingga 220m+, sedangkan di dataran pesisir atau lembah bisa lebih dangkal. Kami tidak menerapkan kedalaman universal, melainkan disesuaikan dengan kondisi lapangan."
+          "EN": "100–220m+ in Uluwatu karst, shallower in plains. Depth is set by survey, never guaranteed. Drilling depths vary significantly based on location and regional hydrogeology. For instance, cliff terrain in Uluwatu or Pecatu may require depths between 100m to 220m+, whereas coastal plains or inland areas may require different depths. We do not guarantee a universal depth and determine drilling depth according to site conditions.",
+          "ID": "100–220m+ di karst Uluwatu, lebih dangkal di dataran. Kedalaman ikut survei, tak pernah dijamin. Kedalaman sangat bervariasi tergantung topografi dan hidrogeologi kawasan. Sebagai contoh, di area tebing Pecatu dan Uluwatu kedalaman sering berkisar 100m hingga 220m+, sedangkan di dataran pesisir atau lembah bisa lebih dangkal. Kami tidak menerapkan kedalaman universal, melainkan disesuaikan dengan kondisi lapangan."
         }
       },
       {
@@ -794,8 +818,8 @@
           "ID": "Berapa lama estimasi pengerjaan proyek sumur dalam?"
         },
         "answer": {
-          "EN": "On average, field drilling and well casing installation take between 2 to 4 weeks, depending on target depth, subsurface rock hardness, site accessibility, and weather conditions.",
-          "ID": "Rata-rata pelaksanaan pengeboran dan pemasangan casing memakan waktu antara 2 hingga 4 minggu, tergantung kedalaman target, kekerasan formasi batuan, kemudahan akses alat berat, serta cuaca."
+          "EN": "Typically 2–4 weeks for drilling plus casing, depending on depth, rock, and access. On average, field drilling and well casing installation take between 2 to 4 weeks, depending on target depth, subsurface rock hardness, site accessibility, and weather conditions.",
+          "ID": "Umumnya 2–4 minggu untuk pengeboran plus casing, tergantung kedalaman, batuan, dan akses. Rata-rata pelaksanaan pengeboran dan pemasangan casing memakan waktu antara 2 hingga 4 minggu, tergantung kedalaman target, kekerasan formasi batuan, kemudahan akses alat berat, serta cuaca."
         }
       },
       {
@@ -805,8 +829,8 @@
           "ID": "Apa itu SIPA dan mengapa wajib dimiliki oleh properti komersial?"
         },
         "answer": {
-          "EN": "SIPA (Surat Izin Pengusahaan Air Tanah) is the official government permit required for ground water extraction and utilization. Having a valid SIPA ensures your villa, resort, or commercial project remains legally compliant with environmental regulations.",
-          "ID": "SIPA (Surat Izin Pengusahaan Air Tanah) adalah izin legal resmi dari pemerintah untuk pengambilan dan pemanfaatan air tanah. Memiliki SIPA yang sah menjamin vila, hotel, resor, atau bisnis komersial Anda beroperasi secara legal dan bebas dari sanksi lingkungan."
+          "EN": "SIPA is the official permit for commercial groundwater use — operating without one risks sanctions. SIPA (Surat Izin Pengusahaan Air Tanah) is the official government permit required for ground water extraction and utilization. Having a valid SIPA ensures your villa, resort, or commercial project remains legally compliant with environmental regulations.",
+          "ID": "SIPA adalah izin resmi pemanfaatan air tanah komersial — tanpa SIPA berisiko sanksi. SIPA (Surat Izin Pengusahaan Air Tanah) adalah izin legal resmi dari pemerintah untuk pengambilan dan pemanfaatan air tanah. Memiliki SIPA yang sah menjamin vila, hotel, resor, atau bisnis komersial Anda beroperasi secara legal dan bebas dari sanksi lingkungan."
         }
       },
       {
@@ -816,8 +840,8 @@
           "ID": "Wilayah mana saja yang dicakup oleh layanan DRYNO?"
         },
         "answer": {
-          "EN": "DRYNO provides integrated ground water solutions across Bali, Nusa Lembongan, Nusa Penida, and West Nusa Tenggara (NTB) including Lombok and surrounding regions.",
-          "ID": "DRYNO melayani seluruh wilayah Bali (Badung, Gianyar, Tabanan, Buleleng, Karangasem, dll.), Nusa Lembongan, Nusa Penida, serta Nusa Tenggara Barat (Lombok dan Sumbawa)."
+          "EN": "All of Bali, Nusa Lembongan, Nusa Penida, and Lombok/Sumbawa (NTB). DRYNO provides integrated ground water solutions across Bali, Nusa Lembongan, Nusa Penida, and West Nusa Tenggara (NTB) including Lombok and surrounding regions.",
+          "ID": "Seluruh Bali, Nusa Lembongan, Nusa Penida, serta Lombok/Sumbawa (NTB). DRYNO melayani seluruh wilayah Bali (Badung, Gianyar, Tabanan, Buleleng, Karangasem, dll.), Nusa Lembongan, Nusa Penida, serta Nusa Tenggara Barat (Lombok dan Sumbawa)."
         }
       },
       {
@@ -827,8 +851,8 @@
           "ID": "Bagaimana cara mendapatkan penawaran biaya yang akurat?"
         },
         "answer": {
-          "EN": "You can contact our engineering team directly via WhatsApp or our contact form. We will review your project location, estimated water requirements, and site accessibility to provide a detailed project proposal.",
-          "ID": "Anda dapat menghubungi tim teknis kami langsung melalui WhatsApp atau formulir kontak. Kami akan meninjau titik lokasi proyek Anda, perkiraan kebutuhan debit air, serta aksesibilitas lokasi untuk memberikan proposal teknis dan biaya yang rinci."
+          "EN": "WhatsApp us your location, water need, and site access — we reply with a fixed-scope proposal. You can contact our engineering team directly via WhatsApp or our contact form. We will review your project location, estimated water requirements, and site accessibility to provide a detailed project proposal.",
+          "ID": "WhatsApp lokasi, kebutuhan air, dan akses alat — kami balas dengan proposal lingkup tetap. Anda dapat menghubungi tim teknis kami langsung melalui WhatsApp atau formulir kontak. Kami akan meninjau titik lokasi proyek Anda, perkiraan kebutuhan debit air, serta aksesibilitas lokasi untuk memberikan proposal teknis dan biaya yang rinci."
         }
       }
     ]
@@ -843,7 +867,7 @@
       "ID": "Konsultasikan Proyek Air Anda"
     },
     "desc": {
-      "EN": "Reach out to our engineering team to assess your ground water requirements, schedule an investigation, or request a project quotation.",
+      "EN": "Tell us about your site and water needs — we reply with a fixed-scope quote and a survey schedule.",
       "ID": "Diskusikan kebutuhan air tanah properti Anda bersama tim teknis kami untuk evaluasi lapangan, jadwal survei geolistrik, atau pengajuan penawaran biaya resmi."
     },
     "whatsappNumber": "6285792096854",
@@ -851,11 +875,11 @@
     "email": "info@drynotech.com",
     "coverage": "Bali • Nusa Lembongan • Nusa Penida • NTB",
     "experienceHighlight": {
-      "EN": "10+ Years Field Experience in hydrogeology, drilling & regulatory compliance.",
-      "ID": "10+ Tahun Pengalaman Lapangan di bidang hidrogeologi, pemboran & kepatuhan regulasi."
+      "EN": "10+ years of field experience in hydrogeology, drilling and regulatory compliance.",
+      "ID": "10+ tahun pengalaman lapangan di bidang hidrogeologi, pemboran, dan kepatuhan regulasi."
     },
     "footerBrandDesc": {
-      "EN": "DRYNO — Engineering Water Solution is an integrated ground water solution provider specializing in investigation, deep well drilling, well installation, technical consultation, and SIPA / NPWPD ABT permitting assistance across Bali & NTB.",
+      "EN": "DRYNO — Engineering Water Solution is an integrated ground water provider for Bali and NTB. We handle surveys, deep well drilling, installation, and consultation — plus SIPA and NPWPD ABT permitting.",
       "ID": "DRYNO — Engineering Water Solution adalah penyedia solusi air tanah terintegrasi yang berspesialisasi dalam investigasi geolistrik, pengeboran sumur dalam, instalasi sumur, konsultasi teknis, serta pendampingan perizinan SIPA / NPWPD ABT di Bali & NTB."
     },
     "collaborationName": "autoneka.id",

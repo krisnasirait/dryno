@@ -7,7 +7,7 @@ import {
   HiPhone,
   HiEnvelope,
   HiCheckCircle,
-  HiSparkles,
+  HiShieldCheck,
 } from "react-icons/hi2";
 import { useLanguage } from "@/context/LanguageContext";
 import { translations } from "@/context/translations";
@@ -59,10 +59,7 @@ export default function Contact() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Navy Card Container */}
-        <div className="relative rounded-3xl bg-gradient-to-br from-deep-navy via-deep-navy-dark to-charcoal text-white p-4 sm:p-12 lg:p-16 shadow-2xl overflow-hidden">
-          {/* Decorative Glowing Orbs */}
-          <div className="absolute top-0 right-0 w-96 h-96 bg-engineering-blue/20 rounded-full blur-3xl pointer-events-none" />
-          <div className="absolute bottom-0 left-0 w-96 h-96 bg-engineering-blue-light/10 rounded-full blur-3xl pointer-events-none" />
+        <div className="relative rounded-3xl bg-deep-navy text-white p-4 sm:p-12 lg:p-16 shadow-2xl overflow-hidden">
 
           <div className="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-16 items-start">
             {/* Left Side: Header & Info (lg:col-span-5) */}
@@ -77,7 +74,7 @@ export default function Contact() {
                 </div>
 
                 {/* Main CTA Heading */}
-                <h2 className="text-2.5xl sm:text-4xl lg:text-5xl font-black text-white leading-tight uppercase tracking-tight mb-2 sm:mb-6">
+                <h2 className="text-4xl lg:text-5xl font-black text-white leading-tight uppercase tracking-tight mb-2 sm:mb-6">
                   {contact.title[language]}
                 </h2>
 
@@ -94,7 +91,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="text-[10px] sm:text-xs font-bold text-gray-300 uppercase tracking-wider">
-                      OPERATIONAL COVERAGE
+                      {language === "EN" ? "OPERATIONAL COVERAGE" : "CAKUPAN OPERASIONAL"}
                     </h4>
                     <p className="text-xs sm:text-sm font-semibold text-white">
                       {contact.coverage}
@@ -108,7 +105,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="text-[10px] sm:text-xs font-bold text-gray-300 uppercase tracking-wider">
-                      DIRECT WHATSAPP & PHONE
+                      {language === "EN" ? "DIRECT WHATSAPP & PHONE" : "WHATSAPP & TELEPON LANGSUNG"}
                     </h4>
                     <p className="text-xs sm:text-sm font-semibold text-white">
                       {contact.phoneDisplay}
@@ -122,7 +119,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="text-[10px] sm:text-xs font-bold text-gray-300 uppercase tracking-wider">
-                      EMAIL INQUIRIES
+                      {language === "EN" ? "EMAIL INQUIRIES" : "PERTANYAAN EMAIL"}
                     </h4>
                     <p className="text-xs sm:text-sm font-semibold text-white">
                       {contact.email}
@@ -133,7 +130,7 @@ export default function Contact() {
 
               {/* Trust Badge */}
               <div className="p-3 sm:p-4 rounded-2xl bg-white/5 border border-white/10 flex items-center gap-2.5 sm:gap-3">
-                <HiSparkles className="w-4 h-4 sm:w-5 sm:h-5 text-engineering-blue-light shrink-0" />
+                <HiShieldCheck className="w-4 h-4 sm:w-5 sm:h-5 text-engineering-blue-light shrink-0" />
                 <p className="text-[11px] sm:text-xs text-gray-300">
                   {contact.experienceHighlight[language]}
                 </p>
@@ -143,7 +140,7 @@ export default function Contact() {
             {/* Right Side: Contact Form (lg:col-span-7) */}
             <div className="lg:col-span-7">
               {submitted ? (
-                <div className="p-8 sm:p-12 rounded-2xl bg-white/10 backdrop-blur-md border border-white/20 text-center space-y-6 animate-fadeIn">
+                <div className="p-8 sm:p-12 rounded-2xl bg-white/5 border border-white/10 text-center space-y-6">
                   <div className="w-16 h-16 rounded-full bg-engineering-blue-light/20 text-engineering-blue-light flex items-center justify-center mx-auto">
                     <HiCheckCircle className="w-10 h-10" />
                   </div>
@@ -171,12 +168,12 @@ export default function Contact() {
                       <input
                         type="text"
                         required
-                        placeholder="John Doe"
+                        placeholder="Your full name"
                         value={formData.name}
                         onChange={(e) =>
                           setFormData({ ...formData, name: e.target.value })
                         }
-                        className="w-full px-3.5 py-2.5 sm:px-4 sm:py-3.5 rounded-xl bg-white/10 border border-white/15 text-white placeholder-gray-400 focus:outline-none focus:border-engineering-blue-light focus:bg-white/15 transition-all text-xs sm:text-sm"
+                        className="w-full px-3.5 py-2.5 sm:px-4 sm:py-3.5 rounded-xl bg-white border border-white/20 text-deep-navy placeholder-gray-500 focus:outline-none focus:border-engineering-blue-light transition-all text-xs sm:text-sm"
                       />
                     </div>
 
@@ -188,12 +185,12 @@ export default function Contact() {
                       <input
                         type="text"
                         required
-                        placeholder="Maison Resort Uluwatu"
+                        placeholder="Property / project name"
                         value={formData.company}
                         onChange={(e) =>
                           setFormData({ ...formData, company: e.target.value })
                         }
-                        className="w-full px-3.5 py-2.5 sm:px-4 sm:py-3.5 rounded-xl bg-white/10 border border-white/15 text-white placeholder-gray-400 focus:outline-none focus:border-engineering-blue-light focus:bg-white/15 transition-all text-xs sm:text-sm"
+                        className="w-full px-3.5 py-2.5 sm:px-4 sm:py-3.5 rounded-xl bg-white border border-white/20 text-deep-navy placeholder-gray-500 focus:outline-none focus:border-engineering-blue-light transition-all text-xs sm:text-sm"
                       />
                     </div>
                   </div>
@@ -212,7 +209,7 @@ export default function Contact() {
                         onChange={(e) =>
                           setFormData({ ...formData, location: e.target.value })
                         }
-                        className="w-full px-3.5 py-2.5 sm:px-4 sm:py-3.5 rounded-xl bg-white/10 border border-white/15 text-white placeholder-gray-400 focus:outline-none focus:border-engineering-blue-light focus:bg-white/15 transition-all text-xs sm:text-sm"
+                        className="w-full px-3.5 py-2.5 sm:px-4 sm:py-3.5 rounded-xl bg-white border border-white/20 text-deep-navy placeholder-gray-500 focus:outline-none focus:border-engineering-blue-light transition-all text-xs sm:text-sm"
                       />
                     </div>
 
@@ -229,13 +226,13 @@ export default function Contact() {
                             projectType: e.target.value,
                           })
                         }
-                        className="w-full px-3.5 py-2.5 sm:px-4 sm:py-3.5 rounded-xl bg-deep-navy border border-white/15 text-white focus:outline-none focus:border-engineering-blue-light transition-all text-xs sm:text-sm cursor-pointer"
+                        className="w-full px-3.5 py-2.5 sm:px-4 sm:py-3.5 rounded-xl bg-white border border-white/20 text-deep-navy focus:outline-none focus:border-engineering-blue-light text-xs sm:text-sm cursor-pointer"
                       >
                         {projectTypes.map((type) => (
                           <option
                             key={type}
                             value={type}
-                            className="bg-deep-navy text-white"
+                            className="bg-white text-deep-navy"
                           >
                             {type}
                           </option>
@@ -261,14 +258,14 @@ export default function Contact() {
                       onChange={(e) =>
                         setFormData({ ...formData, message: e.target.value })
                       }
-                      className="w-full px-3.5 py-2.5 sm:px-4 sm:py-3.5 rounded-xl bg-white/10 border border-white/15 text-white placeholder-gray-400 focus:outline-none focus:border-engineering-blue-light focus:bg-white/15 transition-all text-xs sm:text-sm resize-none"
+                      className="w-full px-3.5 py-2.5 sm:px-4 sm:py-3.5 rounded-xl bg-white border border-white/20 text-deep-navy placeholder-gray-500 focus:outline-none focus:border-engineering-blue-light transition-all text-xs sm:text-sm resize-none"
                     />
                   </div>
 
                   {/* Submit Button */}
                   <button
                     type="submit"
-                    className="w-full inline-flex items-center justify-center gap-2.5 py-3 sm:py-4 rounded-xl bg-engineering-blue hover:bg-engineering-blue-light text-white text-xs font-extrabold tracking-wider uppercase transition-all duration-300 hover:shadow-lg hover:shadow-engineering-blue/30 active:scale-[0.99] group cursor-pointer"
+                    className="w-full inline-flex items-center justify-center gap-2.5 py-3 sm:py-4 rounded-xl bg-engineering-blue hover:bg-engineering-blue-light text-white text-xs font-extrabold tracking-wider uppercase transition-[background-color,box-shadow] duration-300 hover:shadow-lg hover:shadow-engineering-blue/30 group cursor-pointer"
                   >
                     <span>{t.formSubmit}</span>
                     <HiPaperAirplane className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />

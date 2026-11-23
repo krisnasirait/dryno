@@ -1,33 +1,41 @@
 import React from "react";
-import Navbar from "@/components/Navbar";
-import Hero from "@/components/Hero";
+import TopBar from "@/components/chema/TopBar";
+import ChemHeader from "@/components/chema/ChemHeader";
+import ChemHero from "@/components/chema/ChemHero";
+import ChemEffects from "@/components/chema/ChemEffects";
+import SolutionsTabs from "@/components/chema/SolutionsTabs";
+import Approach360 from "@/components/chema/Approach360";
+import StatsBar from "@/components/chema/StatsBar";
+import StickyRail from "@/components/chema/StickyRail";
+import FooterChem from "@/components/chema/FooterChem";
 import About from "@/components/About";
 import WaterChallenges from "@/components/WaterChallenges";
-import Services from "@/components/Services";
 import HowWeWork from "@/components/HowWeWork";
 import Projects from "@/components/Projects";
 import Equipment from "@/components/Equipment";
-import Gallery from "@/components/Gallery";
 import Faq from "@/components/Faq";
 import Contact from "@/components/Contact";
-import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-warm-white flex flex-col font-sans">
-      <Navbar />
-      <Hero />
+      <ChemEffects />
+      <TopBar />
+      <ChemHeader />
+      <ChemHero />
       <About />
       <WaterChallenges />
-      <Services />
+      <SolutionsTabs />
+      <Approach360 />
+      <StatsBar />
       <HowWeWork />
       <Projects />
       <Equipment />
-      {/* <Gallery /> */}
       <Faq />
       <Contact />
-      <Footer />
+      <FooterChem />
+      <StickyRail />
       <WhatsAppButton />
     </main>
   );

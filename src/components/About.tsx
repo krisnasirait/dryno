@@ -7,12 +7,11 @@ import {
   HiMapPin,
   HiBriefcase,
   HiCog6Tooth,
-  HiSparkles,
+  HiArrowPath,
   HiShieldCheck,
   HiBuildingOffice2,
   HiHomeModern,
   HiWrenchScrewdriver,
-  HiChevronDown,
   HiChevronUp,
 } from "react-icons/hi2";
 import { useLanguage } from "@/context/LanguageContext";
@@ -72,7 +71,7 @@ export default function About() {
               </span>
 
               {/* Main Heading */}
-              <h2 className="text-2.5xl sm:text-4xl lg:text-5xl font-bold text-deep-navy leading-[1.12] tracking-tight mb-2 lg:mb-6">
+              <h2 className="text-4xl lg:text-5xl font-bold text-deep-navy leading-[1.12] tracking-tight mb-2 lg:mb-6">
                 {about.titleLine1[language]} <br />
                 {about.titleLine2[language]} <br />
                 {about.titleLine3[language]}
@@ -88,7 +87,7 @@ export default function About() {
             <div className="pt-1 sm:pt-2">
               <button
                 onClick={() => setIsExpanded(!isExpanded)}
-                className="inline-flex items-center gap-3 sm:gap-4 px-5 py-2.5 sm:px-7 sm:py-3.5 rounded-full bg-deep-navy text-white text-[11px] sm:text-xs font-bold tracking-wider uppercase transition-all duration-300 hover:bg-engineering-blue hover:shadow-lg hover:scale-105 active:scale-95 group"
+                className="inline-flex items-center gap-3 sm:gap-4 px-5 py-2.5 sm:px-7 sm:py-3.5 rounded-full bg-deep-navy text-white text-[11px] sm:text-xs font-bold tracking-wider uppercase transition-colors duration-300 hover:bg-engineering-blue group"
               >
                 <span>
                   {isExpanded
@@ -110,7 +109,7 @@ export default function About() {
           <div className="lg:col-span-3 flex flex-col justify-center space-y-4 sm:space-y-7 border-y lg:border-y-0 lg:border-x border-gray-100 py-4 sm:py-6 lg:py-0 lg:px-8">
             {/* Highlight 1: Years Experience */}
             <div className="flex items-start gap-3 sm:gap-4">
-              <div className="text-2.5xl sm:text-4xl font-extrabold text-deep-navy leading-none">
+              <div className="text-4xl font-extrabold text-deep-navy leading-none">
                 {about.yearsExperience}
               </div>
               <div className="text-[11px] sm:text-xs font-semibold text-gray-600 leading-tight whitespace-pre-line">
@@ -162,7 +161,9 @@ export default function About() {
           <div className="lg:col-span-4 relative min-h-[200px] sm:min-h-[320px] lg:min-h-[380px] rounded-2xl overflow-hidden shadow-xl group">
             <Image
               src={about.image || "/images/about-villa.jpg"}
-              alt="Supporting Development with Reliable Water Solutions in Bali"
+              sizes="(max-width: 1024px) 100vw, 40vw"
+              decoding="async"
+              alt="Deep-well drilling rig at work in Pecatu, Uluwatu — DRYNO Bali"
               fill
               unoptimized={
                 about.image?.startsWith("http") ||
@@ -193,7 +194,7 @@ export default function About() {
         >
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-8">
             {/* Expanded Card 1: Sectors We Serve */}
-            <div className="p-4 sm:p-8 rounded-2xl bg-warm-white border border-gray-100 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+            <div className="border-t-2 border-deep-navy/10 pt-4 sm:pt-6 flex flex-col justify-between">
               <div>
                 <div className="flex items-center gap-2.5 sm:gap-3 mb-3 sm:mb-4">
                   <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-engineering-blue/10 flex items-center justify-center text-engineering-blue">
@@ -212,7 +213,7 @@ export default function About() {
                 {clientTypes.map((item, idx) => (
                   <span
                     key={idx}
-                    className="inline-flex items-center gap-1.5 px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-lg bg-white border border-gray-200 text-[11px] sm:text-xs font-semibold text-deep-navy shadow-2xs"
+                    className="inline-flex items-center gap-1.5 px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-lg bg-white border border-gray-200 text-[11px] sm:text-xs font-semibold text-deep-navy"
                   >
                     <item.icon className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-engineering-blue" />
                     {item.label}
@@ -222,11 +223,11 @@ export default function About() {
             </div>
 
             {/* Expanded Card 2: Systematic Approach */}
-            <div className="p-4 sm:p-8 rounded-2xl bg-warm-white border border-gray-100 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+            <div className="border-t-2 border-deep-navy/10 pt-4 sm:pt-6 flex flex-col justify-between">
               <div>
                 <div className="flex items-center gap-2.5 sm:gap-3 mb-3 sm:mb-4">
                   <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-engineering-blue/10 flex items-center justify-center text-engineering-blue">
-                    <HiSparkles className="w-4 h-4 sm:w-5 sm:h-5" />
+                    <HiArrowPath className="w-4 h-4 sm:w-5 sm:h-5" />
                   </div>
                   <h4 className="text-base font-extrabold text-deep-navy uppercase tracking-wider">
                     {about.processTitle[language]}
@@ -249,7 +250,7 @@ export default function About() {
             </div>
 
             {/* Expanded Card 3: Permitting & Legal Compliance */}
-            <div className="p-4 sm:p-8 rounded-2xl bg-warm-white border border-gray-100 shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+            <div className="border-t-2 border-deep-navy/10 pt-4 sm:pt-6 flex flex-col justify-between">
               <div>
                 <div className="flex items-center gap-2.5 sm:gap-3 mb-3 sm:mb-4">
                   <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-engineering-blue/10 flex items-center justify-center text-engineering-blue">
@@ -265,10 +266,10 @@ export default function About() {
               </div>
 
               <div className="flex items-center gap-2 pt-2">
-                <span className="px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-lg bg-deep-navy text-white text-[11px] sm:text-xs font-bold tracking-wider uppercase shadow-xs">
+                <span className="px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-lg bg-deep-navy text-white text-[11px] sm:text-xs font-bold tracking-wider uppercase shadow-sm">
                   {language === "EN" ? "SIPA PERMIT" : "IZIN SIPA"}
                 </span>
-                <span className="px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-lg bg-engineering-blue text-white text-[11px] sm:text-xs font-bold tracking-wider uppercase shadow-xs">
+                <span className="px-2.5 py-1 sm:px-3 sm:py-1.5 rounded-lg bg-engineering-blue text-white text-[11px] sm:text-xs font-bold tracking-wider uppercase shadow-sm">
                   {language === "EN" ? "NPWPD ABT" : "PAJAK ABT"}
                 </span>
               </div>

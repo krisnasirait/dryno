@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import React, { useState, useMemo } from "react";
 import {
   HiCalculator,
@@ -27,7 +28,7 @@ export default function WaterTankerCalculator() {
   // Inputs
   const [dailyNeed, setDailyNeed] = useState<number>(1000);
   const [tankCapacity] = useState<number>(5000);
-  const [pricePerTank, setPricePerTank] = useState<number>(250000);
+  const [pricePerTank] = useState<number>(250000);
   const [projectionYears, setProjectionYears] = useState<5 | 10 | 25>(10);
 
   // Calculations
@@ -89,7 +90,7 @@ export default function WaterTankerCalculator() {
             <span>{t.badge}</span>
           </div>
 
-          <h1 className="text-2.5xl sm:text-4xl lg:text-5xl font-extrabold text-deep-navy leading-[1.15] tracking-tight mb-2 sm:mb-4">
+          <h1 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-deep-navy leading-[1.15] tracking-tight mb-2 sm:mb-4">
             {t.title}
           </h1>
 
@@ -213,16 +214,12 @@ export default function WaterTankerCalculator() {
                     IDR
                   </span>
                   <input
-                    disabled
-                    type="number"
-                    min="100000"
-                    max="2000000"
-                    step="25000"
-                    value={pricePerTank}
-                    onChange={(e) =>
-                      setPricePerTank(Math.max(0, Number(e.target.value)))
-                    }
-                    className="w-full bg-transparent text-right text-xs font-extrabold text-gray-500 cursor-not-allowed focus:outline-none pr-1"
+                    readOnly
+                    type="text"
+                    inputMode="numeric"
+                    value={formatNumber(pricePerTank)}
+                    aria-label={t.tankerPriceLabel}
+                    className="w-full bg-transparent text-right text-xs font-extrabold text-gray-500 focus:outline-none pr-1"
                   />
                 </div>
               </div>
@@ -276,7 +273,7 @@ export default function WaterTankerCalculator() {
                       ? `Akumulasi Pengeluaran Air Tangki (${projectionYears} Tahun)`
                       : `Cumulative Water Delivery Cost (${projectionYears} Years)`}
                   </span>
-                  <div className="text-2xl sm:text-4xl lg:text-4.5xl font-black text-white tracking-tight leading-none drop-shadow-md">
+                  <div className="text-2xl sm:text-4xl font-black text-white tracking-tight leading-none drop-shadow-md">
                     {formatIDR(calculations.projectedCost)}
                   </div>
                 </div>
@@ -367,7 +364,7 @@ export default function WaterTankerCalculator() {
                       : calculations.tanksPerMonth.toFixed(1)}
                   </span>
                   <span className="text-[11px] sm:text-xs font-medium text-gray-500">
-                    {language === "ID" ? "Tangki / bln" : "Trucks / mo"}
+                    {language === "ID" ? "tangki/bulan" : "trucks/month"}
                   </span>
                 </div>
                 <span className="text-[10px] text-gray-400 mt-0.5 block">
@@ -397,7 +394,7 @@ export default function WaterTankerCalculator() {
                   {formatIDR(calculations.yearlyCost)}
                 </div>
                 <span className="text-[10px] text-gray-400 mt-0.5 block">
-                  {language === "ID" ? "Bulanan × 12 bln" : "Monthly × 12 mo"}
+                  {language === "ID" ? "Bulanan × 12 bulan" : "Monthly × 12 months"}
                 </span>
               </div>
             </div>
@@ -422,13 +419,19 @@ export default function WaterTankerCalculator() {
                 <HiArrowRight className="w-3.5 h-3.5" />
               </a>
             </div>
+            <p className="text-[11px] sm:text-xs text-gray-500">
+              {language === "EN" ? "Compare with field proof:" : "Bandingkan dengan bukti lapangan:"}{" "}
+              <Link href="/#projects" className="font-bold text-[#005B94] underline underline-offset-2 hover:text-[#0077c8]">220m Uluwatu →</Link>{" "}
+              <span aria-hidden>•</span>{" "}
+              <Link href="/#faq-faq-4" className="font-bold text-[#005B94] underline underline-offset-2 hover:text-[#0077c8]">{language === "EN" ? "SIPA FAQ" : "FAQ SIPA"} →</Link>
+            </p>
           </div>
         </div>
 
         {/* Informational Notes & Disclaimers */}
         <div className="space-y-3.5">
           {/* Note 1: Baseline Simulation Parameters */}
-          <div className="p-4 sm:p-5 rounded-2xl bg-white border border-gray-200/80 text-xs text-gray-600 flex items-start gap-3 shadow-2xs">
+          <div className="p-4 sm:p-5 rounded-2xl bg-white border border-gray-200/80 text-xs text-gray-600 flex items-start gap-3">
             <HiInformationCircle className="w-5 h-5 text-engineering-blue shrink-0 mt-0.5" />
             <p className="leading-relaxed">
               <strong className="text-deep-navy">
@@ -441,7 +444,7 @@ export default function WaterTankerCalculator() {
           </div>
 
           {/* Note 2: Calculator Disclaimers & Logistics */}
-          <div className="p-4 sm:p-5 rounded-2xl bg-white border border-gray-200/80 text-xs text-gray-600 flex items-start gap-3 shadow-2xs">
+          <div className="p-4 sm:p-5 rounded-2xl bg-white border border-gray-200/80 text-xs text-gray-600 flex items-start gap-3">
             <HiInformationCircle className="w-5 h-5 text-engineering-blue shrink-0 mt-0.5" />
             <p className="leading-relaxed">
               <strong className="text-deep-navy">
@@ -449,16 +452,16 @@ export default function WaterTankerCalculator() {
               </strong>{" "}
               {language === "ID"
                 ? "Hasil perhitungan merupakan estimasi matematis berbasis konsumsi konstan tanpa memperhitungkan inflasi atau kenaikan harga saat musim kemarau. Untuk tagihan riil, pengiriman air selalu dibulatkan ke jumlah tangki penuh."
-                : "Results are illustrative estimates based on constant consumption and uniform pricing, excluding inflation, surcharges for expedited dispatch or difficult terrain, and purchase rounding to whole truckloads."}
+                : "Results are illustrative estimates based on constant consumption and uniform pricing, excluding inflation, surcharges for expedited dispatch or difficult terrain, and billing rounds up to whole truckloads."}
             </p>
           </div>
 
           {/* Note 3: Technical Objectivity Disclaimer */}
-          <div className="p-4 sm:p-5 rounded-2xl bg-amber-50/70 border border-amber-200/80 text-xs text-amber-900 flex items-start gap-3 shadow-2xs">
+          <div className="p-4 sm:p-5 rounded-2xl bg-amber-50/70 border border-amber-200/80 text-xs text-amber-900 flex items-start gap-3">
             <HiExclamationTriangle className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" />
             <p className="leading-relaxed">
               <strong className="text-amber-950">
-                {language === "ID" ? "Disclaimer Objektivitas Teknis:" : "Technical Objectivity Disclaimer:"}
+                {language === "ID" ? "Catatan objektivitas:" : "A note on objectivity:"}
               </strong>{" "}
               {language === "ID"
                 ? "Kalkulator ini tidak dimaksudkan untuk mengklaim bahwa pembuatan sumur dalam selalu lebih ekonomis dalam setiap kondisi. Analisis kelayakan yang objektif wajib mempertimbangkan survei geolistrik, kedalaman bor, kualitas air tanah, biaya listrik pompa, perawatan rutin, perizinan SIPA, dan hasil debit riil di lapangan."

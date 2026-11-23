@@ -3,6 +3,7 @@ import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import { LanguageProvider } from "@/context/LanguageContext";
 import StructuredData from "@/components/StructuredData";
+import LangSync from "@/components/LangSync";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   variable: "--font-plus-jakarta",
@@ -60,8 +61,9 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/",
     languages: {
-      "en-US": "/?lang=en",
-      "id-ID": "/?lang=id",
+      "en": "/?lang=en",
+      "id": "/?lang=id",
+      "x-default": "/",
     },
   },
   openGraph: {
@@ -110,7 +112,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="id"
+      lang="en"
       suppressHydrationWarning
       className={`${plusJakartaSans.variable} font-sans antialiased scroll-smooth`}
     >
@@ -121,7 +123,10 @@ export default function RootLayout({
         suppressHydrationWarning
         className="min-h-screen bg-warm-white text-charcoal flex flex-col"
       >
-        <LanguageProvider>{children}</LanguageProvider>
+        <LanguageProvider>
+          <LangSync />
+          {children}
+        </LanguageProvider>
       </body>
     </html>
   );

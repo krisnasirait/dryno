@@ -11,7 +11,7 @@ export default function StructuredData() {
     name: "DRYNO — Engineering Water Solution",
     alternateName: ["DRYNO", "DRYNO Bali", "Jasa Sumur Bor DRYNO Bali"],
     url: baseUrl,
-    logo: `${baseUrl}/images/bg-hero-1.jpeg`,
+    logo: `${baseUrl}/images/logo.png`,
     image: `${baseUrl}/images/bg-hero-1.jpeg`,
     description:
       "Integrated ground water solution provider specializing in ground water investigation (geolistrik), deep well drilling (sumur bor dalam), well installation, and SIPA ground water permits in Bali, Nusa Penida, Nusa Lembongan, and NTB.",
@@ -83,6 +83,15 @@ export default function StructuredData() {
     },
   };
 
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: baseUrl },
+      { "@type": "ListItem", position: 2, name: "Tanker-Water Cost Calculator", item: `${baseUrl}/calculator` },
+    ],
+  };
+
   const websiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
@@ -121,6 +130,12 @@ export default function StructuredData() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(websiteSchema),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(breadcrumbSchema),
         }}
       />
       <script

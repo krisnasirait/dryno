@@ -103,7 +103,9 @@ export interface ProjectMediaItem {
   src: string;
   poster?: string;
   title: string;
+  titleEN?: string;
   description?: string;
+  descriptionEN?: string;
 }
 
 export interface ProjectItem {

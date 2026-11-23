@@ -20,7 +20,14 @@ const initialContent = defaultContentJson as CMSContent;
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
-  const [language, setLanguageState] = useState<Language>("EN");
+  const [language, setLanguageState] = useState<Language>(() => {
+    if (typeof window !== "undefined") {
+      const q = new URLSearchParams(window.location.search).get("lang");
+      if (q === "id") return "ID";
+      if (q === "en") return "EN";
+    }
+    return "EN";
+  });
   const [content, setContent] = useState<CMSContent>(initialContent);
   const [isLoadingContent, setIsLoadingContent] = useState<boolean>(false);
 
@@ -42,11 +49,18 @@ export function LanguageProvider({ children }: { children: React.ReactNode }) {
   }, []);
 
   useEffect(() => {
+    // Initial CMS fetch on mount — intentional sync from /api/cms/content.
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     refreshContent();
   }, [refreshContent]);
 
   const setLanguage = (lang: Language) => {
     setLanguageState(lang);
+    if (typeof window !== "undefined") {
+      const url = new URL(window.location.href);
+      url.searchParams.set("lang", lang === "ID" ? "id" : "en");
+      window.history.replaceState(null, "", url.toString());
+    }
   };
 
   const toggleLanguage = () => {

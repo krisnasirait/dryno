@@ -1,13 +1,14 @@
 import type { MetadataRoute } from "next";
+import defaultContent from "../../content.json";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://dryno.co.id";
-  const now = new Date();
+  const lastModified = new Date(defaultContent.updatedAt);
 
   return [
     {
       url: `${baseUrl}/`,
-      lastModified: now,
+      lastModified,
       changeFrequency: "weekly",
       priority: 1.0,
       alternates: {
@@ -19,16 +20,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/calculator`,
-      lastModified: now,
+      lastModified,
       changeFrequency: "monthly",
       priority: 0.9,
     },
-    {
-      url: `${baseUrl}/water-tanker-calculator`,
-      lastModified: now,
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
   ];
 }
-

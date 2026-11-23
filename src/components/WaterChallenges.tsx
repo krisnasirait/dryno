@@ -37,15 +37,14 @@ export default function WaterChallenges() {
           </div>
 
           {/* Main Headline */}
-          <h2 className="text-2.5xl sm:text-4xl lg:text-5xl font-extrabold text-deep-navy leading-[1.15] tracking-tight">
+          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-deep-navy leading-[1.15] tracking-tight">
             {wc.headlinePart1[language]}
             <span className="text-engineering-blue block sm:inline">
               {wc.headlinePart2[language]}
             </span>
           </h2>
 
-          {/* Body Copy */}
-          <p className="text-xs sm:text-base lg:text-lg text-gray-700 leading-relaxed font-normal max-w-3xl">
+          <p className="text-sm sm:text-base lg:text-lg text-gray-700 leading-relaxed font-normal max-w-3xl">
             {wc.description[language]}
           </p>
 
@@ -53,7 +52,7 @@ export default function WaterChallenges() {
           <div className="flex flex-wrap items-center gap-2 sm:gap-3 pt-1 sm:pt-2">
             <a
               href="/calculator"
-              className="inline-flex items-center gap-2 px-4 py-2 sm:px-6 sm:py-3 rounded-full bg-deep-navy text-white text-[11px] sm:text-xs font-bold tracking-wider uppercase transition-all duration-300 hover:bg-engineering-blue hover:shadow-lg active:scale-95 group"
+              className="inline-flex items-center gap-2 px-4 py-2 sm:px-6 sm:py-3 rounded-full bg-deep-navy text-white text-[11px] sm:text-xs font-bold tracking-wider uppercase transition-colors duration-300 hover:bg-engineering-blue active:scale-95 group"
             >
               <span>{wc.ctaCalculator[language]}</span>
               <HiArrowRight className="w-3.5 h-3.5 sm:w-4 sm:h-4 transition-transform duration-300 group-hover:translate-x-1" />
@@ -61,11 +60,17 @@ export default function WaterChallenges() {
 
             <a
               href="#services"
-              className="inline-flex items-center gap-2 px-3.5 py-2 sm:px-5 sm:py-3 rounded-full bg-white border border-gray-200 text-deep-navy text-[11px] sm:text-xs font-bold tracking-wider uppercase transition-all duration-300 hover:bg-gray-50 hover:border-gray-300 shadow-2xs"
+              className="inline-flex items-center gap-2 px-3.5 py-2 sm:px-5 sm:py-3 rounded-full bg-white border border-gray-200 text-deep-navy text-[11px] sm:text-xs font-bold tracking-wider uppercase transition-all duration-300 hover:bg-gray-50 hover:border-gray-300"
             >
               <span>{wc.ctaSolutions[language]}</span>
             </a>
           </div>
+          <p className="text-[11px] sm:text-xs text-gray-500 pt-1">
+            {language === "EN" ? "See field proof:" : "Lihat bukti lapangan:"}{" "}
+            <a href="#projects" className="font-bold text-[#005B94] underline underline-offset-2 hover:text-[#0077c8]">Maison Horizon 220m • 10m³/h →</a>{" "}
+            <span aria-hidden>•</span>{" "}
+            <a href="#faq-faq-4" className="font-bold text-[#005B94] underline underline-offset-2 hover:text-[#0077c8]">{language === "EN" ? "SIPA questions" : "Soal SIPA"} →</a>
+          </p>
         </div>
 
         {/* 1/2 Height Image Showcase */}
@@ -75,11 +80,11 @@ export default function WaterChallenges() {
               wc.bannerImage ||
               "https://images.unsplash.com/photo-1535868118629-f37bcd69ff59?q=80&w=1176&auto=format&fit=crop"
             }
-            alt="Water Supply Challenges in Southern Bali and Pecatu"
+            alt="Tanker water queue in Pecatu, South Bali — tanker costs vs DRYNO deep well alternative"
             fill
-            priority
-            unoptimized
             sizes="(max-width: 1280px) 100vw, 1200px"
+            loading="lazy"
+            decoding="async"
             className="object-cover object-center group-hover:scale-105 transition-transform duration-700"
           />
 
@@ -109,7 +114,7 @@ export default function WaterChallenges() {
                   href={article.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group flex flex-col justify-between p-3.5 sm:p-5 rounded-2xl bg-white border border-gray-200/80 shadow-xs hover:shadow-lg hover:border-engineering-blue/40 transition-all duration-300 hover:-translate-y-0.5"
+                  className="group flex flex-col justify-between p-3.5 sm:p-5 rounded-2xl bg-white border border-gray-200/80 shadow-sm hover:shadow-lg hover:border-engineering-blue/40 transition-shadow duration-300"
                 >
                   <div className="space-y-2 sm:space-y-3">
                     <div className="flex items-center justify-between gap-2">

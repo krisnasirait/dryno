@@ -24,9 +24,9 @@ export default function WhatsAppButton() {
           ? "Chat WhatsApp dengan DRYNO"
           : "Chat on WhatsApp with DRYNO"
       }
-      className="fixed bottom-6 right-6 z-50 flex items-center gap-3 px-4 py-3 rounded-full bg-[#25D366] hover:bg-[#20bd5a] text-white shadow-xl hover:shadow-2xl shadow-green-600/30 transition-all duration-300 hover:scale-105 active:scale-95 group"
+      className="fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 rounded-full bg-[#25D366] hover:bg-[#20bd5a] text-white shadow-xl shadow-green-600/30 transition-colors duration-300"
     >
-      <FaWhatsapp className="w-6 h-6 text-white transition-transform group-hover:rotate-12" />
+      <FaWhatsapp className="w-6 h-6 text-white" />
     </a>
   );
 }

@@ -114,7 +114,7 @@ export default function ImageUploaderField({
             }}
             className={`px-2.5 py-1 rounded-md flex items-center gap-1 transition-all cursor-pointer ${
               mode === "url"
-                ? "bg-[#005B94] text-white shadow-xs"
+                ? "bg-[#005B94] text-white shadow-sm"
                 : "text-slate-400 hover:text-white"
             }`}
           >
@@ -129,7 +129,7 @@ export default function ImageUploaderField({
             }}
             className={`px-2.5 py-1 rounded-md flex items-center gap-1 transition-all cursor-pointer ${
               mode === "upload"
-                ? "bg-[#005B94] text-white shadow-xs"
+                ? "bg-[#005B94] text-white shadow-sm"
                 : "text-slate-400 hover:text-white"
             }`}
           >

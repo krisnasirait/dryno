@@ -14,11 +14,11 @@ export const translations = {
     },
     hero: {
       tagline: "Engineering Water Solution",
-      headline: "A Reliable Water Source Starts With The Right Approach",
+      headline: "Reliable well water for your villa, resort, or development in Bali",
       description:
-        "Ground Water investigation, professional deep well drilling, well construction and ground water compliance support for projects across Bali and surrounding regions.",
-      ctaDiscuss: "DISCUSS YOUR PROJECT",
-      ctaServices: "EXPLORE OUR SERVICES",
+        "Geoelectric survey, deep-well drilling to 220 m+, casing, and SIPA permits — Pecatu to Lombok.",
+      ctaDiscuss: "Get a drilling assessment",
+      ctaServices: "Explore ground water services",
       location: "BALI • NUSA LEMBONGAN • NUSA PENIDA • NTB",
     },
     about: {
@@ -27,32 +27,32 @@ export const translations = {
       titleLine2: "Ground Water",
       titleLine3: "Solution Provider",
       description:
-        "DRYNO is an integrated ground water solution provider specializing in ground water investigation, deep well drilling, well installation, technical consultation, and ground water-related permit and administrative assistance.",
-      learnMore: "LEARN MORE",
-      showLess: "SHOW LESS",
+        "DRYNO is an integrated ground water solution provider for Bali and NTB. We handle investigation, deep well drilling, well installation, and technical consultation — plus SIPA and NPWPD ABT permitting, so your project stays compliant.",
+      learnMore: "Learn more",
+      showLess: "Show less",
       fieldExp: "Years of \n Field Experience",
-      approach: "Project-Based \n Approach",
-      technical: "Technical & \n Regulatory Support",
-      sectorsTitle: "SECTORS WE SERVE",
+      approach: "Project-based\napproach",
+      technical: "Technical and\nregulatory support",
+      sectorsTitle: "Sectors we serve",
       sectorsDesc:
         "We work with villas, private estates, hotels, resorts, residential and commercial developments, contractors, developers, and industrial facilities requiring ground water solutions for their projects.",
       processTitle: "Investigate, Drill, Install",
       processDesc:
-        "Our approach begins by understanding the project's water requirements and site conditions. When required, ground water investigation is conducted to obtain subsurface information and identify potential ground water zones before determining the appropriate drilling approach.",
+        "We start from your water demand and site conditions. Where needed, we run a geoelectric survey to map aquifer zones before choosing the drilling method.",
       dataDrivenTitle: "Data-Driven Drilling Strategy",
       dataDrivenDesc: "Minimizing risk & optimizing long-term ground water yield.",
-      permitTitle: "PERMITTING & COMPLIANCE",
+      permitTitle: "Permitting & compliance",
       permitDesc:
-        "Beyond ground water investigation and drilling, DRYNO also assists clients with SIPA and NPWPD ABT processing, providing a more integrated solution from initial investigation to ground water utilization compliance.",
+        "Beyond investigation and drilling, DRYNO handles SIPA and NPWPD ABT processing — one integrated path from first survey to compliant water use.",
     },
     waterChallenges: {
       eyebrow: "Water Supply Challenges in Bali",
       headlinePart1: "Water scarcity is more than an environmental issue. ",
       headlinePart2: "It’s a business challenge.",
       description:
-        "As development continues across southern Bali, reliable water supply remains an important consideration for villas, resorts and commercial properties. Reported distribution challenges in Pecatu and surrounding areas highlight the value of evaluating long-term water supply strategies early in project planning. DRYNO supports property owners and developers through site-specific ground water investigation, deep well drilling and regulatory assistance.",
-      ctaCalculator: "calculate your spending water",
-      ctaSolutions: "Explore Solutions",
+        "South Bali keeps building, but piped water can’t always keep up. In Pecatu and nearby areas, tanker prices run IDR 300,000–700,000 per load — a direct cost to villas, resorts, and commercial properties. DRYNO helps owners plan ahead with site-specific surveys, deep wells, and permits.",
+      ctaCalculator: "Calculate your tanker-water cost",
+      ctaSolutions: "See services & pricing",
       referencesEyebrow: "References & Documented Reports",
       referencesTitle: "Documented Water Supply Challenges",
       readArticle: "Read Article",
@@ -93,7 +93,7 @@ export const translations = {
       eyebrow: "OUR EXPERTISE",
       title: "Engineered Water Solutions",
       subtitle:
-        "End-to-end professional services from subsurface investigation, deep well drilling, to legal permitting support.",
+        "End-to-end professional services — from subsurface investigation and deep well drilling to legal permitting support.",
       viewDetails: "View Details",
       startingFrom: "Starting from",
       priceLabel: "Price",
@@ -115,7 +115,7 @@ export const translations = {
             "Ground Water investigation using geoelectric and ground water detection equipment to assess subsurface conditions and identify potential ground water zones before drilling. The investigation provides technical information to support drilling-point selection and planning of the next project stage.",
           note: "Final price depends on project location, number of investigation points, site conditions, scope, and project requirements.",
           disclaimer:
-            "Do not claim or guarantee exact ground water depth or ground water availability.",
+            "Every site differs — we never promise a fixed depth or guaranteed yield before surveying.",
         },
         {
           id: "drilling",
@@ -123,9 +123,9 @@ export const translations = {
           shortDesc:
             "Professional deep well drilling tailored to geological conditions and project needs.",
           fullDesc:
-            "Professional deep well drilling according to project requirements, available investigation data, geological conditions, and actual field conditions. The drilling method, equipment, diameter, and target depth are determined according to the requirements and conditions of each project.",
+            "We drill to the depth your site actually needs — based on survey data, rock formation, and target yield. Method, rig, diameter, and casing are matched to each project’s geology and water demand.",
           disclaimer:
-            "Do not advertise a universal drilling depth or guarantee ground water availability.",
+            "Every site differs — we never promise a fixed depth or guaranteed yield before surveying.",
         },
         {
           id: "casing",
@@ -133,7 +133,7 @@ export const translations = {
           shortDesc:
             "Installation of high-grade casing and well components for long-term structural integrity.",
           fullDesc:
-            "Installation of well casing and related well components according to drilling conditions and project requirements. The final configuration is determined according to actual technical requirements.",
+            "We install steel or heavy-duty PVC casing with screens and gravel pack, built to keep water clean and the well structure solid for decades.",
         },
         {
           id: "consultation",
@@ -147,10 +147,10 @@ export const translations = {
           id: "sipa",
           title: "SIPA Processing Assistance",
           shortDesc:
-            "Legal administrative assistance for Surat Izin Pengusahaan Air Tanah (SIPA).",
+            "End-to-end help securing your SIPA ground water extraction permit.",
           fullDesc:
             "Administrative and technical support for processing ground water extraction permits (SIPA) in accordance with applicable regional and national regulations.",
-          note: "Price depends on project classification, location, and regulatory scope.",
+          note: "Fixed quote after we review your water demand, location, and document readiness.",
         },
         {
           id: "npwpd",
@@ -164,8 +164,8 @@ export const translations = {
     },
     howWeWork: {
       eyebrow: "OUR PROCESS",
-      title: "How We Work",
-      subtitle: "From understanding your project to operational compliance.",
+      title: "How we work",
+      subtitle: "From first survey to compliant water use.",
       steps: [
         {
           number: "01",
@@ -184,8 +184,8 @@ export const translations = {
         },
         {
           number: "04",
-          title: "Define",
-          desc: "Determine an appropriate technical approach.",
+          title: "Design",
+          desc: "Design the right technical approach for your site.",
         },
         {
           number: "05",
@@ -194,17 +194,17 @@ export const translations = {
         },
         {
           number: "06",
-          title: "Comply",
-          desc: "Assist with SIPA and NPWPD ABT processes when required.",
+          title: "Permit",
+          desc: "Handle SIPA and NPWPD ABT permits until you're compliant.",
         },
       ],
     },
     projects: {
-      eyebrow: "FEATURED WORK",
+      eyebrow: "Field-proven work",
       title: "Projects & Field Operations",
       subtitle:
         "A look at our drilling operations, ground water investigation, and deep well implementations across Bali and surrounding islands.",
-      viewAll: "VIEW ALL PROJECTS",
+      viewAll: "Consult a similar project",
       scopeLabel: "Scope",
       finalDepthLabel: "Final Depth",
       waterEncounterLabel: "Water Encounter",
@@ -217,13 +217,13 @@ export const translations = {
     equipment: {
       eyebrow: "EQUIPMENT & CAPABILITY",
       titleLine1: "Our Equipment",
-      titleLine2: "& Capability",
-      desc: "Equipped with professional equipment and supported by an experienced field team to execute ground water projects safely and efficiently.",
+      titleLine2: "and Capability",
+      desc: "Professional rigs and an experienced field crew, ready for safe, precise drilling across Bali and NTB.",
       cta: "DISCUSS CAPABILITIES",
     },
     faq: {
       eyebrow: "FREQUENTLY ASKED QUESTIONS",
-      title: "Everything you need to know about our ground water solutions",
+      title: "Ground water questions, answered directly",
       subtitle:
         "Can't find what you're looking for? Contact our engineering team directly via WhatsApp or inquiry form.",
       ctaButton: "Ask Our Engineers",
@@ -232,47 +232,47 @@ export const translations = {
           question:
             "Why is a ground water investigation recommended before drilling?",
           answer:
-            "Ground Water investigation (geoelectric survey) provides critical subsurface information to identify potential ground water-bearing zones, estimate depth indications, and assess geological formations before drilling. This minimizes financial risk and helps select the most optimal drilling point.",
+            "Yes — a geoelectric survey maps aquifers before you drill, cutting dry-hole risk. Ground Water investigation (geoelectric survey) provides critical subsurface information to identify potential ground water-bearing zones, estimate depth indications, and assess geological formations before drilling. This minimizes financial risk and helps select the most optimal drilling point.",
         },
         {
           question: "How deep do you usually drill for deep wells in Bali & NTB?",
           answer:
-            "Drilling depths vary significantly based on location and regional hydrogeology. For instance, cliff terrain in Uluwatu or Pecatu may require depths between 100m to 220m+, whereas coastal plains or inland areas may require different depths. We do not guarantee a universal depth and determine drilling depth according to site conditions.",
+            "100–220m+ in Uluwatu karst, shallower in plains. Depth is set by survey, never guaranteed. Drilling depths vary significantly based on location and regional hydrogeology. For instance, cliff terrain in Uluwatu or Pecatu may require depths between 100m to 220m+, whereas coastal plains or inland areas may require different depths. We do not guarantee a universal depth and determine drilling depth according to site conditions.",
         },
         {
           question: "How long does a typical deep well drilling project take?",
           answer:
-            "On average, field drilling and well casing installation take between 2 to 4 weeks, depending on target depth, subsurface rock hardness, site accessibility, and weather conditions.",
+            "Typically 2–4 weeks for drilling plus casing, depending on depth, rock, and access. On average, field drilling and well casing installation take between 2 to 4 weeks, depending on target depth, subsurface rock hardness, site accessibility, and weather conditions.",
         },
         {
           question:
             "What is SIPA and why is it necessary for my commercial project?",
           answer:
-            "SIPA (Surat Izin Pengusahaan Air Tanah) is the official government permit required for ground water extraction and utilization. Having a valid SIPA ensures your villa, resort, or commercial project remains legally compliant with environmental regulations.",
+            "SIPA is the official permit for commercial groundwater use — operating without one risks sanctions. SIPA (Surat Izin Pengusahaan Air Tanah) is the official government permit required for ground water extraction and utilization. Having a valid SIPA ensures your villa, resort, or commercial project remains legally compliant with environmental regulations.",
         },
         {
           question: "Which areas in Indonesia does DRYNO cover?",
           answer:
-            "DRYNO provides integrated ground water solutions across Bali, Nusa Lembongan, Nusa Penida, and West Nusa Tenggara (NTB) including Lombok and surrounding regions.",
+            "All of Bali, Nusa Lembongan, Nusa Penida, and Lombok/Sumbawa (NTB). DRYNO provides integrated ground water solutions across Bali, Nusa Lembongan, Nusa Penida, and West Nusa Tenggara (NTB) including Lombok and surrounding regions.",
         },
         {
           question: "How do I request an accurate quotation for my project?",
           answer:
-            "You can contact our engineering team directly via WhatsApp or our contact form. We will review your project location, estimated water requirements, and site accessibility to provide a detailed project proposal.",
+            "WhatsApp us your location, water need, and site access — we reply with a fixed-scope proposal. You can contact our engineering team directly via WhatsApp or our contact form. We will review your project location, estimated water requirements, and site accessibility to provide a detailed project proposal.",
         },
       ],
     },
     contact: {
       eyebrow: "GET IN TOUCH",
       title: "Discuss Your Water Project",
-      desc: "Reach out to our engineering team to assess your ground water requirements, schedule an investigation, or request a project quotation.",
+      desc: "Tell us about your site and water needs — we reply with a fixed-scope quote and a survey schedule.",
       formName: "Full Name",
       formCompany: "Company / Property Name",
       formLocation: "Project Location (e.g. Pecatu, Uluwatu, Lombok)",
       formProjectType: "Project Type",
       formMessage: "Project Details & Water Requirements",
-      formSubmit: "SUBMIT INQUIRY",
-      formSuccessTitle: "Inquiry Sent Successfully!",
+      formSubmit: "Submit inquiry",
+      formSuccessTitle: "Inquiry sent — we reply shortly",
       formSuccessDesc:
         "Thank you for contacting DRYNO. Our engineering team will review your project details and contact you shortly.",
       formReset: "Send Another Message",
@@ -283,23 +283,23 @@ export const translations = {
     footer: {
       brandDesc:
         "DRYNO — Engineering Water Solution is an integrated ground water solution provider specializing in investigation, deep well drilling, well installation, technical consultation, and SIPA / NPWPD ABT permitting assistance across Bali & NTB.",
-      quickNavTitle: "QUICK NAVIGATION",
-      coverageTitle: "REGIONAL SERVICE COVERAGE",
+      quickNavTitle: "Quick navigation",
+      coverageTitle: "Service coverage",
       allRightsReserved: "All rights reserved.",
       collaborationWith: "In collaboration with",
     },
     calculator: {
       badge: "Water Tanker Cost Calculator",
       title: "How much are you spending on water delivery?",
-      desc: "A practical calculator to estimate long-term expenditures on commercial water tanker deliveries. Adjust your daily water demand (liters), price per 5,000-liter tanker, and projection horizon (5, 10, or 25 years). Results show monthly volume, equivalent tanker truckloads, estimated monthly/annual costs, and cumulative multi-year projections.",
+      desc: "A practical calculator for long-term commercial tanker-water costs. Set daily demand, the 5,000-liter tanker price, and a 5, 10, or 25-year horizon — then compare against owning a deep well.",
       simulationTitle: "Simulation Parameters",
       simulationDesc:
         "Configure your consumption profile below to calculate water tanker logistics and lifetime expenses.",
       presetsLabel: "Quick Demand Presets",
       presets: [
-        { label: "Private Villa", desc: "± 2-3 Bedrooms" },
-        { label: "Luxury Villa", desc: "± 4-6 Beds + Pool" },
-        { label: "Boutique Resort", desc: "± 8-12 Suites" },
+        { label: "Private Villa", desc: "2–3 Bedrooms" },
+        { label: "Luxury Villa", desc: "4–6 Beds + Pool" },
+        { label: "Boutique Resort", desc: "8–12 Suites" },
         { label: "Hotel / Commercial", desc: "Large Facility" },
       ],
       dailyDemandLabel: "Daily Water Need",
@@ -310,15 +310,15 @@ export const translations = {
       monthlyEst: "Estimated Monthly Cost",
       yearlyEst: "Estimated Annual Cost",
       projectedEst: "Cumulative Projected Cost",
-      tanksPerMonth: "tanks / month",
+      tanksPerMonth: "tankers / month",
       breakdownTitle: "Multi-Year Cost Accumulation",
       breakdownDesc:
         "Summary of cumulative tanker water expenses across standard commercial property life horizons.",
-      ctaTitle: "Interested in Independent Deep Well Infrastructure?",
+      ctaTitle: "Interested in your own water supply?",
       ctaDesc:
         "Investing in a dedicated deep well eliminates tanker delivery logistics, price spikes, and seasonal water shortages.",
-      ctaButton: "Consult With DRYNO Engineers",
-      backLink: "Back to Home Overview",
+      ctaButton: "Consult DRYNO engineers",
+      backLink: "Tanker-water calculator",
     },
   },
   ID: {
@@ -336,11 +336,11 @@ export const translations = {
     },
     hero: {
       tagline: "Solusi Rekayasa Air Tanah",
-      headline: "Sumber Air yang Andal Dimulai dari Pendekatan yang Tepat",
+      headline: "Air sumur yang andal untuk vila, resor, atau pengembangan Anda di Bali",
       description:
-        "Investigasi air tanah, pengeboran sumur dalam profesional, konstruksi sumur, dan pendampingan perizinan air tanah untuk berbagai proyek di Bali dan wilayah sekitarnya.",
-      ctaDiscuss: "KONSULTASIKAN PROYEK ANDA",
-      ctaServices: "JELAJAHI LAYANAN KAMI",
+        "Survei geolistrik, pengeboran sumur dalam hingga 220m+, casing, dan izin SIPA — Pecatu hingga Lombok.",
+      ctaDiscuss: "Minta penilaian pengeboran",
+      ctaServices: "Jelajahi layanan air tanah",
       location: "BALI • NUSA LEMBONGAN • NUSA PENIDA • NTB",
     },
     about: {
@@ -349,12 +349,12 @@ export const translations = {
       titleLine2: "Air Tanah",
       titleLine3: "Terintegrasi",
       description:
-        "DRYNO adalah penyedia solusi air tanah terintegrasi yang berspesialisasi dalam investigasi air tanah, pengeboran sumur dalam (deep well), instalasi sumur, konsultasi teknis, serta bantuan pengurusan izin air tanah (SIPA) dan administratif.",
-      learnMore: "PELAJARI LEBIH LANJUT",
-      showLess: "TUTUP",
+        "DRYNO adalah penyedia solusi air tanah terintegrasi untuk Bali dan NTB. Kami menangani investigasi, pengeboran sumur dalam, instalasi sumur, dan konsultasi teknis — plus perizinan SIPA dan NPWPD ABT, agar proyek Anda patuh regulasi.",
+      learnMore: "Pelajari lebih lanjut",
+      showLess: "Tutup",
       fieldExp: "Tahun \n Pengalaman Lapangan",
       approach: "Pendekatan \n Berbasis Proyek",
-      technical: "Dukungan Teknis \n & Regulasi Perizinan",
+      technical: "Dukungan teknis\ndan regulasi perizinan",
       sectorsTitle: "SEKTOR YANG KAMI LAYANI",
       sectorsDesc:
         "Kami bekerja sama dengan pemilik vila, private estate, hotel, resor, kawasan residensial & komersial, kontraktor, pengembang, dan fasilitas industri yang memerlukan solusi air tanah mandiri.",
@@ -363,7 +363,7 @@ export const translations = {
         "Pendekatan kami diawali dengan memahami kebutuhan debit air dan kondisi lokasi proyek. Bila diperlukan, investigasi air tanah dilakukan guna memperoleh data bawah permukaan serta mengidentifikasi zona potensi akuifer sebelum menetapkan metode pengeboran yang tepat.",
       dataDrivenTitle: "Strategi Pengeboran Berbasis Data",
       dataDrivenDesc: "Meminimalkan risiko biaya & mengoptimalkan debit air jangka panjang.",
-      permitTitle: "PERIZINAN & KEPATUHAN REGULASI",
+      permitTitle: "Perizinan & kepatuhan regulasi",
       permitDesc:
         "Selain investigasi dan pengeboran, DRYNO juga mendampingi klien dalam pengurusan SIPA dan NPWPD ABT, memberikan solusi terpadu dari awal eksplorasi hingga kepatuhan legalitas pemanfaatan air tanah.",
     },
@@ -373,8 +373,8 @@ export const translations = {
       headlinePart2: "Ini adalah tantangan bisnis nyata.",
       description:
         "Seiring pesatnya pembangunan di kawasan Bali selatan, keandalan pasokan air bersih menjadi faktor krusial bagi kelangsungan operasional vila, resor, dan properti komersial. Berbagai tantangan distribusi air di Pecatu dan sekitarnya menegaskan pentingnya evaluasi strategi pasokan air jangka panjang sejak tahap awal perencanaan. DRYNO hadir mendukung pemilik properti dan pengembang melalui investigasi air tanah spesifik lokasi, pengeboran sumur dalam (deep well), serta pendampingan regulasi perizinan.",
-      ctaCalculator: "hitung pengeluaran air anda",
-      ctaSolutions: "Jelajahi Solusi",
+      ctaCalculator: "Hitung biaya air tangki Anda",
+      ctaSolutions: "Lihat layanan & harga",
       referencesEyebrow: "Referensi & Laporan Terkait",
       referencesTitle: "Tantangan Pasokan Air di Lapangan",
       readArticle: "Buka Artikel",
@@ -484,8 +484,8 @@ export const translations = {
     },
     howWeWork: {
       eyebrow: "METODE KERJA",
-      title: "Alur Kerja Kami",
-      subtitle: "Dari pemahaman kebutuhan proyek hingga legalitas pemanfaatan air.",
+      title: "Alur kerja kami",
+      subtitle: "Dari survei pertama hingga air yang patuh regulasi.",
       steps: [
         {
           number: "01",
@@ -514,17 +514,17 @@ export const translations = {
         },
         {
           number: "06",
-          title: "Kepatuhan",
-          desc: "Mendampingi pengurusan perizinan resmi SIPA dan NPWPD ABT.",
+          title: "Urus Izin",
+          desc: "Mendampingi pengurusan SIPA dan NPWPD ABT hingga tuntas."
         },
       ],
     },
     projects: {
-      eyebrow: "DOKUMENTASI PROYEK",
+      eyebrow: "Dokumentasi proyek",
       title: "Proyek & Operasi Lapangan",
       subtitle:
         "Dokumentasi nyata kegiatan pengeboran sumur dalam, investigasi geolistrik, dan instalasi sistem air di berbagai wilayah Bali dan sekitarnya.",
-      viewAll: "KONSULTASIKAN PROYEK",
+      viewAll: "Konsultasikan proyek serupa",
       scopeLabel: "Ruang Lingkup",
       finalDepthLabel: "Kedalaman Akhir",
       waterEncounterLabel: "Temuan Air",
@@ -537,13 +537,13 @@ export const translations = {
     equipment: {
       eyebrow: "PERALATAN & KAPABILITAS",
       titleLine1: "Peralatan",
-      titleLine2: "& Kapabilitas Kami",
-      desc: "Didukung armada peralatan pengeboran modern dan tim lapangan profesional berpengalaman untuk mengeksekusi proyek air tanah secara aman, presisi, dan andal.",
+      titleLine2: "dan Kapabilitas Kami",
+      desc: "Armada rig profesional dan tim lapangan berpengalaman, siap mengebor dengan aman dan presisi di Bali dan NTB.",
       cta: "KONSULTASI PERALATAN",
     },
     faq: {
       eyebrow: "PERTANYAAN UMUM",
-      title: "Segala hal yang perlu Anda ketahui seputar solusi air tanah DRYNO",
+      title: "Pertanyaan air tanah, dijawab langsung",
       subtitle:
         "Memiliki pertanyaan khusus mengenai proyek Anda? Tim teknis kami siap menjawab langsung melalui WhatsApp atau form konsultasi.",
       ctaButton: "Hubungi Tim Teknis",
@@ -552,33 +552,33 @@ export const translations = {
           question:
             "Mengapa investigasi air tanah (geolistrik) sangat disarankan sebelum pemboran?",
           answer:
-            "Survei geolistrik menyajikan data formasi bawah permukaan yang akurat untuk mendeteksi lapisan pembawa air (akuifer), memperkirakan kisaran kedalaman, serta memetakan batuan keras. Hal ini sangat meminimalkan risiko biaya bor kering (dry hole) dan membantu memilih titik bor terbaik.",
+            "Ya — survei geolistrik memetakan akuifer sebelum dibor, menekan risiko bor kering. Survei geolistrik menyajikan data formasi bawah permukaan yang akurat untuk mendeteksi lapisan pembawa air (akuifer), memperkirakan kisaran kedalaman, serta memetakan batuan keras. Hal ini sangat meminimalkan risiko biaya bor kering (dry hole) dan membantu memilih titik bor terbaik.",
         },
         {
           question: "Berapa rata-rata kedalaman pemboran sumur dalam di Bali & NTB?",
           answer:
-            "Kedalaman sangat bervariasi tergantung topografi dan hidrogeologi kawasan. Sebagai contoh, di area tebing Pecatu dan Uluwatu kedalaman sering berkisar 100m hingga 220m+, sedangkan di dataran pesisir atau lembah bisa lebih dangkal. Kami tidak menerapkan kedalaman universal, melainkan disesuaikan dengan kondisi lapangan.",
+            "100–220m+ di karst Uluwatu, lebih dangkal di dataran. Kedalaman ikut survei, tak pernah dijamin. Kedalaman sangat bervariasi tergantung topografi dan hidrogeologi kawasan. Sebagai contoh, di area tebing Pecatu dan Uluwatu kedalaman sering berkisar 100m hingga 220m+, sedangkan di dataran pesisir atau lembah bisa lebih dangkal. Kami tidak menerapkan kedalaman universal, melainkan disesuaikan dengan kondisi lapangan.",
         },
         {
           question: "Berapa lama estimasi pengerjaan proyek sumur dalam?",
           answer:
-            "Rata-rata pelaksanaan pengeboran dan pemasangan casing memakan waktu antara 2 hingga 4 minggu, tergantung kedalaman target, kekerasan formasi batuan, kemudahan akses alat berat, serta cuaca.",
+            "Umumnya 2–4 minggu untuk pengeboran plus casing, tergantung kedalaman, batuan, dan akses. Rata-rata pelaksanaan pengeboran dan pemasangan casing memakan waktu antara 2 hingga 4 minggu, tergantung kedalaman target, kekerasan formasi batuan, kemudahan akses alat berat, serta cuaca.",
         },
         {
           question:
             "Apa itu SIPA dan mengapa wajib dimiliki oleh properti komersial?",
           answer:
-            "SIPA (Surat Izin Pengusahaan Air Tanah) adalah izin legal resmi dari pemerintah untuk pengambilan dan pemanfaatan air tanah. Memiliki SIPA yang sah menjamin vila, hotel, resor, atau bisnis komersial Anda beroperasi secara legal dan bebas dari sanksi lingkungan.",
+            "SIPA adalah izin resmi pemanfaatan air tanah komersial — tanpa SIPA berisiko sanksi. SIPA (Surat Izin Pengusahaan Air Tanah) adalah izin legal resmi dari pemerintah untuk pengambilan dan pemanfaatan air tanah. Memiliki SIPA yang sah menjamin vila, hotel, resor, atau bisnis komersial Anda beroperasi secara legal dan bebas dari sanksi lingkungan.",
         },
         {
           question: "Wilayah mana saja yang dicakup oleh layanan DRYNO?",
           answer:
-            "DRYNO melayani seluruh wilayah Bali (Badung, Gianyar, Tabanan, Buleleng, Karangasem, dll.), Nusa Lembongan, Nusa Penida, serta Nusa Tenggara Barat (Lombok dan Sumbawa).",
+            "Seluruh Bali, Nusa Lembongan, Nusa Penida, serta Lombok/Sumbawa (NTB). DRYNO melayani seluruh wilayah Bali (Badung, Gianyar, Tabanan, Buleleng, Karangasem, dll.), Nusa Lembongan, Nusa Penida, serta Nusa Tenggara Barat (Lombok dan Sumbawa).",
         },
         {
           question: "Bagaimana cara mendapatkan penawaran biaya yang akurat?",
           answer:
-            "Anda dapat menghubungi tim teknis kami langsung melalui WhatsApp atau formulir kontak. Kami akan meninjau titik lokasi proyek Anda, perkiraan kebutuhan debit air, serta aksesibilitas lokasi untuk memberikan proposal teknis dan biaya yang rinci.",
+            "WhatsApp lokasi, kebutuhan air, dan akses alat — kami balas dengan proposal lingkup tetap. Anda dapat menghubungi tim teknis kami langsung melalui WhatsApp atau formulir kontak. Kami akan meninjau titik lokasi proyek Anda, perkiraan kebutuhan debit air, serta aksesibilitas lokasi untuk memberikan proposal teknis dan biaya yang rinci.",
         },
       ],
     },
@@ -611,15 +611,15 @@ export const translations = {
     calculator: {
       badge: "Kalkulator Pengeluaran Air Tangki",
       title: "Berapa banyak biaya yang Anda habiskan untuk air tangki?",
-      desc: "Kalkulator praktis untuk mengestimasi pengeluaran jangka panjang pembelian air tangki komersial. Sesuaikan kebutuhan harian (liter), harga per tangki 5.000 liter, dan horizon proyeksi (5, 10, atau 25 tahun). Hasil menampilkan volume bulanan, ritase tangki, estimasi biaya bulanan & tahunan, serta akumulasi multi-tahun.",
+      desc: "Kalkulator praktis untuk biaya air tangki komersial jangka panjang. Atur kebutuhan harian, harga tangki 5.000 liter, dan horizon 5, 10, atau 25 tahun — lalu bandingkan dengan sumur dalam mandiri.",
       simulationTitle: "Parameter Simulasi",
       simulationDesc:
         "Atur profil konsumsi properti Anda di bawah ini untuk menghitung logistik dan akumulasi pengeluaran air tangki.",
       presetsLabel: "Pilihan Cepat Kebutuhan Air",
       presets: [
-        { label: "Private Villa", desc: "± 2-3 Kamar Tidur" },
-        { label: "Luxury Villa", desc: "± 4-6 Kamar + Kolam" },
-        { label: "Boutique Resort", desc: "± 8-12 Kamar / Suite" },
+        { label: "Private Villa", desc: "2–3 Kamar Tidur" },
+        { label: "Luxury Villa", desc: "4–6 Kamar + Kolam" },
+        { label: "Boutique Resort", desc: "8–12 Kamar/Suite" },
         { label: "Hotel / Komersial", desc: "Fasilitas Skala Besar" },
       ],
       dailyDemandLabel: "Kebutuhan Air Harian",
@@ -630,7 +630,7 @@ export const translations = {
       monthlyEst: "Estimasi Biaya Bulanan",
       yearlyEst: "Estimasi Biaya Tahunan",
       projectedEst: "Akumulasi Biaya Proyeksi",
-      tanksPerMonth: "tangki / bulan",
+      tanksPerMonth: "ritase / bulan",
       breakdownTitle: "Akumulasi Biaya Multi-Tahun",
       breakdownDesc:
         "Rangkuman akumulasi biaya air tangki berdasarkan jangka waktu operasional properti komersial.",
@@ -638,7 +638,7 @@ export const translations = {
       ctaDesc:
         "Investasi sumur dalam mandiri membebaskan properti Anda dari ketergantungan ritase tangki, fluktuasi harga musiman, dan kelangkaan pasokan air.",
       ctaButton: "Konsultasikan Dengan Tim DRYNO",
-      backLink: "Kembali ke Beranda",
+      backLink: "Kalkulator air tangki",
     },
   },
 };
