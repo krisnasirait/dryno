@@ -65,7 +65,7 @@ export default function LoginPage() {
           href="/"
           className="inline-flex items-center gap-2 text-xs font-semibold text-slate-400 hover:text-white transition-colors"
         >
-          <HiArrowLeft className="w-4 h-4" />
+          <HiArrowLeft aria-hidden="true" className="w-4 h-4" />
           <span>Kembali ke Halaman Utama Website</span>
         </Link>
       </div>
@@ -75,11 +75,11 @@ export default function LoginPage() {
         {/* Header */}
         <div className="flex flex-col items-center text-center mb-8">
           <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#005B94] to-[#00A3FF] flex items-center justify-center shadow-lg shadow-[#00A3FF]/20 mb-4">
-            <HiShieldCheck className="w-8 h-8 text-white" />
+            <HiShieldCheck aria-hidden="true" className="w-8 h-8 text-white" />
           </div>
 
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-800/80 border border-slate-700 text-[11px] font-bold tracking-wider uppercase text-[#00A3FF] mb-3">
-            <FaGithub className="w-3.5 h-3.5" />
+            <FaGithub aria-hidden="true" className="w-3.5 h-3.5" />
             <span>GitHub-Powered Headless CMS</span>
           </div>
 
@@ -94,7 +94,7 @@ export default function LoginPage() {
         {/* Error Alert */}
         {error && (
           <div className="mb-6 p-4 rounded-2xl bg-red-500/10 border border-red-500/30 text-red-300 text-xs flex items-start gap-3">
-            <HiExclamationCircle className="w-5 h-5 text-red-400 shrink-0 mt-0.5" />
+            <HiExclamationCircle aria-hidden="true" className="w-5 h-5 text-red-400 shrink-0 mt-0.5" />
             <span className="leading-relaxed font-medium">{error}</span>
           </div>
         )}
@@ -110,7 +110,7 @@ export default function LoginPage() {
             </label>
             <div className="relative">
               <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none text-slate-400">
-                <HiLockClosed className="w-5 h-5" />
+                <HiLockClosed aria-hidden="true" className="w-5 h-5" />
               </div>
               <input
                 id="admin-password"
@@ -129,9 +129,9 @@ export default function LoginPage() {
                 aria-label={showPassword ? "Hide password" : "Show password"}
               >
                 {showPassword ? (
-                  <HiEyeSlash className="w-5 h-5" />
+                  <HiEyeSlash aria-hidden="true" className="w-5 h-5" />
                 ) : (
-                  <HiEye className="w-5 h-5" />
+                  <HiEye aria-hidden="true" className="w-5 h-5" />
                 )}
               </button>
             </div>
@@ -150,7 +150,7 @@ export default function LoginPage() {
             ) : (
               <>
                 <span>Masuk ke Dashboard CMS</span>
-                <HiArrowRight className="w-4 h-4" />
+                <HiArrowRight aria-hidden="true" className="w-4 h-4" />
               </>
             )}
           </button>

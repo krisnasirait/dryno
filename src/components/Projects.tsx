@@ -24,11 +24,18 @@ export default function Projects() {
   );
   const [currentImageIndex, setCurrentImageIndex] = useState<number>(0);
   const [scrollProgress, setScrollProgress] = useState(0);
+  const ticking = useRef(false);
   const handleScroll = () => {
-    const el = scrollContainerRef.current;
-    if (!el) return;
-    const max = el.scrollWidth - el.clientWidth;
-    setScrollProgress(max > 0 ? el.scrollLeft / max : 0);
+    if (ticking.current) return;
+    ticking.current = true;
+    requestAnimationFrame(() => {
+      ticking.current = false;
+      const el = scrollContainerRef.current;
+      if (!el) return;
+      const max = el.scrollWidth - el.clientWidth;
+      const v = max > 0 ? el.scrollLeft / max : 0;
+      setScrollProgress((prev) => (Math.abs(prev - v) > 0.002 ? v : prev));
+    });
   };
   const { language, content } = useLanguage();
   const t = translations[language].projects;
@@ -151,7 +158,7 @@ export default function Projects() {
         <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-4 sm:mb-10 pb-3 sm:pb-6 border-b border-gray-100 gap-3 sm:gap-4">
           {/* Title Area */}
           <div>
-            <span className="text-[10px] sm:text-xs font-bold tracking-[0.25em] text-gray-400 uppercase block mb-1 sm:mb-2">
+            <span className="text-[10px] sm:text-xs font-bold tracking-[0.25em] text-gray-500 uppercase block mb-1 sm:mb-2">
               {t.eyebrow}
             </span>
             <h2 className="text-2xl sm:text-3xl lg:text-5xl font-bold text-deep-navy tracking-tight">
@@ -168,14 +175,14 @@ export default function Projects() {
                 aria-label="Previous project"
                 className="w-8 h-8 sm:w-9 sm:h-9 rounded-full border border-gray-200 text-gray-600 hover:bg-deep-navy hover:text-white hover:border-deep-navy flex items-center justify-center transition-all duration-300 active:scale-95"
               >
-                <HiChevronLeft className="w-4 h-4 sm:w-5 sm:h-5" />
+                <HiChevronLeft aria-hidden="true" className="w-4 h-4 sm:w-5 sm:h-5" />
               </button>
               <button
                 onClick={() => scroll("right")}
                 aria-label="Next project"
                 className="w-8 h-8 sm:w-9 sm:h-9 rounded-full border border-gray-200 text-gray-600 hover:bg-deep-navy hover:text-white hover:border-deep-navy flex items-center justify-center transition-all duration-300 active:scale-95"
               >
-                <HiChevronRight className="w-4 h-4 sm:w-5 sm:h-5" />
+                <HiChevronRight aria-hidden="true" className="w-4 h-4 sm:w-5 sm:h-5" />
               </button>
             </div>
 
@@ -185,7 +192,7 @@ export default function Projects() {
               className="inline-flex items-center gap-1.5 text-[11px] sm:text-xs font-bold text-gray-500 hover:text-engineering-blue tracking-widest uppercase transition-colors"
             >
               <span>{t.viewAll}</span>
-              <HiArrowRight className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
+              <HiArrowRight aria-hidden="true" className="w-3 h-3 sm:w-3.5 sm:h-3.5" />
             </a>
           </div>
         </div>
@@ -240,7 +247,7 @@ export default function Projects() {
                   {/* Hover Overlay (single layer) */}
                   <div className="absolute inset-0 bg-deep-navy/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-10" aria-hidden>
                     <span className="px-3.5 py-1.5 rounded-full bg-white/95 text-deep-navy text-xs font-bold shadow-lg flex items-center gap-1.5">
-                      <HiMagnifyingGlassPlus className="w-4 h-4 text-engineering-blue" />
+                      <HiMagnifyingGlassPlus aria-hidden="true" className="w-4 h-4 text-engineering-blue" />
                       {t.openGalleryText}
                     </span>
                   </div>
@@ -249,12 +256,12 @@ export default function Projects() {
                 {/* Card Main Info */}
                 <div className="p-5 sm:p-6 flex flex-col justify-between flex-grow">
                   <div>
-                    <h3 className="text-lg font-black text-deep-navy leading-snug mb-1">
+                    <h3 className="text-lg font-extrabold text-deep-navy leading-snug mb-1">
                       {project.title}
                     </h3>
                     <p className="text-xs font-medium text-gray-500 mb-3">
                       {project.location} &nbsp;|&nbsp;{" "}
-                      <span className="text-gray-400">{project.date}</span>
+                      <span className="text-gray-500">{project.date}</span>
                     </p>
                     <span className="inline-block px-2.5 py-1 rounded-md bg-engineering-blue/10 text-engineering-blue text-[11px] font-semibold mb-4">
                       {project.scope}
@@ -266,30 +273,30 @@ export default function Projects() {
                     <div className="grid grid-cols-3 gap-2 pt-4 border-t border-gray-200/60 text-center">
                       {/* Metric 1 */}
                       <div className="border-r border-gray-200/60 pr-1">
-                        <span className="text-lg sm:text-xl font-black text-deep-navy block leading-none mb-1 tabular-nums">
+                        <span className="text-lg sm:text-xl font-extrabold text-deep-navy block leading-none mb-1 tabular-nums">
                           {project.finalDepth}
                         </span>
-                        <span className="text-[11px] font-semibold text-gray-400 uppercase tracking-wider block">
+                        <span className="text-[11px] font-semibold text-gray-500 uppercase tracking-wider block">
                           {t.finalDepthLabel}
                         </span>
                       </div>
 
                       {/* Metric 2 */}
                       <div className="border-r border-gray-200/60 px-1">
-                        <span className="text-lg sm:text-xl font-black text-deep-navy block leading-none mb-1 tabular-nums">
+                        <span className="text-lg sm:text-xl font-extrabold text-deep-navy block leading-none mb-1 tabular-nums">
                           {project.waterEncounter}
                         </span>
-                        <span className="text-[11px] font-semibold text-gray-400 uppercase tracking-wider block">
+                        <span className="text-[11px] font-semibold text-gray-500 uppercase tracking-wider block">
                           {t.waterEncounterLabel}
                         </span>
                       </div>
 
                       {/* Metric 3 */}
                       <div className="pl-1">
-                        <span className="text-lg sm:text-xl font-black text-deep-navy block leading-none mb-1 tabular-nums">
+                        <span className="text-lg sm:text-xl font-extrabold text-deep-navy block leading-none mb-1 tabular-nums">
                           {project.waterDischarge}
                         </span>
-                        <span className="text-[11px] font-semibold text-gray-400 uppercase tracking-wider block">
+                        <span className="text-[11px] font-semibold text-gray-500 uppercase tracking-wider block">
                           {t.dischargeLabel}
                         </span>
                       </div>
@@ -298,7 +305,7 @@ export default function Projects() {
                     {/* View Documentation Link Bar */}
                     <div className="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between text-xs font-bold text-engineering-blue">
                       <span className="flex items-center gap-1.5">
-                        <HiPhoto className="w-4 h-4" />
+                        <HiPhoto aria-hidden="true" className="w-4 h-4" />
                         {t.openGalleryText} ({galleryList.length} Media)
                       </span>
                       <span aria-hidden>→</span>
@@ -328,7 +335,7 @@ export default function Projects() {
                   <span className="text-[10px] font-bold tracking-widest text-engineering-blue-light uppercase bg-engineering-blue/20 px-2 py-0.5 rounded border border-engineering-blue/30">
                     {t.eyebrow}
                   </span>
-                  <span className="text-xs text-gray-400 hidden sm:inline">
+                  <span className="text-xs text-gray-500 hidden sm:inline">
                     •
                   </span>
                   <span className="text-xs text-gray-300 font-medium">
@@ -337,7 +344,7 @@ export default function Projects() {
                   <span className="text-xs text-gray-500 hidden sm:inline">
                     •
                   </span>
-                  <span className="text-xs text-gray-400">
+                  <span className="text-xs text-gray-500">
                     {selectedProject.date}
                   </span>
                 </div>
@@ -348,12 +355,13 @@ export default function Projects() {
 
               {/* Close Button */}
               <button
+                autoFocus
                 onClick={closeGallery}
                 className="w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors flex-shrink-0"
                 aria-label={`${t.closeModal} (Esc)`}
                 title={`${t.closeModal} (Esc)`}
               >
-                <HiXMark className="w-6 h-6" />
+                <HiXMark aria-hidden="true" className="w-6 h-6" />
               </button>
             </div>
 
@@ -395,12 +403,12 @@ export default function Projects() {
               <div className="absolute top-3 right-3 px-3 py-1 rounded-full bg-black/70 backdrop-blur-md text-xs font-semibold text-white tracking-wider border border-white/10 z-20 flex items-center gap-1.5">
                 {currentMedia.type === "video" ? (
                   <span className="flex items-center gap-1 text-red-400 font-bold">
-                    <HiVideoCamera className="w-3.5 h-3.5" />
+                    <HiVideoCamera aria-hidden="true" className="w-3.5 h-3.5" />
                     {t.videoCount}
                   </span>
                 ) : (
                   <span className="flex items-center gap-1 text-engineering-blue-light font-bold">
-                    <HiPhoto className="w-3.5 h-3.5" />
+                    <HiPhoto aria-hidden="true" className="w-3.5 h-3.5" />
                     {t.photosCount}
                   </span>
                 )}
@@ -420,7 +428,7 @@ export default function Projects() {
                     }
                     className="absolute left-3 sm:left-4 top-1/2 -translate-y-1/2 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-black/60 hover:bg-black/90 text-white border border-white/15 flex items-center justify-center transition-all duration-200 active:scale-95 backdrop-blur-sm z-20"
                   >
-                    <HiChevronLeft className="w-6 h-6" />
+                    <HiChevronLeft aria-hidden="true" className="w-6 h-6" />
                   </button>
                   <button
                     onClick={handleNextImage}
@@ -429,7 +437,7 @@ export default function Projects() {
                     }
                     className="absolute right-3 sm:right-4 top-1/2 -translate-y-1/2 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-black/60 hover:bg-black/90 text-white border border-white/15 flex items-center justify-center transition-all duration-200 active:scale-95 backdrop-blur-sm z-20"
                   >
-                    <HiChevronRight className="w-6 h-6" />
+                    <HiChevronRight aria-hidden="true" className="w-6 h-6" />
                   </button>
                 </>
               )}
@@ -440,12 +448,12 @@ export default function Projects() {
               <div className="flex items-center gap-2">
                 {currentMedia.type === "video" ? (
                   <span className="px-2 py-0.5 rounded bg-red-500/20 text-red-400 border border-red-500/30 text-[10px] font-bold uppercase tracking-wider flex items-center gap-1">
-                    <HiVideoCamera className="w-3 h-3" />
+                    <HiVideoCamera aria-hidden="true" className="w-3 h-3" />
                     {language === "ID" ? "Video Lapangan" : "Field Video"}
                   </span>
                 ) : (
                   <span className="px-2 py-0.5 rounded bg-engineering-blue/20 text-engineering-blue-light border border-engineering-blue/30 text-[10px] font-bold uppercase tracking-wider flex items-center gap-1">
-                    <HiPhoto className="w-3 h-3" />
+                    <HiPhoto aria-hidden="true" className="w-3 h-3" />
                     {language === "ID" ? "Foto Dokumentasi" : "Site Photo"}
                   </span>
                 )}
@@ -492,7 +500,7 @@ export default function Projects() {
                       {media.type === "video" && (
                         <div className="absolute inset-0 bg-black/40 flex items-center justify-center">
                           <div className="w-6 h-6 rounded-full bg-red-600/90 text-white flex items-center justify-center shadow-md">
-                            <HiPlay className="w-3.5 h-3.5 translate-x-0.5" />
+                            <HiPlay aria-hidden="true" className="w-3.5 h-3.5 translate-x-0.5" />
                           </div>
                         </div>
                       )}
@@ -506,7 +514,7 @@ export default function Projects() {
                 {/* Specs */}
                 <div className="flex items-center gap-4 sm:gap-6 text-gray-300">
                   <div>
-                    <span className="text-[10px] text-gray-400 block uppercase font-medium">
+                    <span className="text-[10px] text-gray-500 block uppercase font-medium">
                       {t.finalDepthLabel}
                     </span>
                     <span className="font-bold text-white">
@@ -515,7 +523,7 @@ export default function Projects() {
                   </div>
                   <div className="w-px h-6 bg-white/10" />
                   <div>
-                    <span className="text-[10px] text-gray-400 block uppercase font-medium">
+                    <span className="text-[10px] text-gray-500 block uppercase font-medium">
                       {t.waterEncounterLabel}
                     </span>
                     <span className="font-bold text-white">
@@ -524,7 +532,7 @@ export default function Projects() {
                   </div>
                   <div className="w-px h-6 bg-white/10" />
                   <div>
-                    <span className="text-[10px] text-gray-400 block uppercase font-medium">
+                    <span className="text-[10px] text-gray-500 block uppercase font-medium">
                       {t.dischargeLabel}
                     </span>
                     <span className="font-bold text-white">
@@ -539,7 +547,7 @@ export default function Projects() {
                     onClick={handlePrevProject}
                     className="px-2.5 sm:px-3 py-1.5 rounded-lg bg-white/5 hover:bg-white/15 text-gray-300 hover:text-white transition-colors text-xs font-medium flex items-center gap-1"
                   >
-                    <HiChevronLeft className="w-3.5 h-3.5" />
+                    <HiChevronLeft aria-hidden="true" className="w-3.5 h-3.5" />
                     <span>
                       {language === "ID"
                         ? "Proyek Sebelumnya"
@@ -555,7 +563,7 @@ export default function Projects() {
                         ? "Proyek Selanjutnya"
                         : "Next Project"}
                     </span>
-                    <HiChevronRight className="w-3.5 h-3.5" />
+                    <HiChevronRight aria-hidden="true" className="w-3.5 h-3.5" />
                   </button>
                   <a
                     href={`https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
@@ -567,7 +575,7 @@ export default function Projects() {
                     rel="noopener noreferrer"
                     className="px-3 py-1.5 rounded-lg bg-[#25D366] hover:bg-[#20bd5a] text-white transition-all text-xs font-bold flex items-center gap-1.5 shadow-sm ml-1"
                   >
-                    <FaWhatsapp className="w-3.5 h-3.5" />
+                    <FaWhatsapp aria-hidden="true" className="w-3.5 h-3.5" />
                     <span className="hidden sm:inline">
                       {language === "ID"
                         ? "Tanya Proyek Ini"

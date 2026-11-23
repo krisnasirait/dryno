@@ -47,7 +47,7 @@ export default function Equipment() {
                 className="inline-flex items-center gap-3 px-5 py-2.5 sm:px-7 sm:py-3.5 rounded-full bg-white/10 border border-white/25 text-white text-[11px] sm:text-xs font-bold tracking-wider uppercase transition-colors hover:bg-white hover:text-deep-navy group"
               >
                 <span>{eq.cta[language]}</span>
-                <HiArrowRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
+                <HiArrowRight aria-hidden="true" className="w-3.5 h-3.5 transition-transform group-hover:translate-x-1" />
               </a>
             </div>
           </div>
@@ -69,7 +69,7 @@ export default function Equipment() {
                   <div className="pt-2 text-left">
                     <p className="text-[10px] font-bold tracking-widest text-engineering-blue-light/80 uppercase">{language === "EN" ? item.category : categoryID[item.category] || item.category}</p>
                     <h3 className="text-xs sm:text-sm font-bold text-white leading-snug line-clamp-2">{item.title[language]}</h3>
-                    <p className="text-[11px] font-medium text-gray-400 mt-0.5 line-clamp-2">{item.spec[language]}</p>
+                    <p className="text-[11px] font-medium text-gray-500 mt-0.5 line-clamp-2">{item.spec[language]}</p>
                     {benefits[item.id] && (
                       <p className="text-[11px] font-semibold text-sky-300/90 mt-0.5">→ {benefits[item.id][language]}</p>
                     )}

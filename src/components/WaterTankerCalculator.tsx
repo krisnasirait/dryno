@@ -78,15 +78,12 @@ export default function WaterTankerCalculator() {
       id="tanker-calculator"
       className="relative py-6 sm:py-16 lg:py-20 bg-warm-white text-deep-navy overflow-hidden"
     >
-      {/* Decorative ambient lights */}
-      <div className="absolute top-1/4 left-0 -ml-20 w-80 h-80 rounded-full bg-engineering-blue/5 blur-3xl pointer-events-none" />
-      <div className="absolute bottom-1/4 right-0 -mr-20 w-80 h-80 rounded-full bg-engineering-blue-light/5 blur-3xl pointer-events-none" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="max-w-4xl mb-4 sm:mb-10 lg:mb-14">
           <div className="inline-flex items-center gap-2 px-3 py-1 sm:px-3.5 sm:py-1.5 rounded-full bg-engineering-blue/10 border border-engineering-blue/20 text-engineering-blue text-[11px] sm:text-xs font-bold tracking-wider uppercase mb-2 sm:mb-4">
-            <HiCalculator className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-engineering-blue shrink-0" />
+            <HiCalculator aria-hidden="true" className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-engineering-blue shrink-0" />
             <span>{t.badge}</span>
           </div>
 
@@ -105,7 +102,7 @@ export default function WaterTankerCalculator() {
           <div className="lg:col-span-6 bg-white rounded-3xl p-4 sm:p-8 shadow-xl border border-gray-100/90 space-y-4 sm:space-y-7">
             <div>
               <h2 className="text-base sm:text-lg font-bold text-deep-navy mb-1 flex items-center gap-2">
-                <HiSparkles className="w-5 h-5 text-engineering-blue" />
+                <HiSparkles aria-hidden="true" className="w-5 h-5 text-engineering-blue" />
                 <span>{t.simulationTitle}</span>
               </h2>
               <p className="text-xs text-gray-500">
@@ -148,11 +145,12 @@ export default function WaterTankerCalculator() {
             {/* Parameter 1: Daily Water Demand */}
             <div className="space-y-3">
               <div className="flex items-center justify-between">
-                <label className="text-xs font-bold uppercase tracking-wider text-gray-600">
+                <label htmlFor="calc-daily" className="text-xs font-bold uppercase tracking-wider text-gray-600">
                   {t.dailyDemandLabel}
                 </label>
                 <div className="flex items-center gap-1.5 px-3 py-1 rounded-lg bg-gray-100 border border-gray-200">
                   <input
+                    id="calc-daily"
                     type="number"
                     min="100"
                     max="50000"
@@ -171,6 +169,8 @@ export default function WaterTankerCalculator() {
 
               {/* Slider */}
               <input
+                id="calc-range"
+                aria-label={t.dailyDemandLabel}
                 type="range"
                 min="500"
                 max="20000"
@@ -179,7 +179,7 @@ export default function WaterTankerCalculator() {
                 onChange={(e) => setDailyNeed(Number(e.target.value))}
                 className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer accent-engineering-blue"
               />
-              <div className="flex justify-between text-[10px] font-medium text-gray-400">
+              <div className="flex justify-between text-[10px] font-medium text-gray-500">
                 <span>{formatNumber(500)} {language === "ID" ? "L/hari" : "L/day"}</span>
                 <span>{formatNumber(10000)} {language === "ID" ? "L/hari" : "L/day"}</span>
                 <span>{formatNumber(20000)} {language === "ID" ? "L/hari" : "L/day"}</span>
@@ -195,7 +195,7 @@ export default function WaterTankerCalculator() {
                 </label>
                 <div className="flex items-center justify-between p-3 rounded-xl bg-gray-50 border border-gray-200 text-xs text-gray-700">
                   <span className="flex items-center gap-2 font-medium">
-                    <HiTruck className="w-4 h-4 text-engineering-blue" />
+                    <HiTruck aria-hidden="true" className="w-4 h-4 text-engineering-blue" />
                     {language === "ID" ? "Truk Standar" : "Standard Truck"}
                   </span>
                   <span className="font-extrabold text-deep-navy">
@@ -206,14 +206,15 @@ export default function WaterTankerCalculator() {
 
               {/* Price per 5,000L Tanker */}
               <div className="space-y-1.5">
-                <label className="text-xs font-bold uppercase tracking-wider text-gray-600 block">
+                <label className="text-xs font-bold uppercase tracking-wider text-gray-600 block" htmlFor="calc-price">
                   {t.tankerPriceLabel}
                 </label>
                 <div className="flex items-center gap-1.5 p-2.5 rounded-xl bg-gray-50 border border-gray-200">
-                  <span className="text-xs font-bold text-gray-400 pl-1">
+                  <span className="text-xs font-bold text-gray-500 pl-1">
                     IDR
                   </span>
                   <input
+                    id="calc-price"
                     readOnly
                     type="text"
                     inputMode="numeric"
@@ -227,9 +228,9 @@ export default function WaterTankerCalculator() {
 
             {/* Parameter 3: Projection Horizon */}
             <div className="space-y-2 pt-2 border-t border-gray-100">
-              <label className="text-xs font-bold uppercase tracking-wider text-gray-600 block">
-                {t.projectionLabel}
-              </label>
+              <span className="text-xs font-bold uppercase tracking-wider text-gray-600 block">
+                  {t.projectionLabel}
+                </span>
               <div className="grid grid-cols-3 gap-2.5">
                 {([5, 10, 25] as const).map((years) => (
                   <button
@@ -241,7 +242,7 @@ export default function WaterTankerCalculator() {
                       : "bg-gray-100 text-gray-600 hover:bg-gray-200"
                       }`}
                   >
-                    <HiCalendarDays className="w-4 h-4" />
+                    <HiCalendarDays aria-hidden="true" className="w-4 h-4" />
                     <span>{years} {language === "ID" ? "Tahun" : "Years"}</span>
                   </button>
                 ))}
@@ -273,7 +274,7 @@ export default function WaterTankerCalculator() {
                       ? `Akumulasi Pengeluaran Air Tangki (${projectionYears} Tahun)`
                       : `Cumulative Water Delivery Cost (${projectionYears} Years)`}
                   </span>
-                  <div className="text-2xl sm:text-4xl font-black text-white tracking-tight leading-none drop-shadow-md">
+                  <div className="text-2xl sm:text-4xl font-extrabold text-white tracking-tight leading-none drop-shadow-md">
                     {formatIDR(calculations.projectedCost)}
                   </div>
                 </div>
@@ -338,7 +339,7 @@ export default function WaterTankerCalculator() {
             <div className="grid grid-cols-2 gap-2.5 sm:gap-4">
               {/* Metric 1: Monthly Demand */}
               <div className="p-3 sm:p-5 rounded-2xl bg-white border border-gray-100 shadow-sm">
-                <span className="text-[10px] sm:text-[11px] font-bold text-gray-400 uppercase tracking-wider block mb-0.5 sm:mb-1">
+                <span className="text-[10px] sm:text-[11px] font-bold text-gray-500 uppercase tracking-wider block mb-0.5 sm:mb-1">
                   {language === "ID" ? "Kebutuhan Bulanan" : "Monthly Demand"}
                 </span>
                 <div className="text-base sm:text-xl font-extrabold text-deep-navy">
@@ -347,14 +348,14 @@ export default function WaterTankerCalculator() {
                     {language === "ID" ? "Liter" : "Liters"}
                   </span>
                 </div>
-                <span className="text-[10px] text-gray-400 mt-0.5 block">
+                <span className="text-[10px] text-gray-500 mt-0.5 block">
                   {formatNumber(dailyNeed)} {language === "ID" ? "L/hari × 30 hari" : "L/day × 30 days"}
                 </span>
               </div>
 
               {/* Metric 2: Equivalent Tankers */}
               <div className="p-3 sm:p-5 rounded-2xl bg-white border border-gray-100 shadow-sm">
-                <span className="text-[10px] sm:text-[11px] font-bold text-gray-400 uppercase tracking-wider block mb-0.5 sm:mb-1">
+                <span className="text-[10px] sm:text-[11px] font-bold text-gray-500 uppercase tracking-wider block mb-0.5 sm:mb-1">
                   {language === "ID" ? "Ritase Tangki" : "Equivalent Tankers"}
                 </span>
                 <div className="text-base sm:text-xl font-extrabold text-engineering-blue flex items-baseline gap-1">
@@ -367,33 +368,33 @@ export default function WaterTankerCalculator() {
                     {language === "ID" ? "tangki/bulan" : "trucks/month"}
                   </span>
                 </div>
-                <span className="text-[10px] text-gray-400 mt-0.5 block">
+                <span className="text-[10px] text-gray-500 mt-0.5 block">
                   {language === "ID" ? "5.000 L / armada" : "5,000 L / tanker"}
                 </span>
               </div>
 
               {/* Metric 3: Monthly Cost */}
               <div className="p-3 sm:p-5 rounded-2xl bg-white border border-gray-100 shadow-sm">
-                <span className="text-[10px] sm:text-[11px] font-bold text-gray-400 uppercase tracking-wider block mb-0.5 sm:mb-1">
+                <span className="text-[10px] sm:text-[11px] font-bold text-gray-500 uppercase tracking-wider block mb-0.5 sm:mb-1">
                   {t.monthlyEst}
                 </span>
                 <div className="text-sm sm:text-lg font-extrabold text-deep-navy">
                   {formatIDR(calculations.monthlyCost)}
                 </div>
-                <span className="text-[10px] text-gray-400 mt-0.5 block">
+                <span className="text-[10px] text-gray-500 mt-0.5 block">
                   {language === "ID" ? "Ritase × harga" : "Tankers × price"}
                 </span>
               </div>
 
               {/* Metric 4: Annual Cost */}
               <div className="p-3 sm:p-5 rounded-2xl bg-white border border-gray-100 shadow-sm">
-                <span className="text-[10px] sm:text-[11px] font-bold text-gray-400 uppercase tracking-wider block mb-0.5 sm:mb-1">
+                <span className="text-[10px] sm:text-[11px] font-bold text-gray-500 uppercase tracking-wider block mb-0.5 sm:mb-1">
                   {t.yearlyEst}
                 </span>
                 <div className="text-sm sm:text-lg font-extrabold text-deep-navy">
                   {formatIDR(calculations.yearlyCost)}
                 </div>
-                <span className="text-[10px] text-gray-400 mt-0.5 block">
+                <span className="text-[10px] text-gray-500 mt-0.5 block">
                   {language === "ID" ? "Bulanan × 12 bulan" : "Monthly × 12 months"}
                 </span>
               </div>
@@ -416,7 +417,7 @@ export default function WaterTankerCalculator() {
                 className="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-full bg-deep-navy hover:bg-engineering-blue text-white text-xs font-bold tracking-wider uppercase transition-colors shrink-0"
               >
                 <span>{t.ctaButton}</span>
-                <HiArrowRight className="w-3.5 h-3.5" />
+                <HiArrowRight aria-hidden="true" className="w-3.5 h-3.5" />
               </a>
             </div>
             <p className="text-[11px] sm:text-xs text-gray-500">
@@ -432,7 +433,7 @@ export default function WaterTankerCalculator() {
         <div className="space-y-3.5">
           {/* Note 1: Baseline Simulation Parameters */}
           <div className="p-4 sm:p-5 rounded-2xl bg-white border border-gray-200/80 text-xs text-gray-600 flex items-start gap-3">
-            <HiInformationCircle className="w-5 h-5 text-engineering-blue shrink-0 mt-0.5" />
+            <HiInformationCircle aria-hidden="true" className="w-5 h-5 text-engineering-blue shrink-0 mt-0.5" />
             <p className="leading-relaxed">
               <strong className="text-deep-navy">
                 {language === "ID" ? "Asumsi Parameter Simulasi Awal:" : "Initial Simulation Assumptions:"}
@@ -445,7 +446,7 @@ export default function WaterTankerCalculator() {
 
           {/* Note 2: Calculator Disclaimers & Logistics */}
           <div className="p-4 sm:p-5 rounded-2xl bg-white border border-gray-200/80 text-xs text-gray-600 flex items-start gap-3">
-            <HiInformationCircle className="w-5 h-5 text-engineering-blue shrink-0 mt-0.5" />
+            <HiInformationCircle aria-hidden="true" className="w-5 h-5 text-engineering-blue shrink-0 mt-0.5" />
             <p className="leading-relaxed">
               <strong className="text-deep-navy">
                 {language === "ID" ? "Catatan Kalkulator:" : "Calculator Note:"}
@@ -458,7 +459,7 @@ export default function WaterTankerCalculator() {
 
           {/* Note 3: Technical Objectivity Disclaimer */}
           <div className="p-4 sm:p-5 rounded-2xl bg-amber-50/70 border border-amber-200/80 text-xs text-amber-900 flex items-start gap-3">
-            <HiExclamationTriangle className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" />
+            <HiExclamationTriangle aria-hidden="true" className="w-5 h-5 text-amber-600 shrink-0 mt-0.5" />
             <p className="leading-relaxed">
               <strong className="text-amber-950">
                 {language === "ID" ? "Catatan objektivitas:" : "A note on objectivity:"}

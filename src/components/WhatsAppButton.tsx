@@ -26,7 +26,7 @@ export default function WhatsAppButton() {
       }
       className="fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 rounded-full bg-[#25D366] hover:bg-[#20bd5a] text-white shadow-xl shadow-green-600/30 transition-colors duration-300"
     >
-      <FaWhatsapp className="w-6 h-6 text-white" />
+      <FaWhatsapp aria-hidden="true" className="w-6 h-6 text-white" />
     </a>
   );
 }

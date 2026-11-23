@@ -66,7 +66,7 @@ export default function About() {
           <div className="lg:col-span-5 flex flex-col justify-between space-y-4 sm:space-y-6">
             <div>
               {/* Category Tagline */}
-              <span className="text-xs font-bold tracking-[0.25em] text-gray-400 uppercase block mb-2 sm:mb-3">
+              <span className="text-xs font-bold tracking-[0.25em] text-gray-500 uppercase block mb-2 sm:mb-3">
                 {about.category[language]}
               </span>
 
@@ -96,9 +96,9 @@ export default function About() {
                 </span>
                 <span className="w-5 h-5 sm:w-6 sm:h-6 rounded-full bg-white/20 flex items-center justify-center transition-transform duration-300 group-hover:translate-x-1">
                   {isExpanded ? (
-                    <HiChevronUp className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-white" />
+                    <HiChevronUp aria-hidden="true" className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-white" />
                   ) : (
-                    <HiArrowRight className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-white" />
+                    <HiArrowRight aria-hidden="true" className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-white" />
                   )}
                 </span>
               </button>
@@ -120,7 +120,7 @@ export default function About() {
             {/* Highlight 2: Service Coverage */}
             <div className="flex items-start gap-3 sm:gap-3.5 pt-1 sm:pt-2">
               <div className="p-2 sm:p-2.5 rounded-xl bg-engineering-blue/10 text-engineering-blue shrink-0">
-                <HiMapPin className="w-4 h-4 sm:w-5 sm:h-5" />
+                <HiMapPin aria-hidden="true" className="w-4 h-4 sm:w-5 sm:h-5" />
               </div>
               <div>
                 <div className="text-xs font-bold text-deep-navy">
@@ -135,7 +135,7 @@ export default function About() {
             {/* Highlight 3: Project-Based Approach */}
             <div className="flex items-start gap-3 sm:gap-3.5 pt-1">
               <div className="p-2 sm:p-2.5 rounded-xl bg-engineering-blue/10 text-engineering-blue shrink-0">
-                <HiBriefcase className="w-4 h-4 sm:w-5 sm:h-5" />
+                <HiBriefcase aria-hidden="true" className="w-4 h-4 sm:w-5 sm:h-5" />
               </div>
               <div>
                 <div className="text-xs font-bold text-deep-navy whitespace-pre-line">
@@ -147,7 +147,7 @@ export default function About() {
             {/* Highlight 4: Technical & Regulatory Support */}
             <div className="flex items-start gap-3 sm:gap-3.5 pt-1">
               <div className="p-2 sm:p-2.5 rounded-xl bg-engineering-blue/10 text-engineering-blue shrink-0">
-                <HiCog6Tooth className="w-4 h-4 sm:w-5 sm:h-5" />
+                <HiCog6Tooth aria-hidden="true" className="w-4 h-4 sm:w-5 sm:h-5" />
               </div>
               <div>
                 <div className="text-xs font-bold text-deep-navy whitespace-pre-line">
@@ -176,7 +176,7 @@ export default function About() {
 
             {/* Overlay Text */}
             <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-8 z-10 text-white">
-              <h3 className="text-lg sm:text-2xl font-black tracking-tight leading-tight mb-2 sm:mb-3 drop-shadow-md max-w-[240px]">
+              <h3 className="text-lg sm:text-2xl font-extrabold tracking-tight leading-tight mb-2 sm:mb-3 drop-shadow-md max-w-[240px]">
                 {about.bannerOverlayText[language]}
               </h3>
               <div className="w-1/2 h-1 bg-engineering-blue-light rounded-full" />
@@ -198,7 +198,7 @@ export default function About() {
               <div>
                 <div className="flex items-center gap-2.5 sm:gap-3 mb-3 sm:mb-4">
                   <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-engineering-blue/10 flex items-center justify-center text-engineering-blue">
-                    <HiBuildingOffice2 className="w-4 h-4 sm:w-5 sm:h-5" />
+                    <HiBuildingOffice2 aria-hidden="true" className="w-4 h-4 sm:w-5 sm:h-5" />
                   </div>
                   <h4 className="text-sm sm:text-base font-extrabold text-deep-navy uppercase tracking-wider">
                     {about.sectorsTitle[language]}
@@ -227,7 +227,7 @@ export default function About() {
               <div>
                 <div className="flex items-center gap-2.5 sm:gap-3 mb-3 sm:mb-4">
                   <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-engineering-blue/10 flex items-center justify-center text-engineering-blue">
-                    <HiArrowPath className="w-4 h-4 sm:w-5 sm:h-5" />
+                    <HiArrowPath aria-hidden="true" className="w-4 h-4 sm:w-5 sm:h-5" />
                   </div>
                   <h4 className="text-base font-extrabold text-deep-navy uppercase tracking-wider">
                     {about.processTitle[language]}
@@ -254,7 +254,7 @@ export default function About() {
               <div>
                 <div className="flex items-center gap-2.5 sm:gap-3 mb-3 sm:mb-4">
                   <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-engineering-blue/10 flex items-center justify-center text-engineering-blue">
-                    <HiShieldCheck className="w-4 h-4 sm:w-5 sm:h-5" />
+                    <HiShieldCheck aria-hidden="true" className="w-4 h-4 sm:w-5 sm:h-5" />
                   </div>
                   <h4 className="text-sm sm:text-base font-extrabold text-deep-navy uppercase tracking-wider">
                     {about.permitTitle[language]}

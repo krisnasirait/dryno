@@ -552,11 +552,11 @@ export default function AdminCMSPage() {
           >
             <div className="flex items-start gap-2.5 text-xs">
               {toast.type === "success" ? (
-                <HiCheckCircle className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
+                <HiCheckCircle aria-hidden="true" className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
               ) : toast.type === "error" ? (
-                <HiExclamationTriangle className="w-5 h-5 text-red-400 shrink-0 mt-0.5" />
+                <HiExclamationTriangle aria-hidden="true" className="w-5 h-5 text-red-400 shrink-0 mt-0.5" />
               ) : (
-                <HiInformationCircle className="w-5 h-5 text-[#00A3FF] shrink-0 mt-0.5" />
+                <HiInformationCircle aria-hidden="true" className="w-5 h-5 text-[#00A3FF] shrink-0 mt-0.5" />
               )}
               <div>
                 <p className="font-semibold leading-relaxed">{toast.text}</p>
@@ -568,7 +568,7 @@ export default function AdminCMSPage() {
                     className="inline-flex items-center gap-1 mt-1 text-[11px] font-bold text-emerald-400 hover:underline"
                   >
                     <span>Lihat Commit di GitHub</span>
-                    <HiArrowTopRightOnSquare className="w-3.5 h-3.5" />
+                    <HiArrowTopRightOnSquare aria-hidden="true" className="w-3.5 h-3.5" />
                   </a>
                 )}
               </div>
@@ -579,7 +579,7 @@ export default function AdminCMSPage() {
               }
               className="text-slate-400 hover:text-white"
             >
-              <HiXMark className="w-4 h-4" />
+              <HiXMark aria-hidden="true" className="w-4 h-4" />
             </button>
           </div>
         ))}
@@ -591,7 +591,7 @@ export default function AdminCMSPage() {
           {/* Left Brand & Repo Sync Status */}
           <div className="flex items-center gap-4">
             <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#005B94] to-[#00A3FF] flex items-center justify-center shadow-md">
-              <FaGithub className="w-5 h-5 text-white" />
+              <FaGithub aria-hidden="true" className="w-5 h-5 text-white" />
             </div>
             <div>
               <div className="flex items-center gap-2.5 flex-wrap">
@@ -669,7 +669,7 @@ export default function AdminCMSPage() {
               title="Fetch ulang content.json terbaru dari GitHub API"
               className="px-3.5 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700 text-slate-200 text-xs font-bold flex items-center gap-1.5 transition-all disabled:opacity-50 cursor-pointer"
             >
-              <HiArrowPath
+              <HiArrowPath aria-hidden="true"
                 className={`w-4 h-4 text-[#00A3FF] ${refreshing ? "animate-spin" : ""
                   }`}
               />
@@ -683,7 +683,7 @@ export default function AdminCMSPage() {
               className="px-3.5 py-2 rounded-xl bg-slate-900 hover:bg-slate-800 border border-slate-700 text-slate-200 text-xs font-bold flex items-center gap-1.5 transition-all"
             >
               <span>Lihat Web</span>
-              <HiArrowTopRightOnSquare className="w-3.5 h-3.5 text-slate-400" />
+              <HiArrowTopRightOnSquare aria-hidden="true" className="w-3.5 h-3.5 text-slate-400" />
             </Link>
 
             {/* Save / Publish Commit Button */}
@@ -700,7 +700,7 @@ export default function AdminCMSPage() {
                 </>
               ) : (
                 <>
-                  <HiCloudArrowUp className="w-4 h-4" />
+                  <HiCloudArrowUp aria-hidden="true" className="w-4 h-4" />
                   <span>Save / Publish</span>
                 </>
               )}
@@ -713,7 +713,7 @@ export default function AdminCMSPage() {
               title="Logout dari Admin CMS"
               className="p-2 rounded-xl bg-red-500/10 hover:bg-red-500/20 border border-red-500/30 text-red-300 transition-colors cursor-pointer"
             >
-              <HiArrowRightOnRectangle className="w-5 h-5" />
+              <HiArrowRightOnRectangle aria-hidden="true" className="w-5 h-5" />
             </button>
           </div>
         </div>
@@ -725,7 +725,7 @@ export default function AdminCMSPage() {
         {(!repoInfo.isConfigured || syncSource === "fallback") && (
           <div className="mb-6 p-4 rounded-2xl bg-amber-500/10 border border-amber-500/30 text-amber-200 text-xs flex flex-col sm:flex-row sm:items-center justify-between gap-3">
             <div className="flex items-start gap-3">
-              <HiExclamationTriangle className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" />
+              <HiExclamationTriangle aria-hidden="true" className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" />
               <div>
                 <p className="font-bold text-amber-100">
                   Perhatian Konfigurasi GitHub Environment (.env)
@@ -787,7 +787,7 @@ export default function AdminCMSPage() {
             {/* Commit Panel Card in Sidebar */}
             <div className="bg-[#0B192C] border border-slate-800/80 rounded-3xl p-5 space-y-3.5">
               <div className="flex items-center gap-2 text-xs font-extrabold uppercase tracking-wider text-white">
-                <HiCodeBracket className="w-4 h-4 text-[#00A3FF]" />
+                <HiCodeBracket aria-hidden="true" className="w-4 h-4 text-[#00A3FF]" />
                 <span>GitHub Commit Control</span>
               </div>
 
@@ -841,7 +841,7 @@ export default function AdminCMSPage() {
                   </>
                 ) : (
                   <>
-                    <HiCloudArrowUp className="w-4 h-4" />
+                    <HiCloudArrowUp aria-hidden="true" className="w-4 h-4" />
                     <span>Save & Publish ke GitHub</span>
                   </>
                 )}
@@ -875,7 +875,7 @@ export default function AdminCMSPage() {
                     onClick={openCreateProductModal}
                     className="px-4 py-3 rounded-2xl bg-[#00A3FF] hover:bg-[#0088d6] text-slate-950 font-extrabold text-xs uppercase tracking-wider flex items-center gap-2 shadow-lg shadow-[#00A3FF]/20 shrink-0 transition-all cursor-pointer"
                   >
-                    <HiPlus className="w-4 h-4 stroke-2" />
+                    <HiPlus aria-hidden="true" className="w-4 h-4 stroke-2" />
                     <span>Tambah Produk Baru</span>
                   </button>
                 </div>
@@ -951,7 +951,7 @@ export default function AdminCMSPage() {
                             onClick={() => openEditProductModal(idx)}
                             className="px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-[#005B94] text-slate-200 hover:text-white text-xs font-bold flex items-center gap-1.5 transition-colors cursor-pointer"
                           >
-                            <HiPencilSquare className="w-3.5 h-3.5" />
+                            <HiPencilSquare aria-hidden="true" className="w-3.5 h-3.5" />
                             <span>Edit</span>
                           </button>
                           <button
@@ -966,7 +966,7 @@ export default function AdminCMSPage() {
                             className="p-1.5 rounded-xl bg-red-500/10 hover:bg-red-600 text-red-400 hover:text-white border border-red-500/20 transition-colors cursor-pointer"
                             title="Hapus Produk"
                           >
-                            <HiTrash className="w-4 h-4" />
+                            <HiTrash aria-hidden="true" className="w-4 h-4" />
                           </button>
                         </div>
                       </div>
@@ -1241,7 +1241,7 @@ export default function AdminCMSPage() {
                       }
                       className="px-3.5 py-2 rounded-xl bg-[#005B94] hover:bg-[#00A3FF] text-white hover:text-slate-950 text-xs font-bold flex items-center gap-1.5 transition-colors cursor-pointer"
                     >
-                      <HiPlus className="w-4 h-4" />
+                      <HiPlus aria-hidden="true" className="w-4 h-4" />
                       <span>Tambah Slide Hero</span>
                     </button>
                   </div>
@@ -1268,7 +1268,7 @@ export default function AdminCMSPage() {
                               }
                               className="text-xs text-red-400 hover:text-red-300 flex items-center gap-1 cursor-pointer"
                             >
-                              <HiTrash className="w-3.5 h-3.5" />
+                              <HiTrash aria-hidden="true" className="w-3.5 h-3.5" />
                               <span>Hapus Slide</span>
                             </button>
                           )}
@@ -1627,7 +1627,7 @@ export default function AdminCMSPage() {
                     onClick={openCreateProjectModal}
                     className="px-4 py-3 rounded-2xl bg-[#00A3FF] hover:bg-[#0088d6] text-slate-950 font-extrabold text-xs uppercase tracking-wider flex items-center gap-2 shadow-lg shrink-0 transition-all cursor-pointer"
                   >
-                    <HiPlus className="w-4 h-4 stroke-2" />
+                    <HiPlus aria-hidden="true" className="w-4 h-4 stroke-2" />
                     <span>Tambah Proyek</span>
                   </button>
                 </div>
@@ -1692,7 +1692,7 @@ export default function AdminCMSPage() {
                           onClick={() => openEditProjectModal(idx)}
                           className="px-3 py-1.5 rounded-xl bg-slate-800 hover:bg-[#005B94] text-slate-200 hover:text-white text-xs font-bold flex items-center gap-1.5 transition-colors cursor-pointer"
                         >
-                          <HiPencilSquare className="w-3.5 h-3.5" />
+                          <HiPencilSquare aria-hidden="true" className="w-3.5 h-3.5" />
                           <span>Edit</span>
                         </button>
                         <button
@@ -1706,7 +1706,7 @@ export default function AdminCMSPage() {
                           }
                           className="p-1.5 rounded-xl bg-red-500/10 hover:bg-red-600 text-red-400 hover:text-white border border-red-500/20 transition-colors cursor-pointer"
                         >
-                          <HiTrash className="w-4 h-4" />
+                          <HiTrash aria-hidden="true" className="w-4 h-4" />
                         </button>
                       </div>
                     </div>
@@ -1997,7 +1997,7 @@ export default function AdminCMSPage() {
                         FAQ MANAGEMENT ({editLang})
                       </span>
                       <h3 className="text-lg font-extrabold text-white flex items-center gap-2">
-                        <HiQuestionMarkCircle className="w-5 h-5 text-[#00A3FF]" />
+                        <HiQuestionMarkCircle aria-hidden="true" className="w-5 h-5 text-[#00A3FF]" />
                         <span>
                           Daftar Pertanyaan Umum ({content.faq.items.length}{" "}
                           FAQ)
@@ -2031,7 +2031,7 @@ export default function AdminCMSPage() {
                       }
                       className="px-3.5 py-2 rounded-xl bg-[#005B94] hover:bg-[#00A3FF] text-white hover:text-slate-950 text-xs font-bold flex items-center gap-1.5 transition-colors cursor-pointer"
                     >
-                      <HiPlus className="w-4 h-4" />
+                      <HiPlus aria-hidden="true" className="w-4 h-4" />
                       <span>Tambah FAQ</span>
                     </button>
                   </div>
@@ -2057,7 +2057,7 @@ export default function AdminCMSPage() {
                             }
                             className="text-xs text-red-400 hover:text-red-300 flex items-center gap-1 cursor-pointer"
                           >
-                            <HiTrash className="w-3.5 h-3.5" />
+                            <HiTrash aria-hidden="true" className="w-3.5 h-3.5" />
                             <span>Hapus</span>
                           </button>
                         </div>
@@ -2147,7 +2147,7 @@ export default function AdminCMSPage() {
             disabled={committing}
             className="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-gradient-to-r from-[#005B94] to-[#00A3FF] text-white text-xs font-extrabold uppercase tracking-wider flex items-center justify-center gap-2 shadow-lg shrink-0 cursor-pointer"
           >
-            <HiCloudArrowUp className="w-4 h-4" />
+            <HiCloudArrowUp aria-hidden="true" className="w-4 h-4" />
             <span>{committing ? "Committing..." : "Save & Publish"}</span>
           </button>
         </div>
@@ -2176,7 +2176,7 @@ export default function AdminCMSPage() {
                 onClick={() => setIsProductModalOpen(false)}
                 className="w-8 h-8 rounded-full bg-slate-800 hover:bg-slate-700 text-slate-300 flex items-center justify-center"
               >
-                <HiXMark className="w-5 h-5" />
+                <HiXMark aria-hidden="true" className="w-5 h-5" />
               </button>
             </div>
 
@@ -2187,7 +2187,7 @@ export default function AdminCMSPage() {
             >
               {productFormError && (
                 <div className="p-3.5 rounded-xl bg-red-500/10 border border-red-500/30 text-red-300 text-xs flex items-center gap-2">
-                  <HiExclamationTriangle className="w-4 h-4 text-red-400 shrink-0" />
+                  <HiExclamationTriangle aria-hidden="true" className="w-4 h-4 text-red-400 shrink-0" />
                   <span>{productFormError}</span>
                 </div>
               )}
@@ -2498,7 +2498,7 @@ export default function AdminCMSPage() {
                 onClick={() => setIsProjectModalOpen(false)}
                 className="w-8 h-8 rounded-full bg-slate-800 text-slate-300 flex items-center justify-center"
               >
-                <HiXMark className="w-5 h-5" />
+                <HiXMark aria-hidden="true" className="w-5 h-5" />
               </button>
             </div>
 
@@ -2656,7 +2656,7 @@ export default function AdminCMSPage() {
           <div className="bg-[#0B192C] border border-red-500/30 rounded-3xl max-w-md w-full p-6 space-y-5 shadow-2xl">
             <div className="flex items-start gap-4">
               <div className="w-12 h-12 rounded-2xl bg-red-500/15 border border-red-500/30 flex items-center justify-center text-red-400 shrink-0">
-                <HiExclamationTriangle className="w-6 h-6" />
+                <HiExclamationTriangle aria-hidden="true" className="w-6 h-6" />
               </div>
               <div>
                 <h3 className="text-base font-extrabold text-white">

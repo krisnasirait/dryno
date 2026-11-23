@@ -21,7 +21,7 @@ export default function TopBar() {
         </div>
         <Link href="/#about" className="flex items-center gap-1.5 underline underline-offset-2 hover:text-sky-300 shrink-0 font-semibold">
           <span>{language === "EN" ? "More information" : "Info lebih lanjut"}</span>
-          <HiArrowRight className="w-3 h-3 text-emerald-400" />
+          <HiArrowRight aria-hidden="true" className="w-3 h-3 text-emerald-400" />
         </Link>
       </div>
     </div>

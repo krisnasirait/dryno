@@ -101,7 +101,7 @@ export default function ImageUploaderField({
       {/* Top Row: Label & Mode Switcher */}
       <div className="flex flex-wrap items-center justify-between gap-2">
         <label className="text-xs font-bold uppercase tracking-wider text-slate-300 flex items-center gap-1.5">
-          <HiPhoto className="w-4 h-4 text-[#00A3FF]" />
+          <HiPhoto aria-hidden="true" className="w-4 h-4 text-[#00A3FF]" />
           <span>{label}</span>
         </label>
 
@@ -118,7 +118,7 @@ export default function ImageUploaderField({
                 : "text-slate-400 hover:text-white"
             }`}
           >
-            <HiLink className="w-3.5 h-3.5" />
+            <HiLink aria-hidden="true" className="w-3.5 h-3.5" />
             <span>Input URL</span>
           </button>
           <button
@@ -133,7 +133,7 @@ export default function ImageUploaderField({
                 : "text-slate-400 hover:text-white"
             }`}
           >
-            <HiCloudArrowUp className="w-3.5 h-3.5" />
+            <HiCloudArrowUp aria-hidden="true" className="w-3.5 h-3.5" />
             <span>Upload ke GitHub (Maks 1MB)</span>
           </button>
         </div>
@@ -160,12 +160,12 @@ export default function ImageUploaderField({
                 title="Hapus URL gambar"
                 className="absolute top-1.5 right-1.5 w-6 h-6 rounded-full bg-black/70 hover:bg-red-600 text-white flex items-center justify-center transition-colors"
               >
-                <HiTrash className="w-3.5 h-3.5" />
+                <HiTrash aria-hidden="true" className="w-3.5 h-3.5" />
               </button>
             </>
           ) : (
             <div className="text-center p-2 text-slate-600">
-              <HiPhoto className="w-6 h-6 mx-auto mb-1" />
+              <HiPhoto aria-hidden="true" className="w-6 h-6 mx-auto mb-1" />
               <span className="text-[10px] block">No Image</span>
             </div>
           )}
@@ -211,7 +211,7 @@ export default function ImageUploaderField({
                     </>
                   ) : (
                     <>
-                      <HiCloudArrowUp className="w-4 h-4" />
+                      <HiCloudArrowUp aria-hidden="true" className="w-4 h-4" />
                       <span>Pilih File Gambar (Maks 1 MB)</span>
                     </>
                   )}
@@ -234,14 +234,14 @@ export default function ImageUploaderField({
           {/* Feedback Banners */}
           {localError && (
             <div className="p-2.5 rounded-xl bg-red-500/10 border border-red-500/30 text-red-300 text-xs flex items-center gap-2">
-              <HiExclamationTriangle className="w-4 h-4 text-red-400 shrink-0" />
+              <HiExclamationTriangle aria-hidden="true" className="w-4 h-4 text-red-400 shrink-0" />
               <span>{localError}</span>
             </div>
           )}
 
           {uploadSuccessInfo && !localError && (
             <div className="p-2.5 rounded-xl bg-emerald-500/10 border border-emerald-500/30 text-emerald-300 text-xs flex items-center gap-2">
-              <HiCheckCircle className="w-4 h-4 text-emerald-400 shrink-0" />
+              <HiCheckCircle aria-hidden="true" className="w-4 h-4 text-emerald-400 shrink-0" />
               <span>{uploadSuccessInfo}</span>
             </div>
           )}

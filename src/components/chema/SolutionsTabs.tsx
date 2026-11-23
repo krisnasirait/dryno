@@ -29,7 +29,7 @@ export default function SolutionsTabs() {
     <section id="services" className="relative py-14 sm:py-20 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mb-8" data-aos="fade-up">
-          <span className="text-[11px] font-bold tracking-[0.25em] text-gray-400 uppercase">{meta.eyebrow[language]}</span>
+          <span className="text-[11px] font-bold tracking-[0.25em] text-gray-500 uppercase">{meta.eyebrow[language]}</span>
           <h2 className="text-3xl sm:text-5xl font-extrabold text-[#0B192C] tracking-tight mt-2">{meta.title[language]}</h2>
           <p className="text-gray-600 mt-3">{meta.subtitle[language]}</p>
         </div>
@@ -53,7 +53,7 @@ export default function SolutionsTabs() {
                     <Icon className="w-4 h-4" />
                   </span>
                   <span>
-                    <span className={`block text-[10px] font-bold tracking-widest ${active ? "text-white/70" : "text-gray-400"}`}>{s.number} — {language === "EN" ? s.category : categoryID[s.category] || s.category}</span>
+                    <span className={`block text-[10px] font-bold tracking-widest ${active ? "text-white/80" : "text-gray-500"}`}>{s.number} — {language === "EN" ? s.category : categoryID[s.category] || s.category}</span>
                     <span className="block text-[13px] font-bold leading-tight">{s.name[language]}</span>
                   </span>
                 </button>
@@ -70,12 +70,12 @@ export default function SolutionsTabs() {
               <div className="p-6 sm:p-10 flex flex-col justify-center">
                 <span className="text-[11px] font-bold tracking-[0.25em] text-sky-300 uppercase">SERVICE {cur.number} — {language === "EN" ? cur.category : categoryID[cur.category] || cur.category}</span>
                 <h3 className="text-2xl sm:text-4xl font-extrabold mt-2 mb-3">{cur.name[language]}</h3>
-                <p className="text-white/70 text-sm sm:text-base mb-4">{cur.shortDesc?.[language]}</p>
+                <p className="text-white/80 text-sm sm:text-base mb-4">{cur.shortDesc?.[language]}</p>
                 <div className="mb-4">
-                  <span className="text-xl font-black text-sky-300">{cur.price[language]}</span>
-                  <span className="text-[11px] text-white/50 ml-2">{cur.priceLabel[language]}</span>
+                  <span className="text-xl font-extrabold text-sky-300">{cur.price[language]}</span>
+                  <span className="text-[11px] text-white/70 ml-2">{cur.priceLabel[language]}</span>
                 </div>
-                <p className="text-xs text-white/60 mb-6">
+                <p className="text-xs text-white/75 mb-6">
                   {language === "EN" ? "Permits confusing?" : "Bingung soal izin?"}{" "}
                   <a href="#faq-faq-4" className="font-bold text-sky-300 underline underline-offset-2 hover:text-white">
                     {language === "EN" ? "SIPA explained in FAQ →" : "SIPA dijelaskan di FAQ →"}
@@ -83,20 +83,20 @@ export default function SolutionsTabs() {
                 </p>
                 <div className="flex items-center gap-3">
                   <button onClick={() => setModal(true)} className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-[#0B192C] text-xs font-bold uppercase tracking-wider hover:bg-sky-100 transition-colors">
-                    {language === "EN" ? "See details" : "Lihat detail"} <HiArrowRight className="w-4 h-4" />
+                    {language === "EN" ? "See details" : "Lihat detail"} <HiArrowRight aria-hidden="true" className="w-4 h-4" />
                   </button>
                   <div className="flex gap-2 ml-auto">
                     <button onClick={() => go(-1)} aria-label="Previous service" className="w-10 h-10 rounded-full border border-white/30 flex items-center justify-center hover:bg-white/20 transition-colors">
-                      <HiChevronLeft className="w-5 h-5" />
+                      <HiChevronLeft aria-hidden="true" className="w-5 h-5" />
                     </button>
                     <button onClick={() => go(1)} aria-label="Next service" className="w-10 h-10 rounded-full border border-white/30 flex items-center justify-center hover:bg-white/20 transition-colors">
-                      <HiChevronRight className="w-5 h-5" />
+                      <HiChevronRight aria-hidden="true" className="w-5 h-5" />
                     </button>
                   </div>
                 </div>
                 <div className="mt-6 flex items-center gap-3">
-                  <span className="text-xs font-bold text-white/60 tabular-nums">{String(idx + 1).padStart(2, "0")} / {String(items.length).padStart(2, "0")}</span>
-                  <div className="flex-1 h-1 rounded-full bg-white/15 overflow-hidden" role="progressbar" aria-valuenow={idx + 1} aria-valuemin={1} aria-valuemax={items.length}>
+                  <span className="text-xs font-bold text-white/75 tabular-nums">{String(idx + 1).padStart(2, "0")} / {String(items.length).padStart(2, "0")}</span>
+                  <div className="flex-1 h-1 rounded-full bg-white/15 overflow-hidden" role="progressbar" aria-label={language === "EN" ? `Service ${idx + 1} of ${items.length}` : `Layanan ${idx + 1} dari ${items.length}`} aria-valuenow={idx + 1} aria-valuemin={1} aria-valuemax={items.length} aria-valuetext={cur.name[language]}>
                     <div className="h-full bg-sky-400 rounded-full transition-all duration-500" style={{ width: `${progress}%` }} />
                   </div>
                 </div>

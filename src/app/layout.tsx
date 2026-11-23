@@ -123,6 +123,7 @@ export default function RootLayout({
         suppressHydrationWarning
         className="min-h-screen bg-warm-white text-charcoal flex flex-col"
       >
+        <a href="#main-content" className="sr-only">Skip to content</a>
         <LanguageProvider>
           <LangSync />
           {children}

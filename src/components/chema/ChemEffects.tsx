@@ -28,13 +28,28 @@ export default function ChemEffects() {
         },
         { rootMargin: "0px 0px -8% 0px", threshold: 0.08 }
       );
-      const watch = () =>
-        document
-          .querySelectorAll<HTMLElement>("[data-aos]:not(.aos-in)")
-          .forEach((el) => io.observe(el));
+      let pending = false;
+      const watch = () => {
+        const fresh = document.querySelectorAll<HTMLElement>(
+          "[data-aos]:not(.aos-in)"
+        );
+        fresh.forEach((el) => io.observe(el));
+        // Nothing left to reveal — stop observing entirely.
+        if (fresh.length === 0) {
+          io.disconnect();
+          mo.disconnect();
+        }
+      };
       watch();
-      // CMS content can swap in late nodes — observe once, cheap.
-      const mo = new MutationObserver(watch);
+      // CMS content can swap in late nodes — observe, cheap.
+      const mo = new MutationObserver(() => {
+        if (pending) return;
+        pending = true;
+        requestAnimationFrame(() => {
+          pending = false;
+          watch();
+        });
+      });
       mo.observe(document.body, { childList: true, subtree: true });
 
       const onScroll = () => {
@@ -50,12 +65,21 @@ export default function ChemEffects() {
           else el.classList.remove("active");
         }
       };
-      window.addEventListener("scroll", onScroll, { passive: true });
+      let ticking = false;
+      const onScrollRaf = () => {
+        if (ticking) return;
+        ticking = true;
+        requestAnimationFrame(() => {
+          ticking = false;
+          onScroll();
+        });
+      };
+      window.addEventListener("scroll", onScrollRaf, { passive: true });
       onScroll();
       return () => {
         io.disconnect();
         mo.disconnect();
-        window.removeEventListener("scroll", onScroll);
+        window.removeEventListener("scroll", onScrollRaf);
       };
     } else {
       document

@@ -56,6 +56,9 @@ body {
 @keyframes fadeIn { from { opacity: 0 } to { opacity: 1 } }
 .animate-fadeIn { animation: fadeIn .5s ease both }
 html { scroll-behavior: smooth }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+.sr-only:focus { position: fixed; top: 0.5rem; left: 0.5rem; z-index: 100; width: auto; height: auto; padding: 0.5rem 1rem; margin: 0; overflow: visible; clip: auto; white-space: normal; background: #0B192C; color: #fff; border-radius: 9999px; font-size: 0.75rem; font-weight: 700; }
+:focus-visible { outline: 2px solid #005B94; outline-offset: 2px; }
 section[id] { scroll-margin-top: 112px }
 body.scrolled #masthead { box-shadow: 0 10px 30px rgba(0,0,0,.12) }
 @keyframes heroFade { from { opacity: 0 } }

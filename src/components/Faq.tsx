@@ -28,7 +28,7 @@ export default function Faq() {
           {/* Column 1: Left Headline & CTA (lg:col-span-5) */}
           <div className="lg:col-span-5 space-y-4 sm:space-y-6 lg:sticky lg:top-28">
             <div>
-              <span className="text-[10px] sm:text-xs font-bold tracking-[0.25em] text-gray-400 uppercase block mb-1.5 sm:mb-3">
+              <span className="text-[10px] sm:text-xs font-bold tracking-[0.25em] text-gray-500 uppercase block mb-1.5 sm:mb-3">
                 {faq.eyebrow[language]}
               </span>
               <h2 className="text-4xl lg:text-5xl font-bold text-deep-navy tracking-tight leading-tight mb-2 sm:mb-4">
@@ -43,7 +43,7 @@ export default function Faq() {
             <div className="p-4 sm:p-6 rounded-2xl bg-gradient-to-br from-deep-navy to-deep-navy-dark text-white space-y-3 sm:space-y-4 shadow-xl">
               <div className="flex items-center gap-2.5 sm:gap-3">
                 <div className="w-8 h-8 sm:w-10 sm:h-10 rounded-xl bg-engineering-blue/20 flex items-center justify-center text-engineering-blue-light shrink-0">
-                  <HiChatBubbleLeftEllipsis className="w-4 h-4 sm:w-5 sm:h-5" />
+                  <HiChatBubbleLeftEllipsis aria-hidden="true" className="w-4 h-4 sm:w-5 sm:h-5" />
                 </div>
                 <div>
                   <h3 className="text-xs sm:text-sm font-bold text-white">
@@ -97,9 +97,9 @@ export default function Faq() {
                       }`}
                     >
                       {isOpen ? (
-                        <HiMinus className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+                        <HiMinus aria-hidden="true" className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                       ) : (
-                        <HiPlus className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
+                        <HiPlus aria-hidden="true" className="w-3.5 h-3.5 sm:w-4 sm:h-4" />
                       )}
                     </div>
                   </button>

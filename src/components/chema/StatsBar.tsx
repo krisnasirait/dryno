@@ -21,11 +21,20 @@ export default function StatsBar() {
         });
       }
     };
-    window.addEventListener("scroll", run, { passive: true });
+    let ticking = false;
+    const onScroll = () => {
+      if (ticking) return;
+      ticking = true;
+      requestAnimationFrame(() => {
+        ticking = false;
+        run();
+      });
+    };
+    window.addEventListener("scroll", onScroll, { passive: true });
     run();
     return () => {
       cancelled = true;
-      window.removeEventListener("scroll", run);
+      window.removeEventListener("scroll", onScroll);
     };
   }, []);
   const stats = [
@@ -38,8 +47,8 @@ export default function StatsBar() {
       <div ref={ref} className="element-on-scroll max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-3 gap-4 text-center">
         {stats.map((s) => (
           <div key={s.id}>
-            <div id={s.id} className="text-3xl sm:text-5xl font-black text-sky-300">{s.top}</div>
-            <div className="text-[11px] sm:text-xs text-white/60 uppercase tracking-widest mt-1">{s.label}</div>
+            <div id={s.id} className="text-3xl sm:text-5xl font-extrabold text-sky-300">{s.top}</div>
+            <div className="text-[11px] sm:text-xs text-white/75 uppercase tracking-widest mt-1">{s.label}</div>
           </div>
         ))}
       </div>

@@ -75,12 +75,12 @@ export default function ChemHeader() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between gap-4">
           <Link href="/" aria-label="DRYNO home"><Logo variant="dark" /></Link>
-          <nav className="masthead__nav hidden lg:flex items-center gap-6">
+          <nav aria-label="Primary" className="masthead__nav hidden lg:flex items-center gap-6">
             {nav.map((m) => (
               <div key={m.key} className="menu-item relative group">
                 <Link href={m.href} className="menu-item__inner flex items-center gap-1 py-2 text-[13px] font-bold tracking-wide text-gray-800 hover:text-[#005B94]">
                   <span>{m.name}</span>
-                  {m.subs && <HiChevronDown className="w-3.5 h-3.5 text-[#005B94] menu-item__chevron transition-transform group-hover:rotate-180" />}
+                  {m.subs && <HiChevronDown aria-hidden="true" className="w-3.5 h-3.5 text-[#005B94] menu-item__chevron transition-transform group-hover:rotate-180" />}
                 </Link>
                 {m.subs && (
                   <div className="sub-menu__container absolute left-1/2 -translate-x-1/2 top-full pt-3 opacity-0 invisible translate-y-2 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-300">
@@ -106,7 +106,7 @@ export default function ChemHeader() {
             </div>
             <Link href="/#contact" className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#0B192C] text-white text-xs font-bold uppercase tracking-wider hover:bg-[#005B94] transition-colors group">
               <span className="hidden xl:inline">{t.nav.discussProject}</span><span className="xl:hidden">Contact</span>
-              <span className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center group-hover:translate-x-1 transition-transform"><HiArrowRight className="w-3.5 h-3.5" /></span>
+              <span className="w-6 h-6 rounded-full bg-white/10 flex items-center justify-center group-hover:translate-x-1 transition-transform"><HiArrowRight aria-hidden="true" className="w-3.5 h-3.5" /></span>
             </Link>
           </div>
           <div className="flex items-center gap-2 lg:hidden">
@@ -116,7 +116,7 @@ export default function ChemHeader() {
               ))}
             </div>
             <button onClick={() => setMobileOpen(!mobileOpen)} className="header-menu-toggle p-2 rounded-lg text-[#0B192C] hover:bg-gray-100" aria-label="Toggle menu">
-              {mobileOpen ? <HiXMark className="w-6 h-6" /> : <HiBars3 className="w-6 h-6" />}
+              {mobileOpen ? <HiXMark aria-hidden="true" className="w-6 h-6" /> : <HiBars3 aria-hidden="true" className="w-6 h-6" />}
             </button>
           </div>
         </div>
@@ -128,18 +128,18 @@ export default function ChemHeader() {
               <div key={m.key} className="menu-item-has-children border-b border-white/5 last:border-0">
                 <div className="menu-item__inner flex items-center justify-between py-2.5" onClick={() => m.subs && setOpenMobile(openMobile === m.key ? null : m.key)}>
                   <Link href={m.href} onClick={() => setMobileOpen(false)} className="text-sm font-bold tracking-wide">{m.name}</Link>
-                  {m.subs && <HiChevronDown className={`w-4 h-4 transition-transform ${openMobile === m.key ? "rotate-180" : ""}`} />}
+                  {m.subs && <HiChevronDown aria-hidden="true" className={`w-4 h-4 transition-transform ${openMobile === m.key ? "rotate-180" : ""}`} />}
                 </div>
                 {m.subs && openMobile === m.key && (
                   <div className="sub-menu__container active pb-3 pl-3 space-y-1">
                     {m.subs.map((s) => (
-                      <Link key={s.name} href={s.href} onClick={() => setMobileOpen(false)} className="block py-1.5 text-[13px] text-white/70 hover:text-white">{s.name}</Link>
+                      <Link key={s.name} href={s.href} onClick={() => setMobileOpen(false)} className="block py-1.5 text-[13px] text-white/80 hover:text-white">{s.name}</Link>
                     ))}
                   </div>
                 )}
               </div>
             ))}
-            <Link href="/#contact" onClick={() => setMobileOpen(false)} className="mt-3 w-full flex items-center justify-center gap-2 py-3 rounded-full bg-engineering-blue text-white text-xs font-bold uppercase">{t.nav.discussProject}<HiArrowRight className="w-4 h-4" /></Link>
+            <Link href="/#contact" onClick={() => setMobileOpen(false)} className="mt-3 w-full flex items-center justify-center gap-2 py-3 rounded-full bg-engineering-blue text-white text-xs font-bold uppercase">{t.nav.discussProject}<HiArrowRight aria-hidden="true" className="w-4 h-4" /></Link>
           </div>
         </div>
       )}

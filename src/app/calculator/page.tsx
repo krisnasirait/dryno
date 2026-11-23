@@ -27,7 +27,7 @@ export const metadata: Metadata = {
 
 export default function CalculatorPage() {
   return (
-    <main className="min-h-screen bg-warm-white flex flex-col font-sans">
+    <main id="main-content" className="min-h-screen bg-warm-white flex flex-col font-sans">
       <ChemEffects />
       <TopBar />
       <ChemHeader />

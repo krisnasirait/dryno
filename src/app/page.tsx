@@ -19,7 +19,7 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-warm-white flex flex-col font-sans">
+    <main id="main-content" className="min-h-screen bg-warm-white flex flex-col font-sans">
       <ChemEffects />
       <TopBar />
       <ChemHeader />
@@ -32,7 +32,7 @@ export default function Home() {
       <HowWeWork />
       <Projects />
       <Equipment />
-      <Faq />
+      <Faq aria-hidden="true" />
       <Contact />
       <FooterChem />
       <StickyRail />

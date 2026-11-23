@@ -9,6 +9,11 @@ export default function ChemHero() {
   const hero = content.hero;
   const [slide, setSlide] = useState(0);
   const images = hero.images?.length ? hero.images : [{ id: "01", src: "/images/bg-hero-1.jpeg", alt: "DRYNO" }];
+  const portraits = [
+    "/images/hero-potrait/bg-hero-potrait-1.webp",
+    "/images/hero-potrait/bg-hero-potrait-2.webp",
+    "/images/hero-potrait/bg-hero-potrait-3.webp",
+  ];
 
   useEffect(() => {
     const id = setInterval(
@@ -32,6 +37,17 @@ export default function ChemHero() {
           i !== slide ? null : (
             <div key={img.id || i} className="absolute inset-0">
               <Image
+                src={portraits[i % portraits.length]}
+                alt={img.alt || "DRYNO"}
+                fill
+                sizes="100vw"
+                priority={i === 0}
+                fetchPriority="high"
+                loading={i === 0 ? "eager" : "lazy"}
+                decoding="async"
+                className={`object-cover object-center scale-105 md:hidden ${i === 0 ? "" : "hero-fade-in"}`}
+              />
+              <Image
                 src={img.src}
                 alt={img.alt || "DRYNO"}
                 fill
@@ -40,7 +56,7 @@ export default function ChemHero() {
                 fetchPriority="high"
                 loading={i === 0 ? "eager" : "lazy"}
                 decoding="async"
-                className={`object-cover scale-105 ${i === 0 ? "" : "hero-fade-in"}`}
+                className={`object-cover scale-105 hidden md:block ${i === 0 ? "" : "hero-fade-in"}`}
                 unoptimized={img.src.startsWith("http") || img.src.startsWith("/images/uploads/")}
               />
             </div>
@@ -69,23 +85,23 @@ export default function ChemHero() {
               <span>{hero.ctaServices[language]}</span><span>→</span>
             </a>
           </div>
-          <div className="mt-8 text-[11px] sm:text-xs font-bold tracking-[0.2em] text-white/70">{hero.location}</div>
+          <div className="mt-8 text-[11px] sm:text-xs font-bold tracking-[0.2em] text-white/80">{hero.location}</div>
 
           <div className="mt-5 flex flex-wrap items-center gap-x-4 gap-y-2 text-xs sm:text-sm" data-aos="fade-up">
             <a href="#projects" className="inline-flex items-center gap-1.5 rounded-full bg-white/10 border border-white/20 px-3 py-1.5 font-bold text-white hover:bg-white/20 transition-colors">
-              <span className="text-sky-300">10+ years</span><span className="text-white/60">•</span><span>220 m Uluwatu</span><span className="text-white/60">•</span><span>10 m³/h</span><span aria-hidden>→</span>
+              <span className="text-sky-300">10+ years</span><span className="text-white/75">•</span><span>220 m Uluwatu</span><span className="text-white/75">•</span><span>10 m³/h</span><span aria-hidden>→</span>
             </a>
-            <a href="#faq-faq-4" className="underline underline-offset-4 text-white/70 hover:text-white">SIPA handled for you — see FAQ</a>
+            <a href="#faq-faq-4" className="underline underline-offset-4 text-white/80 hover:text-white">SIPA handled for you — see FAQ</a>
           </div>
         </div>
 
         <div className="hidden md:flex flex-col justify-center gap-0 border-l border-white/20 pl-8" data-aos="fade-left">
           {links.map((l) => (
             <a key={l.key} href={l.href} className="group py-5 border-b border-white/20 last:border-0 flex items-start gap-4 hover:pl-2 transition-all">
-              <span className="w-10 h-10 rounded-full bg-[#0077c8] flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform"><HiArrowUpRight className="w-5 h-5" /></span>
+              <span className="w-10 h-10 rounded-full bg-[#0077c8] flex items-center justify-center shrink-0 group-hover:scale-110 transition-transform"><HiArrowUpRight aria-hidden="true" className="w-5 h-5" /></span>
               <span>
                 <span className="block text-2xl font-bold">{l.key}</span>
-                <span className="block text-white/60 text-sm">{language === "EN" ? l.descEN : l.descID}</span>
+                <span className="block text-white/75 text-sm">{language === "EN" ? l.descEN : l.descID}</span>
               </span>
             </a>
           ))}

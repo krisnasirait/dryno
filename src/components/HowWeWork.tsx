@@ -44,7 +44,7 @@ export default function HowWeWork() {
             return (
               <li key={step.number} className="rounded-2xl bg-white/5 border border-white/10 p-5 flex flex-col">
                 <div className="flex items-start justify-between mb-3">
-                  <span className="text-3xl font-black text-white/15 tabular-nums leading-none" aria-hidden>
+                  <span className="text-3xl font-extrabold text-white/15 tabular-nums leading-none" aria-hidden>
                     {step.number}
                   </span>
                   <span className="w-10 h-10 rounded-full bg-[#0077c8]/20 border border-[#0077c8]/30 flex items-center justify-center shrink-0">

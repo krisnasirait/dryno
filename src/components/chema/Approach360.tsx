@@ -16,14 +16,14 @@ export default function Approach360() {
               <img src={about.image} alt="DRYNO" className="w-full h-full object-cover" />
               <div className="absolute inset-0 bg-[#0077c8]/20" />
             </div>
-            <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-16 h-16 rounded-full bg-[#0077c8] text-white flex items-center justify-center shadow-xl"><HiMagnifyingGlass className="w-7 h-7" /></div>
-            <div className="absolute bottom-6 -left-2 w-16 h-16 rounded-full bg-white border-2 border-[#0077c8]/20 flex items-center justify-center shadow-xl"><HiWrenchScrewdriver className="w-7 h-7 text-[#0077c8]" /></div>
-            <div className="absolute bottom-6 -right-2 w-16 h-16 rounded-full bg-[#0B192C] text-white flex items-center justify-center shadow-xl"><HiCheckBadge className="w-7 h-7" /></div>
+            <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-16 h-16 rounded-full bg-[#0077c8] text-white flex items-center justify-center shadow-xl"><HiMagnifyingGlass aria-hidden="true" className="w-7 h-7" /></div>
+            <div className="absolute bottom-6 -left-2 w-16 h-16 rounded-full bg-white border-2 border-[#0077c8]/20 flex items-center justify-center shadow-xl"><HiWrenchScrewdriver aria-hidden="true" className="w-7 h-7 text-[#0077c8]" /></div>
+            <div className="absolute bottom-6 -right-2 w-16 h-16 rounded-full bg-[#0B192C] text-white flex items-center justify-center shadow-xl"><HiCheckBadge aria-hidden="true" className="w-7 h-7" /></div>
           </div>
         </div>
         <div data-aos="fade-left">
           <div className="flex items-center gap-3 mb-3">
-            <span className="w-10 h-10 rounded-full bg-[#0077c8] text-white flex items-center justify-center font-black">360°</span>
+            <span className="w-10 h-10 rounded-full bg-[#0077c8] text-white flex items-center justify-center font-extrabold">360°</span>
             <h2 className="text-3xl sm:text-4xl font-extrabold text-[#0077c8] leading-tight">{language === "EN" ? "Our Investigation, Drilling & Installation Approach" : "Pendekatan Investigasi, Pengeboran, Instalasi Kami"}</h2>
           </div>
           <p className="text-gray-600 mb-4">{about.processDesc[language]}</p>
