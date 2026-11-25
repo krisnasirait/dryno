@@ -121,6 +121,8 @@ export default function SolutionsTabs() {
                     preload="metadata"
                     className="absolute inset-0 h-full w-full object-cover"
                   />
+                ) : cur.id === "sipa" || cur.id === "npwpd" ? (
+                  <Image src={curImage} alt={cur.name[language]} fill sizes="(max-width: 768px) 100vw, 50vw" priority decoding="async" className="object-contain bg-[#0B192C] p-4 sm:p-6" unoptimized={cur.image?.startsWith("http") || cur.image?.startsWith("/images/uploads/")} />
                 ) : (
                   <Image src={curImage} alt={cur.name[language]} fill sizes="(max-width: 768px) 100vw, 50vw" priority decoding="async" className="object-cover" unoptimized={cur.image?.startsWith("http") || cur.image?.startsWith("/images/uploads/")} />
                 )}
