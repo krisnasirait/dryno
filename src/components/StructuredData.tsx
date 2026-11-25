@@ -12,7 +12,7 @@ export default function StructuredData() {
     alternateName: ["DRYNO", "DRYNO Bali", "Jasa Sumur Bor DRYNO Bali"],
     url: baseUrl,
     logo: `${baseUrl}/images/logo.png`,
-    image: `${baseUrl}/images/bg-hero-1.jpeg`,
+    image: `${baseUrl}/images/hero-site-pecatu.jpg`,
     description:
       "Integrated ground water solution provider specializing in ground water investigation (geolistrik), deep well drilling (sumur bor dalam), well installation, and SIPA ground water permits in Bali, Nusa Penida, Nusa Lembongan, and NTB.",
     telephone: "+6285792096854",

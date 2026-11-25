@@ -77,7 +77,7 @@ export const metadata: Metadata = {
       "Integrated ground water solutions: geoelectric investigation, deep well drilling, and SIPA legal compliance support for villas, resorts, and commercial developments across Bali & NTB.",
     images: [
       {
-        url: "/images/bg-hero-1.jpeg",
+        url: "/images/hero-site-pecatu.jpg",
         width: 1200,
         height: 630,
         alt: "DRYNO Engineering Water Solution Bali",
@@ -89,7 +89,7 @@ export const metadata: Metadata = {
     title: "DRYNO — Engineering Water Solution Bali",
     description:
       "Ground water investigation, professional deep well drilling, and SIPA licensing in Bali and surrounding islands.",
-    images: ["/images/bg-hero-1.jpeg"],
+    images: ["/images/hero-site-pecatu.jpg"],
   },
   robots: {
     index: true,

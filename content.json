@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-25T12:31:40.490449Z",
+  "updatedAt": "2026-11-25T12:34:06.915504Z",
   "hero": {
     "tagline": {
       "EN": "Engineering Water Solution",
@@ -25,18 +25,18 @@
     "images": [
       {
         "id": "01",
-        "src": "/images/bg-hero-1.jpeg",
-        "alt": "Heavy-duty deep-well drilling rig at work in Pecatu, Uluwatu — DRYNO Bali"
+        "src": "/images/hero-site-pecatu.jpg",
+        "alt": "DRYNO crawler drilling rig and compressor at work on a villa site in Pecatu, Bali"
       },
       {
         "id": "02",
-        "src": "/images/bg-hero-2.jpeg",
-        "alt": "Geoelectric groundwater survey before deep-well drilling in Bali — DRYNO"
+        "src": "/images/hero-rig-front.jpg",
+        "alt": "DRYNO blue crawler deep-well rig set up on site in Bali"
       },
       {
         "id": "03",
-        "src": "/images/bg-hero-3.jpeg",
-        "alt": "Completed deep well with high-yield water discharge in Bali — DRYNO"
+        "src": "/images/hero-rig-blue.jpg",
+        "alt": "DRYNO drilling rig mast and rotary head during deep-well drilling in Uluwatu"
       }
     ]
   },

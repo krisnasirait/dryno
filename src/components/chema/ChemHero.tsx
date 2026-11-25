@@ -10,9 +10,9 @@ export default function ChemHero() {
   const [slide, setSlide] = useState(0);
   const images = hero.images?.length ? hero.images : [{ id: "01", src: "/images/bg-hero-1.jpeg", alt: "DRYNO" }];
   const portraits = [
-    "/images/hero-potrait/bg-hero-potrait-1.webp",
-    "/images/hero-potrait/bg-hero-potrait-2.webp",
-    "/images/hero-potrait/bg-hero-potrait-3.webp",
+    "/images/hero-potrait/hero-site-tech.jpg",
+    "/images/hero-potrait/hero-mast-fira.jpg",
+    "/images/hero-potrait/hero-rig-blue.jpg",
   ];
 
   useEffect(() => {
