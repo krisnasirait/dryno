@@ -5,15 +5,6 @@ import Image from "next/image";
 import { HiArrowRight } from "react-icons/hi2";
 import { useLanguage } from "@/context/LanguageContext";
 
-const benefits: Record<string, { EN: string; ID: string }> = {
-  admt: { EN: "Finds the aquifer before you pay to drill", ID: "Temukan akuifer sebelum membayar pengeboran" },
-  "drilling-rig": { EN: "Reaches 220 m+ through Uluwatu karst", ID: "Tembus 220 m+ menembus karst Uluwatu" },
-  compressor: { EN: "Powers DTH hammers in hard rock", ID: "Menggerakkan hammer di batuan keras" },
-  "dth-hammer": { EN: "Matched to karst limestone", ID: "Cocok untuk batu kapur karst" },
-  pdc: { EN: "Faster penetration in hard rock", ID: "Penetrasi lebih cepat di batuan keras" },
-  casing: { EN: "Clean water for decades", ID: "Air bersih puluhan tahun" },
-};
-
 const categoryID: Record<string, string> = {
   "Ground Water Investigation": "Investigasi Air Tanah",
   "Drilling Equipment": "Peralatan Pengeboran",
@@ -69,10 +60,14 @@ export default function Equipment() {
                   <div className="pt-2 text-left">
                     <p className="text-[10px] font-bold tracking-widest text-engineering-blue-light/80 uppercase">{language === "EN" ? item.category : categoryID[item.category] || item.category}</p>
                     <h3 className="text-xs sm:text-sm font-bold text-white leading-snug line-clamp-2">{item.title[language]}</h3>
-                    <p className="text-[11px] font-medium text-gray-500 mt-0.5 line-clamp-2">{item.spec[language]}</p>
-                    {benefits[item.id] && (
-                      <p className="text-[11px] font-semibold text-sky-300/90 mt-0.5">→ {benefits[item.id][language]}</p>
-                    )}
+                    {(() => {
+                      const spec = (item.spec?.[language] || "").trim();
+                      const titleEN = (item.title?.EN || "").trim().toLowerCase();
+                      const titleID = (item.title?.ID || "").trim().toLowerCase();
+                      const specLower = spec.toLowerCase();
+                      if (!spec || specLower === titleEN || specLower === titleID) return null;
+                      return <p className="text-[11px] font-medium text-gray-400 mt-0.5 line-clamp-2">{spec}</p>;
+                    })()}
                   </div>
                 </li>
               ))}
