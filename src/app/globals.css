@@ -70,7 +70,7 @@ body.scrolled #masthead { box-shadow: 0 10px 30px rgba(0,0,0,.12) }
 @media (prefers-reduced-motion: reduce) { .js-anim [data-aos] { opacity: 1 !important; transform: none !important; } }
 .slider-icon-item.active { box-shadow: 0 10px 25px rgba(0,119,200,.35) }
 .slide-image-item { transition: opacity .5s ease }
-.multi-cols-cards__wrapper.using_slider, .cta-contact-sticky { transition: all .3s cubic-bezier(.4,0,.2,1) }
+.multi-cols-cards__wrapper.using_slider, .cta-contact-sticky { transition: transform .3s cubic-bezier(.4,0,.2,1), opacity .3s cubic-bezier(.4,0,.2,1) }
 #masthead.sticky { position: sticky }
 .slick-slider { position: relative }
 

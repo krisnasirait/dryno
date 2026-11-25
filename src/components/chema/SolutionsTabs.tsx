@@ -158,7 +158,7 @@ export default function SolutionsTabs() {
                 <div className="mt-6 flex items-center gap-3">
                   <span className="text-xs font-bold text-white/75 tabular-nums">{String(idx + 1).padStart(2, "0")} / {String(items.length).padStart(2, "0")}</span>
                   <div className="flex-1 h-1 rounded-full bg-white/15 overflow-hidden" role="progressbar" aria-label={language === "EN" ? `Service ${idx + 1} of ${items.length}` : `Layanan ${idx + 1} dari ${items.length}`} aria-valuenow={idx + 1} aria-valuemin={1} aria-valuemax={items.length} aria-valuetext={cur.name[language]}>
-                    <div className="h-full bg-sky-400 rounded-full transition-all duration-500" style={{ width: `${progress}%` }} />
+                    <div className="h-full w-full origin-left bg-sky-400 rounded-full transition-transform duration-500" style={{ transform: `scaleX(${progress / 100})` }} />
                   </div>
                 </div>
               </div>

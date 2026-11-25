@@ -100,11 +100,11 @@ export default function ChemHero() {
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.08] tracking-tight mb-5 drop-shadow-lg">{hero.headline[language]}</h1>
           <p className="text-white/75 text-sm sm:text-lg font-light max-w-xl mb-8">{hero.description[language]}</p>
           <div className="flex flex-col sm:flex-row gap-3">
-            <a href="#contact" className="inline-flex items-center justify-between gap-3 px-7 py-4 rounded-full bg-white text-[#0B192C] font-bold text-xs sm:text-sm uppercase tracking-wider hover:shadow-2xl transition-shadow group w-full sm:w-auto">
+            <a href="#contact" className="inline-flex items-center justify-between gap-3 px-7 py-4 rounded-full bg-white text-[#0B192C] font-bold text-xs sm:text-sm uppercase tracking-wider hover:shadow-2xl transition-transform duration-300 hover:-translate-y-0.5 group w-full sm:w-auto">
               <span>{hero.ctaDiscuss[language]}</span>
               <span className="w-8 h-8 rounded-full bg-[#0B192C] text-white flex items-center justify-center group-hover:translate-x-1 transition-transform">→</span>
             </a>
-            <a href="#services" className="inline-flex items-center justify-between gap-3 px-7 py-4 rounded-full border border-white/40 bg-white/10 backdrop-blur font-bold text-xs sm:text-sm uppercase tracking-wider hover:bg-white/20 transition-all w-full sm:w-auto">
+            <a href="#services" className="inline-flex items-center justify-between gap-3 px-7 py-4 rounded-full border border-white/40 bg-white/10 backdrop-blur font-bold text-xs sm:text-sm uppercase tracking-wider hover:bg-white/20 transition-transform duration-300 hover:-translate-y-0.5 w-full sm:w-auto">
               <span>{hero.ctaServices[language]}</span><span>→</span>
             </a>
           </div>

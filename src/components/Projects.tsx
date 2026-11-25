@@ -198,7 +198,7 @@ export default function Projects() {
         </div>
 
         <div className="mt-4 h-1 rounded-full bg-gray-100 overflow-hidden" role="progressbar" aria-label="Projects scroll progress" aria-valuenow={Math.round(scrollProgress * 100)} aria-valuemin={0} aria-valuemax={100}>
-          <div className="h-full bg-engineering-blue rounded-full transition-all duration-200" style={{ width: `${Math.max(8, scrollProgress * 100)}%` }} />
+          <div className="h-full w-full origin-left bg-engineering-blue rounded-full" style={{ transform: `scaleX(${Math.max(0.08, scrollProgress)})` }} />
         </div>
 
         {/* Slidable Cards Row / Responsive Grid */}

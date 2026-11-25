@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import Image from "next/image";
 import {
   HiArrowRight,
   HiXMark,
@@ -115,13 +116,15 @@ export default function ServiceModal({
             </div>
             <div className="grid grid-cols-2 gap-2 bg-gray-50 p-3">
               <a href="/docs/contoh-sipa-pb-umku-censored.pdf" target="_blank" rel="noopener noreferrer" className="group relative block overflow-hidden rounded-xl border bg-white">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/images/sipa-example-p1.jpg" alt={language === "EN" ? "Censored SIPA example page 1" : "Contoh SIPA disamarkan halaman 1"} loading="lazy" className="h-48 w-full object-cover object-top transition-transform group-hover:scale-[1.02]" />
+                                <div className="relative h-48 w-full overflow-hidden">
+                  <Image src="/images/sipa-example-p1.jpg" alt={language === "EN" ? "Censored SIPA example page 1" : "Contoh SIPA disamarkan halaman 1"} fill sizes="(max-width: 768px) 50vw, 320px" loading="lazy" decoding="async" className="object-cover object-top transition-transform group-hover:scale-[1.02]" unoptimized />
+                </div>
                 <span className="absolute bottom-2 left-2 rounded-full bg-black/70 px-2.5 py-1 text-[10px] font-bold text-white">Hal 1 / Pg 1</span>
               </a>
               <a href="/docs/contoh-sipa-pb-umku-censored.pdf" target="_blank" rel="noopener noreferrer" className="group relative block overflow-hidden rounded-xl border bg-white">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/images/sipa-example-p2.jpg" alt={language === "EN" ? "Censored SIPA example page 2" : "Contoh SIPA disamarkan halaman 2"} loading="lazy" className="h-48 w-full object-cover object-top transition-transform group-hover:scale-[1.02]" />
+                                <div className="relative h-48 w-full overflow-hidden">
+                  <Image src="/images/sipa-example-p2.jpg" alt={language === "EN" ? "Censored SIPA example page 2" : "Contoh SIPA disamarkan halaman 2"} fill sizes="(max-width: 768px) 50vw, 320px" loading="lazy" decoding="async" className="object-cover object-top transition-transform group-hover:scale-[1.02]" unoptimized />
+                </div>
                 <span className="absolute bottom-2 left-2 rounded-full bg-black/70 px-2.5 py-1 text-[10px] font-bold text-white">Hal 2 / Pg 2</span>
               </a>
             </div>
@@ -145,13 +148,15 @@ export default function ServiceModal({
             </div>
             <div className="grid grid-cols-2 gap-2 bg-gray-50 p-3">
               <a href="/docs/sk-npwpd-abt-censored.pdf" target="_blank" rel="noopener noreferrer" className="group relative block overflow-hidden rounded-xl border bg-white">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/images/npwpd-example-p1.jpg" alt={language === "EN" ? "Censored NPWPD ABT decree page 1" : "Contoh SK NPWPD ABT disamarkan halaman 1"} loading="lazy" className="h-48 w-full object-cover object-top transition-transform group-hover:scale-[1.02]" />
+                                <div className="relative h-48 w-full overflow-hidden">
+                  <Image src="/images/npwpd-example-p1.jpg" alt={language === "EN" ? "Censored NPWPD ABT decree page 1" : "Contoh SK NPWPD ABT disamarkan halaman 1"} fill sizes="(max-width: 768px) 50vw, 320px" loading="lazy" decoding="async" className="object-cover object-top transition-transform group-hover:scale-[1.02]" unoptimized />
+                </div>
                 <span className="absolute bottom-2 left-2 rounded-full bg-black/70 px-2.5 py-1 text-[10px] font-bold text-white">Hal 1 / Pg 1</span>
               </a>
               <a href="/docs/sk-npwpd-abt-censored.pdf" target="_blank" rel="noopener noreferrer" className="group relative block overflow-hidden rounded-xl border bg-white">
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img src="/images/npwpd-example-p2.jpg" alt={language === "EN" ? "Censored NPWPD ABT tax card page 2" : "Contoh kartu NPWPD disamarkan halaman 2"} loading="lazy" className="h-48 w-full object-cover object-top transition-transform group-hover:scale-[1.02]" />
+                                <div className="relative h-48 w-full overflow-hidden">
+                  <Image src="/images/npwpd-example-p2.jpg" alt={language === "EN" ? "Censored NPWPD ABT tax card page 2" : "Contoh kartu NPWPD disamarkan halaman 2"} fill sizes="(max-width: 768px) 50vw, 320px" loading="lazy" decoding="async" className="object-cover object-top transition-transform group-hover:scale-[1.02]" unoptimized />
+                </div>
                 <span className="absolute bottom-2 left-2 rounded-full bg-black/70 px-2.5 py-1 text-[10px] font-bold text-white">Hal 2 / Pg 2</span>
               </a>
             </div>

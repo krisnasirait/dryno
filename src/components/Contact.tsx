@@ -276,7 +276,7 @@ export default function Contact() {
                   {/* Submit Button */}
                   <button
                     type="submit"
-                    className="w-full inline-flex items-center justify-center gap-2.5 py-3 sm:py-4 rounded-xl bg-engineering-blue hover:bg-engineering-blue-light text-white text-xs font-extrabold tracking-wider uppercase transition-[background-color,box-shadow] duration-300 hover:shadow-lg hover:shadow-engineering-blue/30 group cursor-pointer"
+                    className="w-full inline-flex items-center justify-center gap-2.5 py-3 sm:py-4 rounded-xl bg-engineering-blue hover:bg-engineering-blue-light text-white text-xs font-extrabold tracking-wider uppercase transition-transform duration-300 hover:-translate-y-0.5 active:scale-[0.98] group cursor-pointer"
                   >
                     <span>{t.formSubmit}</span>
                     <HiPaperAirplane aria-hidden="true" className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1" />
