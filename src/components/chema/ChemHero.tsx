@@ -8,7 +8,7 @@ export default function ChemHero() {
   const { language, content } = useLanguage();
   const hero = content.hero;
   const [slide, setSlide] = useState(0);
-  const images = hero.images?.length ? hero.images : [{ id: "01", src: "/images/bg-hero-1.jpeg", alt: "DRYNO" }];
+  const images = hero.images?.length ? hero.images : [{ id: "01", src: "/images/hero-site-pecatu.jpg", alt: "DRYNO" }];
   const portraits = [
     "/images/hero-potrait/hero-site-tech.jpg",
     "/images/hero-potrait/hero-mast-fira.jpg",

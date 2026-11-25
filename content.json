@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-25T12:35:24.904096Z",
+  "updatedAt": "2026-11-25T12:42:37.876190Z",
   "hero": {
     "tagline": {
       "EN": "Engineering Water Solution",
@@ -328,12 +328,12 @@
       },
       "category": "Drilling",
       "priceLabel": {
-        "EN": "Custom quote",
-        "ID": "Penawaran khusus"
+        "EN": "Pricing",
+        "ID": "Harga"
       },
       "price": {
-        "EN": "Request Quotation",
-        "ID": "Ajukan Penawaran"
+        "EN": "Custom quote",
+        "ID": "Penawaran khusus"
       },
       "shortDesc": {
         "EN": "Professional deep well drilling tailored to geological conditions and project needs.",
@@ -379,12 +379,12 @@
       },
       "category": "Installation",
       "priceLabel": {
-        "EN": "Custom quote",
-        "ID": "Penawaran khusus"
+        "EN": "Pricing",
+        "ID": "Harga"
       },
       "price": {
-        "EN": "Request Quotation",
-        "ID": "Ajukan Penawaran"
+        "EN": "Custom quote",
+        "ID": "Penawaran khusus"
       },
       "shortDesc": {
         "EN": "Installation of high-grade casing and well components for long-term structural integrity.",
@@ -431,12 +431,12 @@
       },
       "category": "Consultation",
       "priceLabel": {
-        "EN": "Custom quote",
-        "ID": "Penawaran khusus"
+        "EN": "Pricing",
+        "ID": "Harga"
       },
       "price": {
-        "EN": "Contact Us",
-        "ID": "Hubungi Kami"
+        "EN": "Custom quote",
+        "ID": "Penawaran khusus"
       },
       "shortDesc": {
         "EN": "Expert technical guidance and strategic project planning for ground water solutions.",

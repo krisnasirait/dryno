@@ -1231,7 +1231,7 @@ export default function AdminCMSPage() {
                                 ...prev.hero.images,
                                 {
                                   id: nextNum,
-                                  src: "/images/bg-hero-1.jpeg",
+                                  src: "/images/hero-site-pecatu.jpg",
                                   alt: `DRYNO Hero Slide ${nextNum}`,
                                 },
                               ],
