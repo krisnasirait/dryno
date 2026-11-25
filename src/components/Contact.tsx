@@ -30,6 +30,12 @@ export default function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    const waNumber = (contact.whatsappNumber || "6285792096854").replace(/[^0-9]/g, "");
+    const text =
+      language === "EN"
+        ? `Hello DRYNO, I would like to discuss a groundwater project.\n\nName: ${formData.name}\nProperty / Project: ${formData.company}\nLocation: ${formData.location}\nProject type: ${formData.projectType}\nMessage: ${formData.message}`
+        : `Halo DRYNO, saya ingin konsultasi proyek air tanah.\n\nNama: ${formData.name}\nProperti / Proyek: ${formData.company}\nLokasi: ${formData.location}\nJenis proyek: ${formData.projectType}\nPesan: ${formData.message}`;
+    window.open(`https://wa.me/${waNumber}?text=${encodeURIComponent(text)}`, "_blank", "noopener");
     setSubmitted(true);
   };
 
