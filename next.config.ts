@@ -18,6 +18,20 @@ const nextConfig: NextConfig = {
   },
   cacheComponents: true,
   partialPrefetching: true,
+  async redirects() {
+    return [
+      {
+        source: "/water-tanker-calculator",
+        destination: "/calculator",
+        permanent: true,
+      },
+      {
+        source: "/water-tanker-calculator/:path*",
+        destination: "/calculator",
+        permanent: true,
+      },
+    ];
+  },
   turbopack: {
     rules: {
       "*.css": {

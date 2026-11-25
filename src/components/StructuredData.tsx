@@ -108,14 +108,81 @@ export default function StructuredData() {
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: contentData.faq.items.map((item) => ({
-      "@type": "Question",
-      name: item.question.ID || item.question.EN,
-      acceptedAnswer: {
-        "@type": "Answer",
-        text: item.answer.ID || item.answer.EN,
+    mainEntity: contentData.faq.items.flatMap((item) => {
+      const entries: { "@type": string; name: string; acceptedAnswer: { "@type": string; text: string } }[] = [];
+      if (item.question.EN && item.answer.EN) {
+        entries.push({
+          "@type": "Question",
+          name: item.question.EN,
+          acceptedAnswer: { "@type": "Answer", text: item.answer.EN },
+        });
+      }
+      if (item.question.ID && item.answer.ID) {
+        entries.push({
+          "@type": "Question",
+          name: item.question.ID,
+          acceptedAnswer: { "@type": "Answer", text: item.answer.ID },
+        });
+      }
+      return entries;
+    }),
+  };
+
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    itemListElement: contentData.products
+      .filter((p) => p.status !== "Draft")
+      .map((p, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        item: {
+          "@type": "Service",
+          name: `${p.name.EN} — ${p.name.ID}`,
+          description: p.fullDesc.EN || p.shortDesc.EN,
+          image: `${baseUrl}${p.image}`,
+          areaServed: ["Bali", "Nusa Penida", "Nusa Lembongan", "Nusa Tenggara Barat"],
+          provider: { "@id": `${baseUrl}/#organization` },
+          offers: {
+            "@type": "Offer",
+            price: (p.price.EN || "").replace(/[^0-9]/g, "") || undefined,
+            priceCurrency: "IDR",
+            availability: "https://schema.org/InStock",
+          },
+        },
+      })),
+  };
+
+  const videoSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        item: {
+          "@type": "VideoObject",
+          name: "Deep-well drilling field operation — DRYNO Bali",
+          description:
+            "Field footage of DRYNO deep-well drilling operations in Bali, November 2026.",
+          thumbnailUrl: [`${baseUrl}/images/service-drilling-video-poster.jpg`],
+          uploadDate: "2026-11-25",
+          contentUrl: `${baseUrl}/videos/drilling-field-nov2026.mp4`,
+        },
       },
-    })),
+      {
+        "@type": "ListItem",
+        position: 2,
+        item: {
+          "@type": "VideoObject",
+          name: "Maison Horizon Uluwatu — 220 m deep-well drilling",
+          description: "Live footage of deep-well drilling down to 220 metres in Pecatu, Uluwatu.",
+          thumbnailUrl: [`${baseUrl}/images/project/maison1.webp`],
+          uploadDate: "2025-01-15",
+          contentUrl: `${baseUrl}/videos/Maison.mp4`,
+        },
+      },
+    ],
   };
 
   return (
@@ -142,6 +209,18 @@ export default function StructuredData() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify(faqSchema),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(serviceSchema),
+        }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(videoSchema),
         }}
       />
     </>

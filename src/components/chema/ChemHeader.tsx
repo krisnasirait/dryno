@@ -27,11 +27,12 @@ export default function ChemHeader() {
     {
       key: "solutions", name: language === "EN" ? "Solutions" : "Solusi", href: "/#services",
       subs: [
-        { name: language === "EN" ? "Ground Water Investigation" : "Investigasi Air Tanah", href: "/#services" },
-        { name: language === "EN" ? "Deep Well Drilling" : "Pengeboran Sumur Dalam", href: "/#services" },
-        { name: language === "EN" ? "Well Installation & Casing" : "Instalasi & Casing Sumur", href: "/#services" },
-        { name: language === "EN" ? "Technical Consultation" : "Konsultasi Teknis", href: "/#services" },
-        { name: "SIPA / NPWPD ABT", href: "/#services" },
+        { name: language === "EN" ? "Ground Water Investigation" : "Investigasi Air Tanah", href: "/#services-investigation" },
+        { name: language === "EN" ? "Deep Well Drilling" : "Pengeboran Sumur Dalam", href: "/#services-drilling" },
+        { name: language === "EN" ? "Well Installation & Casing" : "Instalasi & Casing Sumur", href: "/#services-casing" },
+        { name: language === "EN" ? "Technical Consultation" : "Konsultasi Teknis", href: "/#services-consultation" },
+        { name: "SIPA", href: "/#services-sipa" },
+        { name: "NPWPD ABT", href: "/#services-npwpd" },
       ],
     },
     {
@@ -70,6 +71,22 @@ export default function ChemHeader() {
     { key: "contact", name: t.nav.contact, href: "/#contact" },
   ];
 
+  const goService = (e: React.MouseEvent, href: string) => {
+    if (!href.includes("#services-")) return;
+    e.preventDefault();
+    const hash = href.split("#")[1] ?? "";
+    setMobileOpen(false);
+    if (window.location.pathname !== "/") {
+      window.location.href = `/#${hash}`;
+      return;
+    }
+    window.history.replaceState(null, "", `/#${hash}`);
+    window.dispatchEvent(new CustomEvent("dryno:select-service", { detail: hash }));
+    requestAnimationFrame(() =>
+      document.getElementById("services")?.scrollIntoView({ behavior: "smooth", block: "start" })
+    );
+  };
+
   return (
     <header id="masthead" className={`sticky top-0 z-50 bg-white transition-all duration-300 ${isScrolled ? "shadow-lg py-2 scrolled" : "py-3 border-b border-gray-100"}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -88,7 +105,7 @@ export default function ChemHeader() {
                       <ul className="sub-menu space-y-1">
                         {m.subs.map((s) => (
                           <li key={s.name} className="menu-item">
-                            <Link href={s.href} className="block px-4 py-2.5 rounded-xl text-[13px] font-semibold text-gray-700 hover:bg-[#005B94]/10 hover:text-[#005B94]">{s.name}</Link>
+                            <Link href={s.href} onClick={(e) => goService(e, s.href)} className="block px-4 py-2.5 rounded-xl text-[13px] font-semibold text-gray-700 hover:bg-[#005B94]/10 hover:text-[#005B94]">{s.name}</Link>
                           </li>
                         ))}
                       </ul>
@@ -133,7 +150,7 @@ export default function ChemHeader() {
                 {m.subs && openMobile === m.key && (
                   <div className="sub-menu__container active pb-3 pl-3 space-y-1">
                     {m.subs.map((s) => (
-                      <Link key={s.name} href={s.href} onClick={() => setMobileOpen(false)} className="block py-1.5 text-[13px] text-white/80 hover:text-white">{s.name}</Link>
+                      <Link key={s.name} href={s.href} onClick={(e) => { goService(e, s.href); if (!s.href.includes("#services-")) setMobileOpen(false); }} className="block py-1.5 text-[13px] text-white/80 hover:text-white">{s.name}</Link>
                     ))}
                   </div>
                 )}

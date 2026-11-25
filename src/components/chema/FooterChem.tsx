@@ -18,7 +18,7 @@ export default function FooterChem() {
       <div className="absolute -top-24 -left-24 w-[420px] h-[420px] rounded-full bg-white/15 blur-2xl pointer-events-none" />
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 grid md:grid-cols-3 gap-10">
         <nav aria-label="Explore">
-          <h2 className="font-bold text-base mb-4">{language === "EN" ? "Explore DRYNO" : "Jelajahi DRYNO"}</h2>
+          <p className="font-bold text-base mb-4">{language === "EN" ? "Explore DRYNO" : "Jelajahi DRYNO"}</p>
           <ul className="space-y-2 text-sm text-white/85 underline-offset-2">
             {[["Services & Solutions", "/#services"], ["Projects", "/#projects"], ["Equipment", "/#equipment"], ["About Us", "/#about"], ["How We Work", "/#how-we-work"], ["Contact Us", "/#contact"], ["Sitemap", "/sitemap.xml"]].map(([n, h]) => (
               <li key={n}><Link href={h} className="hover:underline underline">{n}</Link></li>
@@ -26,7 +26,7 @@ export default function FooterChem() {
           </ul>
         </nav>
         <div>
-          <h2 className="font-bold text-base mb-4">{language === "EN" ? "Using Our Website" : "Menggunakan Situs Ini"}</h2>
+          <p className="font-bold text-base mb-4">{language === "EN" ? "Using Our Website" : "Menggunakan Situs Ini"}</p>
           <ul className="space-y-2 text-sm text-white/85">
             <li><Link href="/#faq" className="underline">{language === "EN" ? "Privacy Statement" : "Pernyataan Privasi"}</Link></li>
             <li><Link href="/#faq" className="underline">{language === "EN" ? "Terms & Conditions" : "Syarat & Ketentuan"}</Link></li>
@@ -35,7 +35,7 @@ export default function FooterChem() {
           </ul>
         </div>
         <div>
-          <h2 className="font-bold text-base mb-4">{language === "EN" ? "Stay Connected" : "Tetap Terhubung"}</h2>
+          <p className="font-bold text-base mb-4">{language === "EN" ? "Stay Connected" : "Tetap Terhubung"}</p>
           <div className="flex gap-3">
             <a href={wa} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp DRYNO engineers" className="w-11 h-11 rounded-full bg-white text-[#0077c8] flex items-center justify-center hover:scale-110 transition-transform"><FaWhatsapp aria-hidden="true" className="w-5 h-5" /></a>
             <a href={`mailto:${contact.email}`} aria-label="Email DRYNO" className="w-11 h-11 rounded-full bg-white text-[#0077c8] flex items-center justify-center hover:scale-110 transition-transform"><HiEnvelope aria-hidden="true" className="w-5 h-5" /></a>

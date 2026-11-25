@@ -1,13 +1,13 @@
 {
-  "updatedAt": "2026-10-29T16:20:21.011Z",
+  "updatedAt": "2026-11-25T04:02:17.854965Z",
   "hero": {
     "tagline": {
       "EN": "Engineering Water Solution",
       "ID": "Solusi Rekayasa Air Tanah"
     },
     "headline": {
-      "EN": "Reliable well water for your villa, resort, or development in Bali",
-      "ID": "Air sumur yang andal untuk vila, resor, atau pengembangan Anda di Bali"
+      "EN": "Reliable groundwater for your villa, resort, or development in Bali",
+      "ID": "Air tanah yang andal untuk vila, resor, atau pengembangan Anda di Bali"
     },
     "description": {
       "EN": "Geoelectric survey, deep-well drilling to 220 m+, casing, and SIPA permits — Pecatu to Lombok.",
@@ -15,7 +15,7 @@
     },
     "ctaDiscuss": {
       "EN": "Get a drilling assessment",
-      "ID": "Minta penilaian pengeboran"
+      "ID": "Minta asesmen pengeboran"
     },
     "ctaServices": {
       "EN": "Explore ground water services",
@@ -47,11 +47,11 @@
     },
     "titleLine1": {
       "EN": "Integrated",
-      "ID": "Penyedia Solusi"
+      "ID": "Penyedia"
     },
     "titleLine2": {
       "EN": "Ground Water",
-      "ID": "Air Tanah"
+      "ID": "Solusi Air Tanah"
     },
     "titleLine3": {
       "EN": "Solution Provider",
@@ -67,7 +67,7 @@
     },
     "showLess": {
       "EN": "Show less",
-      "ID": "Tutup"
+      "ID": "Tutup ringkasan"
     },
     "yearsExperience": "10+",
     "fieldExp": {
@@ -91,7 +91,7 @@
     },
     "sectorsTitle": {
       "EN": "Sectors we serve",
-      "ID": "SEKTOR YANG KAMI LAYANI"
+      "ID": "Sektor yang Kami Layani"
     },
     "sectorsDesc": {
       "EN": "We work with villas, private estates, hotels, resorts, residential and commercial developments, contractors, developers, and industrial facilities requiring ground water solutions for their projects.",
@@ -136,7 +136,7 @@
       "ID": "Ini adalah tantangan bisnis nyata."
     },
     "description": {
-      "EN": "South Bali keeps building, but piped water can’t always keep up. In Pecatu and nearby areas, tanker prices run IDR 300,000–700,000 per load — a direct cost to villas, resorts, and commercial properties. DRYNO helps owners plan ahead with site-specific surveys, deep wells, and permits.",
+      "EN": "South Bali keeps building, but piped water can’t always keep up. In Pecatu and nearby areas, tanker prices run IDR 300,000–700,000 per tanker load — a direct cost to villas, resorts, and commercial properties. DRYNO helps owners plan ahead with site-specific surveys, deep wells, and permits.",
       "ID": "Bali selatan terus membangun, tetapi pasokan air PDAM tak selalu mencukupi. Di Pecatu dan sekitarnya, harga air tangki mencapai Rp300.000–Rp700.000 per ritase — biaya nyata bagi vila, resor, dan properti komersial. DRYNO membantu pemilik merencanakan sejak awal lewat survei spesifik lokasi, sumur dalam, dan perizinan."
     },
     "bannerImage": "/images/water-challenges-bali.jpg",
@@ -239,7 +239,7 @@
       "ID": "Solusi Rekayasa Air Tanah"
     },
     "subtitle": {
-      "EN": "End-to-end professional services — from subsurface investigation and deep well drilling to legal permitting support.",
+      "EN": "End-to-end groundwater delivery — from geoelectric survey and deep-well drilling to SIPA compliance.",
       "ID": "Layanan profesional komprehensif mulai dari investigasi geolistrik bawah tanah, pengeboran sumur dalam, hingga pengurusan izin legalitas."
     },
     "modalScope": {
@@ -323,8 +323,8 @@
       },
       "category": "Drilling",
       "priceLabel": {
-        "EN": "Pricing",
-        "ID": "Harga"
+        "EN": "Custom quote",
+        "ID": "Penawaran khusus"
       },
       "price": {
         "EN": "Request Quotation",
@@ -335,22 +335,35 @@
         "ID": "Pengeboran sumur dalam profesional yang disesuaikan dengan kondisi geologi dan kebutuhan debit proyek."
       },
       "fullDesc": {
-        "EN": "We drill to the depth your site actually needs — based on survey data, rock formation, and target yield. Method, rig, diameter, and casing are matched to each project’s geology and water demand.",
-        "ID": "Layanan pengeboran sumur dalam dengan armada mesin bor heavy-duty sesuai spesifikasi teknis, data investigasi, dan kondisi formasi batuan aktual. Metode pengeboran, diameter lubang, dan kedalaman target dirancang presisi untuk setiap proyek."
+        "EN": "We drill to the depth your site actually needs — based on geoelectric survey data, rock formation, and target yield. Crawler rigs reach 220 m+ through Uluwatu karst limestone. Method, diameter (4-8 inch), and casing are matched to each project geology and water demand. Typical villa projects complete in 7-14 days including testing.",
+        "ID": "Kami mengebor hingga kedalaman yang dibutuhkan lokasi Anda — berdasarkan data survei geolistrik, formasi batuan, dan target debit. Rig crawler menembus 220 m+ di batuan karst Uluwatu. Metode, diameter (4-8 inci), dan casing disesuaikan dengan geologi dan kebutuhan debit tiap proyek. Proyek vila umumnya selesai 7-14 hari termasuk pengujian."
       },
       "image": "/images/service-2.jpg",
       "status": "Featured",
-      "includesEN": [],
-      "includesID": [],
+      "includesEN": [
+        "Geoelectric survey review and drilling-point setup",
+        "Crawler-rig drilling to 65-220 m+ in karst rock",
+        "Diameter 4-8 inch to match pump and yield",
+        "Well development, flushing and discharge testing",
+        "Drilling log and technical handover report"
+      ],
+      "includesID": [
+        "Review survei geolistrik dan penentuan titik bor",
+        "Pengeboran rig crawler 65-220 m+ di batuan karst",
+        "Diameter 4-8 inci sesuai pompa dan debit",
+        "Pengembangan sumur, flushing dan uji debit",
+        "Log pengeboran dan berita acara teknis"
+      ],
       "casingTypes": [],
       "note": {
-        "EN": "",
-        "ID": ""
+        "EN": "Fixed timeline and scope confirmed after site survey and water-demand review.",
+        "ID": "Jadwal dan ruang lingkup pasti dikonfirmasi setelah survei lokasi dan review kebutuhan debit."
       },
       "disclaimer": {
         "EN": "Every site differs — we never promise a fixed depth or guaranteed yield before surveying.",
         "ID": "Kedalaman pengeboran selalu mengikuti kondisi hidrogeologi setempat — tidak ada angka universal."
-      }
+      },
+      "video": "/videos/drilling-field-nov2026.mp4"
     },
     {
       "id": "casing",
@@ -361,8 +374,8 @@
       },
       "category": "Installation",
       "priceLabel": {
-        "EN": "Pricing",
-        "ID": "Harga"
+        "EN": "Custom quote",
+        "ID": "Penawaran khusus"
       },
       "price": {
         "EN": "Request Quotation",
@@ -373,13 +386,23 @@
         "ID": "Pemasangan pipa casing berkualitas tinggi dan konstruksi sumur untuk ketahanan jangka panjang."
       },
       "fullDesc": {
-        "EN": "We install steel or heavy-duty PVC casing with screens and gravel pack, built to keep water clean and the well structure solid for decades.",
-        "ID": "Pemasangan pipa casing (besi/PVC heavy-duty), saringan (screen), gravel pack, dan konstruksi sumur sesuai standar teknis hidrolik guna memastikan air bersih bebas sedimen dan struktur sumur kokoh puluhan tahun."
+        "EN": "We install steel or heavy-duty PVC casing with screens and gravel pack, sized 4-6 inch for decades of clean, sediment-free water. Includes verticality check, sanitary seal, and pump seating at the tested depth.",
+        "ID": "Kami memasang casing besi atau PVC heavy-duty dengan screen dan gravel pack, ukuran 4-6 inci untuk air bersih bebas sedimen selama puluhan tahun. Termasuk uji kelurusan lubang, sanitary seal, dan dudukan pompa pada kedalaman teruji."
       },
       "image": "/images/service-3.jpg",
       "status": "Active",
-      "includesEN": [],
-      "includesID": [],
+      "includesEN": [
+        "Steel / heavy-duty PVC casing, 4-6 inch",
+        "Screens and gravel pack for sediment control",
+        "Sanitary seal and wellhead completion",
+        "Pump seating at tested depth"
+      ],
+      "includesID": [
+        "Casing besi / PVC heavy-duty, 4-6 inci",
+        "Screen dan gravel pack penahan sedimen",
+        "Sanitary seal dan penyelesaian kepala sumur",
+        "Dudukan pompa pada kedalaman teruji"
+      ],
       "casingTypes": [
         "6″ casing",
         "5″ casing",
@@ -403,8 +426,8 @@
       },
       "category": "Consultation",
       "priceLabel": {
-        "EN": "Pricing",
-        "ID": "Harga"
+        "EN": "Custom quote",
+        "ID": "Penawaran khusus"
       },
       "price": {
         "EN": "Contact Us",
@@ -415,8 +438,8 @@
         "ID": "Bimbingan teknis ahli dan perencanaan strategis untuk sistem pasokan air mandiri properti."
       },
       "fullDesc": {
-        "EN": "Technical consultation for projects requiring ground water solutions. Our experienced hydrogeological team provides end-to-end guidance for private, commercial, and industrial developments.",
-        "ID": "Konsultasi teknis komprehensif bagi proyek properti, resor, dan komersial yang memerlukan solusi pasokan air tanah. Tim ahli kami mendampingi mulai dari studi kelayakan, mitigasi risiko salinitas, hingga strategi pemboran."
+        "EN": "Technical consultation for projects requiring groundwater solutions. Our hydrogeology team covers feasibility, salinity-risk mitigation in coastal zones, drilling strategy, and budgeting for private, commercial, and industrial developments.",
+        "ID": "Konsultasi teknis bagi proyek properti, resor, dan komersial yang memerlukan solusi pasokan air tanah. Tim kami mendampingi studi kelayakan, mitigasi risiko salinitas di zona pesisir, strategi pemboran, dan anggaran hingga proyek siap dieksekusi."
       },
       "image": "/images/service-4.jpg",
       "status": "Active",
@@ -469,13 +492,23 @@
         "ID": "Pendampingan administratif dan teknis untuk penerbitan Surat Izin Pengusahaan Air Tanah (SIPA)."
       },
       "fullDesc": {
-        "EN": "Administrative and technical support for processing ground water extraction permits (SIPA) in accordance with applicable regional and national regulations.",
-        "ID": "Bantuan menyeluruh penyusunan dokumen teknis, pengujian debit (pumping test), dan koordinasi administratif dengan instansi terkait untuk penerbitan SIPA resmi sesuai regulasi pemerintah."
+        "EN": "Administrative and technical support for SIPA groundwater extraction permits (PB-UMKU) via OSS — from document checklist and pumping-test data to submission and follow-up with ESDM/BKPM. Proven path: a censored issued SIPA example is shown below.",
+        "ID": "Bantuan penyusunan dokumen teknis, pengujian debit (pumping test), dan pengajuan SIPA PB-UMKU via OSS hingga terbit — termasuk koordinasi dengan ESDM/BKPM. Bukti nyata: contoh SIPA terbit yang disamarkan dapat dilihat di bawah."
       },
       "image": "/images/service-5.jpg",
       "status": "Active",
-      "includesEN": [],
-      "includesID": [],
+      "includesEN": [
+        "Document checklist and readiness review",
+        "Pumping-test coordination and technical dossier",
+        "OSS PB-UMKU submission and follow-up",
+        "Handover of issued SIPA and compliance guidance"
+      ],
+      "includesID": [
+        "Checklist dokumen dan review kesiapan",
+        "Koordinasi pumping test dan dossier teknis",
+        "Pengajuan OSS PB-UMKU dan tindak lanjut",
+        "Serah terima SIPA terbit dan panduan kepatuhan"
+      ],
       "casingTypes": [],
       "note": {
         "EN": "Fixed quote after we review your water demand, location, and document readiness.",
@@ -507,13 +540,21 @@
         "ID": "Pengurusan nomor pokok wajib pajak daerah untuk pelaporan pemanfaatan air bawah tanah."
       },
       "fullDesc": {
-        "EN": "Guidance and administrative submission for ground water utilization tax (NPWPD ABT), ensuring your commercial operation adheres to regional taxation laws.",
-        "ID": "Pendampingan pendaftaran NPWPD ABT dan panduan pelaporan meteran air tanah agar operasional komersial properti Anda patuh terhadap peraturan perpajakan daerah."
+        "EN": "Registration and reporting setup for NPWPD ABT groundwater tax — metered-usage reporting so your commercial operation stays compliant with regional tax rules. Handled together with SIPA in one integrated timeline.",
+        "ID": "Pendaftaran NPWPD ABT dan penyiapan pelaporan pemakaian air tanah bermeter agar operasional komersial patuh pajak daerah. Diurus bersama SIPA dalam satu alur waktu terpadu."
       },
       "image": "/images/service-6.jpg",
       "status": "Active",
-      "includesEN": [],
-      "includesID": [],
+      "includesEN": [
+        "NPWPD ABT registration",
+        "Meter-reading and reporting setup",
+        "Filing calendar and compliance reminders"
+      ],
+      "includesID": [
+        "Pendaftaran NPWPD ABT",
+        "Penyiapan pencatatan dan pelaporan meter",
+        "Jadwal pelaporan dan pengingat kepatuhan"
+      ],
       "casingTypes": [],
       "note": {
         "EN": "",
@@ -546,6 +587,15 @@
           "description": "Dokumentasi video langsung proses pengeboran sumur dalam hingga kedalaman 220 meter di kawasan Pecatu, Uluwatu.",
           "titleEN": "Drilling operation video — Maison Horizon",
           "descriptionEN": "Live footage of deep-well drilling down to 220 metres in Pecatu, Uluwatu."
+        },
+        {
+          "type": "video",
+          "src": "/videos/drilling-field-nov2026.mp4",
+          "poster": "/images/service-drilling-video-poster.jpg",
+          "title": "Video Lapangan Pengeboran — Rig Biru",
+          "titleEN": "Field drilling video — blue rig",
+          "description": "Dokumentasi video operasi pengeboran sumur dalam di lapangan, Nov 2026.",
+          "descriptionEN": "Field footage of deep-well drilling operations, Nov 2026."
         },
         {
           "type": "image",
@@ -621,7 +671,7 @@
       "finalDepth": "105 m",
       "waterEncounter": "±90 m",
       "waterDischarge": "5 m³/h",
-      "image": "/images/project/bebas vila.jpg",
+      "image": "/images/project/bebas-vila.jpg",
       "status": "Completed",
       "gallery": [
         {
@@ -712,8 +762,8 @@
           "ID": "Rig Bor Heavy-Duty"
         },
         "spec": {
-          "EN": "Heavy-Duty Drilling Rig",
-          "ID": "Mesin Bor Sumur Dalam"
+          "EN": "Crawler rig, 220 m+ in karst limestone",
+          "ID": "Rig crawler, 220 m+ di batuan karst"
         },
         "image": "/images/eq-2.jpg"
       },
@@ -725,8 +775,8 @@
           "ID": "Kompresor Tekanan Tinggi"
         },
         "spec": {
-          "EN": "High-Pressure Compressor",
-          "ID": "Kompresor Udara Bertekanan"
+          "EN": "High-pressure air for DTH hammers in hard rock",
+          "ID": "Udara bertekanan untuk hammer di batuan keras"
         },
         "image": "/images/eq-3.jpg"
       },
@@ -738,8 +788,8 @@
           "ID": "DTH Hammer"
         },
         "spec": {
-          "EN": "8\" & 6\"",
-          "ID": "8\" & 6\""
+          "EN": "6-8 inch bits for karst limestone",
+          "ID": "Mata 6-8 inci untuk batu kapur karst"
         },
         "image": "/images/eq-4.jpg"
       },
@@ -747,12 +797,12 @@
         "id": "pdc",
         "category": "Drilling Tools",
         "title": {
-          "EN": "PDC",
-          "ID": "PDC"
+          "EN": "PDC Drill Bits",
+          "ID": "Mata Bor PDC"
         },
         "spec": {
-          "EN": "8\" & 6.7\"",
-          "ID": "8\" & 6.7\""
+          "EN": "6.7-8 inch PDC, faster in hard rock",
+          "ID": "PDC 6,7-8 inci, lebih cepat di batuan keras"
         },
         "image": "/images/eq-5.jpg"
       },
@@ -760,12 +810,12 @@
         "id": "casing",
         "category": "Casing",
         "title": {
-          "EN": "Casing",
-          "ID": "Casing"
+          "EN": "Well Casing",
+          "ID": "Pipa Casing"
         },
         "spec": {
-          "EN": "6\" / 5\" / 4\"",
-          "ID": "6\" / 5\" / 4\""
+          "EN": "Steel / heavy-duty PVC, 4-6 inch + screens",
+          "ID": "Besi / PVC heavy-duty, 4-6 inci + screen"
         },
         "image": "/images/eq-6.jpg"
       }

@@ -80,6 +80,7 @@ export interface ProductItem {
   shortDesc: BilingualText;
   fullDesc: BilingualText;
   image: string;
+  video?: string;
   status: "Active" | "Featured" | "Draft";
   includesEN: string[];
   includesID: string[];

@@ -19,14 +19,53 @@ export default function SolutionsTabs() {
   const [modal, setModal] = useState(false);
   const meta = content.servicesMeta;
   const items = content.products.filter((p) => p.status !== "Draft");
+
+  // Deep-link support: /#services-sipa, /#services-drilling, etc. (header dropdown)
+  React.useEffect(() => {
+    const applyHashValue = (h: string) => {
+      if (!h.startsWith("services")) return;
+      const parts = h.split("-");
+      const serviceId = parts.length > 1 ? parts.slice(1).join("-") : "";
+      if (!serviceId) return;
+      const found = items.findIndex((p) => p.id === serviceId);
+      if (found >= 0) {
+        setIdx(found);
+        document.getElementById("services")?.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    };
+    const applyHash = () => applyHashValue(window.location.hash.replace("#", ""));
+    const onCustom = (e: Event) => applyHashValue((e as CustomEvent<string>).detail ?? "");
+    applyHash();
+    window.addEventListener("hashchange", applyHash);
+    window.addEventListener("popstate", applyHash);
+    window.addEventListener("dryno:select-service", onCustom);
+    return () => {
+      window.removeEventListener("hashchange", applyHash);
+      window.removeEventListener("popstate", applyHash);
+      window.removeEventListener("dryno:select-service", onCustom);
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [items.length]);
+
+  const selectService = (i: number) => {
+    setIdx(i);
+    const id = items[i]?.id;
+    if (id && typeof window !== "undefined") {
+      window.history.replaceState(null, "", `#services-${id}`);
+    }
+  };
+
   const cur = items[Math.min(idx, items.length - 1)];
   if (!cur) return null;
 
-  const go = (d: number) => setIdx((p) => (p + d + items.length) % items.length);
+  const go = (d: number) => {
+    const next = (idx + d + items.length) % items.length;
+    selectService(next);
+  };
   const progress = ((idx + 1) / items.length) * 100;
 
   return (
-    <section id="services" className="relative py-14 sm:py-20 bg-white overflow-hidden">
+    <section id="services" className="relative py-14 sm:py-20 bg-white overflow-hidden scroll-mt-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-3xl mb-8" data-aos="fade-up">
           <span className="text-[11px] font-bold tracking-[0.25em] text-gray-500 uppercase">{meta.eyebrow[language]}</span>
@@ -44,7 +83,7 @@ export default function SolutionsTabs() {
                   key={s.id}
                   role="tab"
                   aria-selected={active}
-                  onClick={() => setIdx(i)}
+                  onClick={() => selectService(i)}
                   className={`flex items-center gap-3 px-4 py-3 rounded-xl border text-left transition-colors ${
                     active ? "bg-[#0077c8] text-white border-[#0077c8] shadow-md" : "bg-gray-50 text-gray-700 border-gray-100 hover:border-[#0077c8]/40"
                   }`}
@@ -63,9 +102,23 @@ export default function SolutionsTabs() {
 
           <div className="relative rounded-3xl overflow-hidden bg-[#0B192C] text-white min-h-[420px] flex" data-aos="fade-left">
             <div key={cur.id} className="relative w-full grid md:grid-cols-2">
-              <div className="relative h-60 sm:h-72 md:h-auto md:min-h-[420px]">
-                <Image src={cur.image} alt={cur.name[language]} fill sizes="(max-width: 768px) 100vw, 50vw" decoding="async" className="object-cover" unoptimized={cur.image?.startsWith("http") || cur.image?.startsWith("/images/uploads/")} />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0B192C] via-[#0B192C]/20 to-transparent md:bg-gradient-to-r md:from-transparent md:via-transparent md:to-[#0B192C]" />
+              <div className="relative h-60 sm:h-72 md:h-auto md:min-h-[420px] bg-black">
+                {((cur as { video?: string }).video || (cur.id === "drilling" ? "/videos/drilling-field-nov2026.mp4" : "")) ? (
+                  <video
+                    key={cur.id}
+                    src={(cur as { video?: string }).video || "/videos/drilling-field-nov2026.mp4"}
+                    poster={cur.image}
+                    controls
+                    muted
+                    loop
+                    playsInline
+                    preload="metadata"
+                    className="absolute inset-0 h-full w-full object-cover"
+                  />
+                ) : (
+                  <Image src={cur.image} alt={cur.name[language]} fill sizes="(max-width: 768px) 100vw, 50vw" decoding="async" className="object-cover" unoptimized={cur.image?.startsWith("http") || cur.image?.startsWith("/images/uploads/")} />
+                )}
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0B192C] via-[#0B192C]/20 to-transparent md:bg-gradient-to-r md:from-transparent md:via-transparent md:to-[#0B192C] pointer-events-none" />
               </div>
               <div className="p-6 sm:p-10 flex flex-col justify-center">
                 <span className="text-[11px] font-bold tracking-[0.25em] text-sky-300 uppercase">SERVICE {cur.number} — {language === "EN" ? cur.category : categoryID[cur.category] || cur.category}</span>

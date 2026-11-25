@@ -13,7 +13,7 @@ export default function Approach360() {
             <div className="absolute inset-0 rounded-full border-[10px] border-[#0077c8]/15" />
             <div className="absolute inset-6 rounded-full overflow-hidden shadow-2xl">
               {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img src={about.image} alt="DRYNO" className="w-full h-full object-cover" />
+              <img src={about.image} alt={language === "EN" ? "DRYNO geoelectric survey team mapping groundwater aquifer before deep-well drilling in Bali" : "Tim geolistrik DRYNO memetakan akuifer air tanah sebelum pengeboran sumur dalam di Bali"} className="w-full h-full object-cover" />
               <div className="absolute inset-0 bg-[#0077c8]/20" />
             </div>
             <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-16 h-16 rounded-full bg-[#0077c8] text-white flex items-center justify-center shadow-xl"><HiMagnifyingGlass aria-hidden="true" className="w-7 h-7" /></div>

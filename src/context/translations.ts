@@ -14,7 +14,7 @@ export const translations = {
     },
     hero: {
       tagline: "Engineering Water Solution",
-      headline: "Reliable well water for your villa, resort, or development in Bali",
+      headline: "Reliable groundwater for your villa, resort, or development in Bali",
       description:
         "Geoelectric survey, deep-well drilling to 220 m+, casing, and SIPA permits — Pecatu to Lombok.",
       ctaDiscuss: "Get a drilling assessment",
@@ -50,7 +50,7 @@ export const translations = {
       headlinePart1: "Water scarcity is more than an environmental issue. ",
       headlinePart2: "It’s a business challenge.",
       description:
-        "South Bali keeps building, but piped water can’t always keep up. In Pecatu and nearby areas, tanker prices run IDR 300,000–700,000 per load — a direct cost to villas, resorts, and commercial properties. DRYNO helps owners plan ahead with site-specific surveys, deep wells, and permits.",
+        "South Bali keeps building, but piped water can’t always keep up. In Pecatu and nearby areas, tanker prices run IDR 300,000–700,000 per tanker load — a direct cost to villas, resorts, and commercial properties. DRYNO helps owners plan ahead with site-specific surveys, deep wells, and permits.",
       ctaCalculator: "Calculate your tanker-water cost",
       ctaSolutions: "See services & pricing",
       referencesEyebrow: "References & Documented Reports",
@@ -93,7 +93,7 @@ export const translations = {
       eyebrow: "OUR EXPERTISE",
       title: "Engineered Water Solutions",
       subtitle:
-        "End-to-end professional services — from subsurface investigation and deep well drilling to legal permitting support.",
+        "End-to-end groundwater delivery — from geoelectric survey and deep-well drilling to SIPA compliance.",
       viewDetails: "View Details",
       startingFrom: "Starting from",
       priceLabel: "Price",
