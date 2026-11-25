@@ -57,6 +57,7 @@ export default function ChemHero() {
               );
             }
             return (
+              <div key={img.id || i} className="absolute inset-0">
               <Image
                 src={portraits[i % portraits.length]}
                 alt={img.alt || "DRYNO"}
