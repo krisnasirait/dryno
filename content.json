@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-25T04:49:47.707806Z",
+  "updatedAt": "2026-11-25T12:31:40.490449Z",
   "hero": {
     "tagline": {
       "EN": "Engineering Water Solution",
@@ -752,7 +752,7 @@
           "EN": "ADMT HT3 & Aerox",
           "ID": "ADMT HT3 & Aerox"
         },
-        "image": "/images/eq-1.jpg"
+        "image": "/images/eq-admt-site.jpg"
       },
       {
         "id": "drilling-rig",
@@ -765,7 +765,7 @@
           "EN": "Crawler rig, 220 m+ in karst limestone",
           "ID": "Rig crawler, 220 m+ di batuan karst"
         },
-        "image": "/images/eq-2.jpg"
+        "image": "/images/eq-rig-pecatu.jpg"
       },
       {
         "id": "compressor",
@@ -778,7 +778,7 @@
           "EN": "High-pressure air for DTH hammers in hard rock",
           "ID": "Udara bertekanan untuk hammer di batuan keras"
         },
-        "image": "/images/eq-3.jpg"
+        "image": "/images/eq-compressor-truck.jpg"
       },
       {
         "id": "dth-hammer",
@@ -791,7 +791,7 @@
           "EN": "6-8 inch bits for karst limestone",
           "ID": "Mata 6-8 inci untuk batu kapur karst"
         },
-        "image": "/images/eq-4.jpg"
+        "image": "/images/eq-mast-fira.jpg"
       },
       {
         "id": "pdc",
@@ -804,7 +804,7 @@
           "EN": "6.7-8 inch PDC, faster in hard rock",
           "ID": "PDC 6,7-8 inci, lebih cepat di batuan keras"
         },
-        "image": "/images/eq-5.jpg"
+        "image": "/images/eq-rods-wellhead.jpg"
       },
       {
         "id": "casing",
@@ -817,7 +817,7 @@
           "EN": "Steel / heavy-duty PVC, 4-6 inch + screens",
           "ID": "Besi / PVC heavy-duty, 4-6 inci + screen"
         },
-        "image": "/images/eq-6.jpg"
+        "image": "/images/eq-pipes-cuttings.jpg"
       }
     ]
   },

@@ -49,7 +49,7 @@ export default function Equipment() {
                 <li key={item.id} className="flex flex-col">
                   <div className="relative aspect-[4/3] w-full rounded-xl overflow-hidden bg-white/5">
                     <Image
-                      src={item.image || "/images/eq-1.jpg"}
+                      src={item.image || "/images/eq-admt-site.jpg"}
                       alt={item.title[language]}
                       fill
                       unoptimized={item.image?.startsWith("http") || item.image?.startsWith("/images/uploads/")}
