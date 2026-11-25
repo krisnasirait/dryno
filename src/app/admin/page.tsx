@@ -96,8 +96,8 @@ export default function AdminCMSPage() {
     branch: string;
     isConfigured: boolean;
   }>({
-    owner: "AuxoaZ",
-    repo: "lp-dryno",
+    owner: "krisnasirait",
+    repo: "dryno",
     branch: "main",
     isConfigured: false,
   });

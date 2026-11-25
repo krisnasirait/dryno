@@ -56,6 +56,12 @@ export default function SolutionsTabs() {
   };
 
   const cur = items[Math.min(idx, items.length - 1)];
+  // Real document screenshots always win over CMS/AI images for permit services.
+  const docImageOverride: Record<string, string> = {
+    sipa: "/images/service-sipa-doc.png",
+    npwpd: "/images/service-npwpd-doc.png",
+  };
+  const curImage = docImageOverride[cur.id] || cur.image;
   if (!cur) return null;
 
   const go = (d: number) => {
@@ -107,7 +113,7 @@ export default function SolutionsTabs() {
                   <video
                     key={cur.id}
                     src={(cur as { video?: string }).video || "/videos/drilling-field-nov2026.mp4"}
-                    poster={cur.image}
+                    poster={curImage}
                     controls
                     muted
                     loop
@@ -116,7 +122,7 @@ export default function SolutionsTabs() {
                     className="absolute inset-0 h-full w-full object-cover"
                   />
                 ) : (
-                  <Image src={cur.image} alt={cur.name[language]} fill sizes="(max-width: 768px) 100vw, 50vw" priority decoding="async" className="object-cover" unoptimized={cur.image?.startsWith("http") || cur.image?.startsWith("/images/uploads/")} />
+                  <Image src={curImage} alt={cur.name[language]} fill sizes="(max-width: 768px) 100vw, 50vw" priority decoding="async" className="object-cover" unoptimized={cur.image?.startsWith("http") || cur.image?.startsWith("/images/uploads/")} />
                 )}
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0B192C] via-[#0B192C]/20 to-transparent md:bg-gradient-to-r md:from-transparent md:via-transparent md:to-[#0B192C] pointer-events-none" />
               </div>

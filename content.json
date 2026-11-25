@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-25T04:46:43.190750Z",
+  "updatedAt": "2026-11-25T04:49:47.707806Z",
   "hero": {
     "tagline": {
       "EN": "Engineering Water Solution",
@@ -495,7 +495,7 @@
         "EN": "Administrative and technical support for SIPA groundwater extraction permits (PB-UMKU) via OSS — from document checklist and pumping-test data to submission and follow-up with ESDM/BKPM. Proven path: a censored issued SIPA example is shown below.",
         "ID": "Bantuan penyusunan dokumen teknis, pengujian debit (pumping test), dan pengajuan SIPA PB-UMKU via OSS hingga terbit — termasuk koordinasi dengan ESDM/BKPM. Bukti nyata: contoh SIPA terbit yang disamarkan dapat dilihat di bawah."
       },
-      "image": "/images/sipa-example-p1.jpg",
+      "image": "/images/service-sipa-doc.png",
       "status": "Active",
       "includesEN": [
         "Document checklist and readiness review",
@@ -543,7 +543,7 @@
         "EN": "Registration and reporting setup for NPWPD ABT groundwater tax — metered-usage reporting so your commercial operation stays compliant with regional tax rules. Handled together with SIPA in one integrated timeline.",
         "ID": "Pendaftaran NPWPD ABT dan penyiapan pelaporan pemakaian air tanah bermeter agar operasional komersial patuh pajak daerah. Diurus bersama SIPA dalam satu alur waktu terpadu."
       },
-      "image": "/images/npwpd-example-p2.jpg",
+      "image": "/images/service-npwpd-doc.png",
       "status": "Active",
       "includesEN": [
         "NPWPD ABT registration",

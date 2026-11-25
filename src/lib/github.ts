@@ -13,8 +13,8 @@ export interface GitHubConfig {
 
 export function getGitHubConfig(): GitHubConfig {
   const pat = (process.env.GITHUB_PAT || "").trim();
-  const owner = (process.env.GITHUB_OWNER || "AuxoaZ").trim();
-  const repo = (process.env.GITHUB_REPO || "lp-dryno").trim();
+  const owner = (process.env.GITHUB_OWNER || "krisnasirait").trim();
+  const repo = (process.env.GITHUB_REPO || "dryno").trim();
   const branch = (process.env.GITHUB_BRANCH || "main").trim();
 
   const isPlaceholderPat =
