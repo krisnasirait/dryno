@@ -116,7 +116,7 @@ export default function SolutionsTabs() {
                     className="absolute inset-0 h-full w-full object-cover"
                   />
                 ) : (
-                  <Image src={cur.image} alt={cur.name[language]} fill sizes="(max-width: 768px) 100vw, 50vw" decoding="async" className="object-cover" unoptimized={cur.image?.startsWith("http") || cur.image?.startsWith("/images/uploads/")} />
+                  <Image src={cur.image} alt={cur.name[language]} fill sizes="(max-width: 768px) 100vw, 50vw" priority decoding="async" className="object-cover" unoptimized={cur.image?.startsWith("http") || cur.image?.startsWith("/images/uploads/")} />
                 )}
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0B192C] via-[#0B192C]/20 to-transparent md:bg-gradient-to-r md:from-transparent md:via-transparent md:to-[#0B192C] pointer-events-none" />
               </div>

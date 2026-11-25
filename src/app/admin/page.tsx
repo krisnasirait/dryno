@@ -58,7 +58,7 @@ const emptyProduct: ProductItem = {
   price: { EN: "IDR 15,000,000", ID: "IDR 15,000,000" },
   shortDesc: { EN: "", ID: "" },
   fullDesc: { EN: "", ID: "" },
-  image: "/images/service-1.jpg",
+  image: "/images/service-investigation-2026.jpg",
   status: "Active",
   includesEN: [],
   includesID: [],
@@ -892,7 +892,7 @@ export default function AdminCMSPage() {
                         <div className="relative h-44 w-full bg-slate-950 overflow-hidden">
                           {/* eslint-disable-next-line @next/next/no-img-element */}
                           <img
-                            src={product.image || "/images/service-1.jpg"}
+                            src={product.image || "/images/service-investigation-2026.jpg"}
                             alt={product.name[editLang]}
                             className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                           />

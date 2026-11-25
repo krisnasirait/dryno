@@ -40,7 +40,7 @@ export default function ChemHero() {
                 src={portraits[i % portraits.length]}
                 alt={img.alt || "DRYNO"}
                 fill
-                sizes="100vw"
+                sizes="(max-width: 768px) 100vw, 768px"
                 priority={i === 0}
                 fetchPriority="high"
                 loading={i === 0 ? "eager" : "lazy"}

@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-25T04:02:17.854965Z",
+  "updatedAt": "2026-11-25T04:46:43.190750Z",
   "hero": {
     "tagline": {
       "EN": "Engineering Water Solution",
@@ -284,7 +284,7 @@
         "EN": "Ground Water investigation using geoelectric and ground water detection equipment to assess subsurface conditions and identify potential ground water zones before drilling. The investigation provides technical information to support drilling-point selection and planning of the next project stage.",
         "ID": "Investigasi air tanah menggunakan instrumen geolistrik modern untuk menganalisis formasi batuan bawah permukaan dan mengidentifikasi potensi akuifer air sebelum pengeboran. Hasil investigasi menyajikan data teknis untuk menentukan titik bor optimal dan estimasi kedalaman."
       },
-      "image": "/images/service-1.jpg",
+      "image": "/images/service-investigation-2026.jpg",
       "status": "Featured",
       "includesEN": [
         "Site assessment",
@@ -495,7 +495,7 @@
         "EN": "Administrative and technical support for SIPA groundwater extraction permits (PB-UMKU) via OSS — from document checklist and pumping-test data to submission and follow-up with ESDM/BKPM. Proven path: a censored issued SIPA example is shown below.",
         "ID": "Bantuan penyusunan dokumen teknis, pengujian debit (pumping test), dan pengajuan SIPA PB-UMKU via OSS hingga terbit — termasuk koordinasi dengan ESDM/BKPM. Bukti nyata: contoh SIPA terbit yang disamarkan dapat dilihat di bawah."
       },
-      "image": "/images/service-5.jpg",
+      "image": "/images/sipa-example-p1.jpg",
       "status": "Active",
       "includesEN": [
         "Document checklist and readiness review",
@@ -543,7 +543,7 @@
         "EN": "Registration and reporting setup for NPWPD ABT groundwater tax — metered-usage reporting so your commercial operation stays compliant with regional tax rules. Handled together with SIPA in one integrated timeline.",
         "ID": "Pendaftaran NPWPD ABT dan penyiapan pelaporan pemakaian air tanah bermeter agar operasional komersial patuh pajak daerah. Diurus bersama SIPA dalam satu alur waktu terpadu."
       },
-      "image": "/images/service-6.jpg",
+      "image": "/images/npwpd-example-p2.jpg",
       "status": "Active",
       "includesEN": [
         "NPWPD ABT registration",

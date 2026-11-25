@@ -184,7 +184,7 @@ export default function ImageUploaderField({
               />
               <p className="text-[11px] text-slate-500 mt-1">
                 {helperText ||
-                  "Masukkan path relatif (misal /images/service-1.jpg) atau URL gambar eksternal (https://...)."}
+                  "Masukkan path relatif (misal /images/service-investigation-2026.jpg) atau URL gambar eksternal (https://...)."}
               </p>
             </div>
           ) : (
