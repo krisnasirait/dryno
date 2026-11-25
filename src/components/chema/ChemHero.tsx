@@ -16,12 +16,15 @@ export default function ChemHero() {
   ];
 
   useEffect(() => {
-    const id = setInterval(
+    const current = images[slide % images.length];
+    const isVideo = current?.src?.endsWith(".mp4");
+    const id = setTimeout(
       () => setSlide((s) => (s + 1) % images.length),
-      6000
+      isVideo ? 12000 : 6000
     );
-    return () => clearInterval(id);
-  }, [images.length]);
+    return () => clearTimeout(id);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [slide, images.length]);
 
   const links = [
     { key: "Investigate", descEN: "Map aquifers with a geoelectric survey before you drill.", descID: "Petakan akuifer lewat survei geolistrik sebelum mengebor.", href: "#services" },
@@ -34,8 +37,26 @@ export default function ChemHero() {
     <section id="home" className="relative min-h-[92vh] flex items-center overflow-hidden bg-[#06121f] text-white">
       <div className="absolute inset-0 z-0">
         {images.map((img, i) =>
-          i !== slide ? null : (
-            <div key={img.id || i} className="absolute inset-0">
+          i !== slide ? null : (() => {
+            const isVideo = img.src.endsWith(".mp4");
+            if (isVideo) {
+              return (
+                <div key={img.id || i} className="absolute inset-0">
+                  <video
+                    src={img.src}
+                    poster="/images/service-drilling-video-poster.jpg"
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                    preload="metadata"
+                    aria-label={img.alt || "DRYNO"}
+                    className={`object-cover object-center scale-105 h-full w-full ${i === 0 ? "" : "hero-fade-in"}`}
+                  />
+                </div>
+              );
+            }
+            return (
               <Image
                 src={portraits[i % portraits.length]}
                 alt={img.alt || "DRYNO"}
@@ -60,7 +81,8 @@ export default function ChemHero() {
                 unoptimized={img.src.startsWith("http") || img.src.startsWith("/images/uploads/")}
               />
             </div>
-          )
+            );
+          })()
         )}
       </div>
       <div className="absolute inset-0 z-[1] pointer-events-none" aria-hidden>

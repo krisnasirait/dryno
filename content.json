@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-11-25T12:34:06.915504Z",
+  "updatedAt": "2026-11-25T12:35:24.904096Z",
   "hero": {
     "tagline": {
       "EN": "Engineering Water Solution",
@@ -37,6 +37,11 @@
         "id": "03",
         "src": "/images/hero-rig-blue.jpg",
         "alt": "DRYNO drilling rig mast and rotary head during deep-well drilling in Uluwatu"
+      },
+      {
+        "id": "04",
+        "src": "/videos/drilling-field-nov2026.mp4",
+        "alt": "Field video: DRYNO deep-well drilling rig at work in Bali"
       }
     ]
   },
